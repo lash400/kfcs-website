@@ -9,6 +9,7 @@
 <meta property="og:title" content="訓練書系｜KFCS">
 <meta property="og:description" content="KFCS 訓練書系：徐國峰的著作與譯作書目，從《KFCS 跑力提升訓練系統》《跑者如何以身練心》到《跑步，該怎麼跑？》《丹尼爾斯博士跑步方程式》，並收錄他讀過且給予高度評價的耐力訓練專書。">
 <meta property="og:type" content="website">
+<link rel="icon" type="image/svg+xml" href="assets/kfcs-logo.svg">
 <link rel="icon" type="image/png" href="assets/kfcs-logo.png">
 <link rel="stylesheet" href="shared/site-chrome.css">
 </head>
@@ -16,7 +17,7 @@
 <nav class="kfcs-sitenav">
   <div class="nav-shell">
     <a class="nav-brand" href="index.html">
-      <img src="assets/kfcs-logo.png" alt="KFCS logo">
+      <img src="assets/kfcs-logo.svg" alt="KFCS logo">
       <span class="brand-sub">耐力訓練系統</span>
     </a>
     <input class="nav-toggle-box" type="checkbox" id="kfcs-nav-toggle">
@@ -183,24 +184,20 @@ src="https://www.facebook.com/tr?id=404602746416082&ev=PageView&noscript=1"
 /* ── 書封與購買連結 ── */
 #kfcs-books .book-cover {
   display: block;
-  width: 132px;
-  margin: 12px 0 4px;
-  border-radius: 6px;
-  overflow: hidden;
-  box-shadow: 0 10px 26px rgba(15, 15, 15, 0.18);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  width: 138px;
+  margin: 14px 0 6px;
+  transition: transform 0.2s ease;
 }
 #kfcs-books .book-cover img {
   display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: 3 / 4;
-  object-fit: cover;
-  background: #ece6db;
+  background: transparent;
+  /* 去背書封：用陰影做出立體感，不加外框 */
+  filter: drop-shadow(0 10px 18px rgba(15, 15, 15, 0.22));
 }
 #kfcs-books .book-card:hover .book-cover {
-  transform: translateY(-2px) rotate(-1deg);
-  box-shadow: 0 16px 34px rgba(15, 15, 15, 0.24);
+  transform: translateY(-3px) scale(1.02);
 }
 #kfcs-books .buy-link {
   display: inline-flex;
@@ -228,6 +225,33 @@ src="https://www.facebook.com/tr?id=404602746416082&ev=PageView&noscript=1"
   margin-top: 14px;
   color: #8b857c;
   font-size: 0.82rem;
+}
+#kfcs-books .buy-note {
+  margin-top: 7px;
+  color: #8b857c;
+  font-size: 0.78rem;
+  line-height: 1.6;
+}
+/* 絕版書：以文字書背代替封面 */
+#kfcs-books .book-cover.is-blank {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 3 / 4;
+  padding: 12px;
+  background: linear-gradient(150deg, #23211d 0%, #16150f 100%);
+  border: 1px solid rgba(246, 194, 19, 0.24);
+}
+#kfcs-books .blank-title {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 0.86rem;
+  font-weight: 700;
+  line-height: 1.6;
+  letter-spacing: 0.04em;
+  text-align: center;
+  color: rgba(246, 194, 19, 0.9);
+  writing-mode: vertical-rl;
+  max-height: 100%;
 }
 #kfcs-books .book-title {
   margin-top: 10px;
@@ -334,6 +358,7 @@ src="https://www.facebook.com/tr?id=404602746416082&ev=PageView&noscript=1"
 
         <li class="book-card">
           <span class="book-no">01</span>
+          <a class="book-cover" href="https://www.books.com.tw/products/0011040037" target="_blank" rel="noreferrer noopener"><img src="assets/covers/books/0011040037.png" alt="《KFCS 跑力提升訓練系統》 書封" loading="lazy"></a>
           <h3 class="book-title">
             《KFCS 跑力提升訓練系統》
             <span class="book-title-sub">體能 × 力量 × 技術 × 計畫，全面解析科學化跑步訓練</span>
@@ -349,10 +374,12 @@ src="https://www.facebook.com/tr?id=404602746416082&ev=PageView&noscript=1"
             <span class="tag">跑步</span>
             <span class="tag">訓練系統</span>
           </div>
+          <a class="buy-link" href="https://www.books.com.tw/products/0011040037" target="_blank" rel="noreferrer noopener">購書連結 →</a>
         </li>
 
         <li class="book-card">
           <span class="book-no">02</span>
+          <a class="book-cover" href="https://www.books.com.tw/products/0010968213" target="_blank" rel="noreferrer noopener"><img src="assets/covers/books/0010968213.png" alt="《跑者如何以身練心》 書封" loading="lazy"></a>
           <h3 class="book-title">《跑者如何以身練心》</h3>
           <p class="book-meta">遠流出版・2023 年</p>
           <p class="book-desc">
@@ -363,10 +390,12 @@ src="https://www.facebook.com/tr?id=404602746416082&ev=PageView&noscript=1"
             <span class="tag">跑步</span>
             <span class="tag">訓練心法</span>
           </div>
+          <a class="buy-link" href="https://www.books.com.tw/products/0010968213" target="_blank" rel="noreferrer noopener">購書連結 →</a>
         </li>
 
         <li class="book-card">
           <span class="book-no">03</span>
+          <a class="book-cover" href="https://www.books.com.tw/products/0010825356" target="_blank" rel="noreferrer noopener"><img src="assets/covers/books/0010825356.png" alt="《自由式的科學化訓練》 書封" loading="lazy"></a>
           <h3 class="book-title">《自由式的科學化訓練》</h3>
           <p class="book-meta">2019 年</p>
           <p class="book-desc">
@@ -377,10 +406,12 @@ src="https://www.facebook.com/tr?id=404602746416082&ev=PageView&noscript=1"
             <span class="tag">游泳</span>
             <span class="tag">技術</span>
           </div>
+          <a class="buy-link" href="https://www.books.com.tw/products/0010825356" target="_blank" rel="noreferrer noopener">購書連結 →</a>
         </li>
 
         <li class="book-card">
           <span class="book-no">04</span>
+          <a class="book-cover" href="https://www.books.com.tw/products/0010716778" target="_blank" rel="noreferrer noopener"><img src="assets/covers/books/0010716778.png" alt="《跑者都該懂的跑步關鍵數據》 書封" loading="lazy"></a>
           <h3 class="book-title">《跑者都該懂的跑步關鍵數據》</h3>
           <p class="book-meta">徐國峰、莊茗傑 合著・臉譜出版・2016 年 6 月</p>
           <p class="book-desc">
@@ -391,10 +422,12 @@ src="https://www.facebook.com/tr?id=404602746416082&ev=PageView&noscript=1"
             <span class="tag">跑步</span>
             <span class="tag">數據分析</span>
           </div>
+          <a class="buy-link" href="https://www.books.com.tw/products/0010716778" target="_blank" rel="noreferrer noopener">購書連結 →</a>
         </li>
 
         <li class="book-card">
           <span class="book-no">05</span>
+          <a class="book-cover" href="https://www.books.com.tw/products/0010672564" target="_blank" rel="noreferrer noopener"><img src="assets/covers/books/0010672564.png" alt="《體能！技術！肌力！心志！全方位的馬拉松科學化訓練》 書封" loading="lazy"></a>
           <h3 class="book-title">《體能！技術！肌力！心志！全方位的馬拉松科學化訓練》</h3>
           <p class="book-meta">徐國峰、羅譽寅 合著・遠流出版・2015 年</p>
           <p class="book-desc">
@@ -406,10 +439,12 @@ src="https://www.facebook.com/tr?id=404602746416082&ev=PageView&noscript=1"
             <span class="tag">跑步</span>
             <span class="tag">馬拉松</span>
           </div>
+          <a class="buy-link" href="https://www.books.com.tw/products/0010672564" target="_blank" rel="noreferrer noopener">購書連結 →</a>
         </li>
 
         <li class="book-card">
           <span class="book-no">06</span>
+          <span class="book-cover is-blank" aria-hidden="true"><span class="blank-title">鐵人三項自主訓練攻略</span></span>
           <h3 class="book-title">《鐵人三項自主訓練攻略》</h3>
           <p class="book-meta">徐國峰、羅譽寅 合著・臉譜出版・2014 年</p>
           <p class="book-desc">
@@ -421,10 +456,12 @@ src="https://www.facebook.com/tr?id=404602746416082&ev=PageView&noscript=1"
             <span class="tag">鐵人三項</span>
             <span class="tag">課表</span>
           </div>
+          <p class="buy-none">此版本已絕版，暫無網路書店連結。</p>
         </li>
 
         <li class="book-card">
           <span class="book-no">07</span>
+          <a class="book-cover" href="https://www.books.com.tw/products/0010623027" target="_blank" rel="noreferrer noopener"><img src="assets/covers/books/0010623027.png" alt="《挑戰自我的鐵人三項》 書封" loading="lazy"></a>
           <h3 class="book-title">
             《挑戰自我的鐵人三項》
             <span class="book-title-sub">2010 年初版書名為《鐵人三項》</span>
@@ -438,10 +475,12 @@ src="https://www.facebook.com/tr?id=404602746416082&ev=PageView&noscript=1"
             <span class="tag">鐵人三項</span>
             <span class="tag">入門</span>
           </div>
+          <a class="buy-link" href="https://www.books.com.tw/products/0010623027" target="_blank" rel="noreferrer noopener">購書連結 →</a>
         </li>
 
         <li class="book-card">
           <span class="book-no">08</span>
+          <span class="book-cover is-blank" aria-hidden="true"><span class="blank-title">先秦儒家水意象析論</span></span>
           <h3 class="book-title">《先秦儒家水意象析論》</h3>
           <p class="book-meta">花木蘭出版社・2011 年 3 月</p>
           <p class="book-desc">
@@ -453,6 +492,7 @@ src="https://www.facebook.com/tr?id=404602746416082&ev=PageView&noscript=1"
             <span class="tag">學術著作</span>
             <span class="tag">人文</span>
           </div>
+          <p class="buy-none">此版本已絕版，暫無網路書店連結。</p>
         </li>
 
       </ul>
@@ -476,6 +516,7 @@ src="https://www.facebook.com/tr?id=404602746416082&ev=PageView&noscript=1"
 
         <li class="book-card">
           <span class="book-no">01</span>
+          <a class="book-cover" href="https://www.books.com.tw/products/0010950446" target="_blank" rel="noreferrer noopener"><img src="assets/covers/books/0010950446.png" alt="《跑步，該怎麼跑？》 書封" loading="lazy"></a>
           <h3 class="book-title">《跑步，該怎麼跑？》</h3>
           <p class="book-orig">The Pose Method of Running</p>
           <p class="book-meta">尼可拉斯・羅曼諾夫博士（Dr. Nicholas Romanov）著・臉譜出版</p>
@@ -488,10 +529,12 @@ src="https://www.facebook.com/tr?id=404602746416082&ev=PageView&noscript=1"
             <span class="tag">跑步技術</span>
             <span class="tag">姿勢跑法</span>
           </div>
+          <a class="buy-link" href="https://www.books.com.tw/products/0010950446" target="_blank" rel="noreferrer noopener">購書連結 →</a>
         </li>
 
         <li class="book-card">
           <span class="book-no">02</span>
+          <a class="book-cover" href="https://www.books.com.tw/products/0010906271" target="_blank" rel="noreferrer noopener"><img src="assets/covers/books/0010906271.png" alt="《羅曼諾夫博士的姿勢跑法》 書封" loading="lazy"></a>
           <h3 class="book-title">《羅曼諾夫博士的姿勢跑法》</h3>
           <p class="book-orig">The Running Revolution</p>
           <p class="book-meta">羅曼諾夫、寇特・布倫加德 著・徐國峰、莊茗傑 合譯・臉譜出版・2015 年 8 月</p>
@@ -504,10 +547,13 @@ src="https://www.facebook.com/tr?id=404602746416082&ev=PageView&noscript=1"
             <span class="tag">跑步技術</span>
             <span class="tag">姿勢跑法</span>
           </div>
+          <a class="buy-link" href="https://www.books.com.tw/products/0010906271" target="_blank" rel="noreferrer noopener">購書連結 →</a>
+          <p class="buy-note">單行本已絕版，此連結為含本書的套書。</p>
         </li>
 
         <li class="book-card">
           <span class="book-no">03</span>
+          <a class="book-cover" href="https://www.books.com.tw/products/0010974086" target="_blank" rel="noreferrer noopener"><img src="assets/covers/books/0010974086.png" alt="《Pose Method 鐵人三項技術全書》 書封" loading="lazy"></a>
           <h3 class="book-title">《Pose Method 鐵人三項技術全書》</h3>
           <p class="book-orig">Pose Method of Triathlon Techniques</p>
           <p class="book-meta">羅曼諾夫博士 著・臉譜出版・2018 年初版、2023 年二版</p>
@@ -520,10 +566,12 @@ src="https://www.facebook.com/tr?id=404602746416082&ev=PageView&noscript=1"
             <span class="tag">鐵人三項</span>
             <span class="tag">技術</span>
           </div>
+          <a class="buy-link" href="https://www.books.com.tw/products/0010974086" target="_blank" rel="noreferrer noopener">購書連結 →</a>
         </li>
 
         <li class="book-card">
           <span class="book-no">04</span>
+          <a class="book-cover" href="https://www.books.com.tw/products/0010981849" target="_blank" rel="noreferrer noopener"><img src="assets/covers/books/0010981849.png" alt="《丹尼爾斯博士跑步方程式》 書封" loading="lazy"></a>
           <h3 class="book-title">《丹尼爾斯博士跑步方程式》</h3>
           <p class="book-orig">Daniels' Running Formula</p>
           <p class="book-meta">傑克・丹尼爾斯（Jack Daniels）著・第三版譯本 2014 年、第四版重譯 2024 年（臉譜出版）</p>
@@ -536,13 +584,15 @@ src="https://www.facebook.com/tr?id=404602746416082&ev=PageView&noscript=1"
             <span class="tag">跑力</span>
             <span class="tag">課表</span>
           </div>
+          <a class="buy-link" href="https://www.books.com.tw/products/0010981849" target="_blank" rel="noreferrer noopener">購書連結 →</a>
         </li>
 
         <li class="book-card">
           <span class="book-no">05</span>
+          <a class="book-cover" href="https://www.books.com.tw/products/0011010102" target="_blank" rel="noreferrer noopener"><img src="assets/covers/books/0011010102.png" alt="《自行車功率訓練全書》 書封" loading="lazy"></a>
           <h3 class="book-title">《自行車功率訓練全書》</h3>
           <p class="book-orig">Training and Racing with a Power Meter</p>
-          <p class="book-meta">杭特・艾倫、安德魯・考根博士、史蒂芬・麥奎格博士 著・臉譜出版・2023 年</p>
+          <p class="book-meta">杭特・艾倫、安德魯・考根博士、史蒂芬・麥奎格博士 著・臉譜出版・2025 年 1 月</p>
           <p class="book-desc">
             自行車功率訓練的工具書，內含功率概況分析表（相當於跑步的跑力表）、
             轉速分布圖、功率分布圖，以及強度係數 IF 與變動指數 VI 等判讀工具。
@@ -551,10 +601,12 @@ src="https://www.facebook.com/tr?id=404602746416082&ev=PageView&noscript=1"
             <span class="tag">自行車</span>
             <span class="tag">功率</span>
           </div>
+          <a class="buy-link" href="https://www.books.com.tw/products/0011010102" target="_blank" rel="noreferrer noopener">購書連結 →</a>
         </li>
 
         <li class="book-card">
           <span class="book-no">06</span>
+          <a class="book-cover" href="https://www.books.com.tw/products/0010576990" target="_blank" rel="noreferrer noopener"><img src="assets/covers/books/0010576990.png" alt="《更快更安全的赤腳跑步法》 書封" loading="lazy"></a>
           <h3 class="book-title">《更快更安全的赤腳跑步法》</h3>
           <p class="book-orig">The Barefoot Running Book</p>
           <p class="book-meta">傑森・羅比拉德（Jason Robillard）著</p>
@@ -566,10 +618,12 @@ src="https://www.facebook.com/tr?id=404602746416082&ev=PageView&noscript=1"
             <span class="tag">跑步技術</span>
             <span class="tag">赤足</span>
           </div>
+          <a class="buy-link" href="https://www.books.com.tw/products/0010576990" target="_blank" rel="noreferrer noopener">購書連結 →</a>
         </li>
 
         <li class="book-card">
           <span class="book-no">07</span>
+          <a class="book-cover" href="https://www.books.com.tw/products/0010906044" target="_blank" rel="noreferrer noopener"><img src="assets/covers/books/0010906044.png" alt="《週期化力量訓練系統》 書封" loading="lazy"></a>
           <h3 class="book-title">《週期化力量訓練系統》</h3>
           <p class="book-orig">The System: Soviet Periodization Adapted for the American Strength Coach</p>
           <p class="book-meta">強尼・帕克、艾爾・米勒、羅伯・帕納列洛 著</p>
@@ -582,10 +636,12 @@ src="https://www.facebook.com/tr?id=404602746416082&ev=PageView&noscript=1"
             <span class="tag">力量訓練</span>
             <span class="tag">週期化</span>
           </div>
+          <a class="buy-link" href="https://www.books.com.tw/products/0010906044" target="_blank" rel="noreferrer noopener">購書連結 →</a>
         </li>
 
         <li class="book-card">
           <span class="book-no">08</span>
+          <a class="book-cover" href="https://www.books.com.tw/products/0010947865" target="_blank" rel="noreferrer noopener"><img src="assets/covers/books/0010947865.png" alt="《樂齡族力量訓練的第一本書》 書封" loading="lazy"></a>
           <h3 class="book-title">《樂齡族力量訓練的第一本書》</h3>
           <p class="book-meta">佩姬・威納（Paige Waehner）著・臉譜出版・2023 年 1 月</p>
           <p class="book-desc">
@@ -596,6 +652,7 @@ src="https://www.facebook.com/tr?id=404602746416082&ev=PageView&noscript=1"
             <span class="tag">力量訓練</span>
             <span class="tag">樂齡</span>
           </div>
+          <a class="buy-link" href="https://www.books.com.tw/products/0010947865" target="_blank" rel="noreferrer noopener">購書連結 →</a>
         </li>
 
       </ul>
@@ -619,6 +676,7 @@ src="https://www.facebook.com/tr?id=404602746416082&ev=PageView&noscript=1"
 
         <li class="book-card">
           <span class="book-no">01</span>
+          <a class="book-cover" href="https://www.books.com.tw/products/0010992183" target="_blank" rel="noreferrer noopener"><img src="assets/covers/books/0010992183.png" alt="《兒童與青少年運動訓練全指南》 書封" loading="lazy"></a>
           <h3 class="book-title">
             《兒童與青少年運動訓練全指南》
             <span class="book-title-sub">奧運金牌教練教你如何幫助孩子發揮最佳運動潛力，同時健康成長</span>
@@ -634,10 +692,12 @@ src="https://www.facebook.com/tr?id=404602746416082&ev=PageView&noscript=1"
             <span class="tag">週期化</span>
             <span class="tag">策劃選書</span>
           </div>
+          <a class="buy-link" href="https://www.books.com.tw/products/0010992183" target="_blank" rel="noreferrer noopener">購書連結 →</a>
         </li>
 
         <li class="book-card">
           <span class="book-no">02</span>
+          <a class="book-cover" href="https://www.books.com.tw/products/0010961952" target="_blank" rel="noreferrer noopener"><img src="assets/covers/books/0010961952.png" alt="《公開水域游泳訓練全書》 書封" loading="lazy"></a>
           <h3 class="book-title">
             《公開水域游泳訓練全書》
             <span class="book-title-sub">從入門到精通的必備知識、技術和策略</span>
@@ -652,6 +712,7 @@ src="https://www.facebook.com/tr?id=404602746416082&ev=PageView&noscript=1"
             <span class="tag">公開水域</span>
             <span class="tag">策劃選書</span>
           </div>
+          <a class="buy-link" href="https://www.books.com.tw/products/0010961952" target="_blank" rel="noreferrer noopener">購書連結 →</a>
         </li>
 
       </ul>
@@ -676,6 +737,7 @@ src="https://www.facebook.com/tr?id=404602746416082&ev=PageView&noscript=1"
 
         <li class="book-card">
           <span class="book-no">01</span>
+          <a class="book-cover" href="https://www.books.com.tw/products/F010550001" target="_blank" rel="noreferrer noopener"><img src="assets/covers/books/F010550001.png" alt="Lore of Running 書封" loading="lazy"></a>
           <h3 class="book-title">
             Lore of Running
             <span class="book-title-sub">第四版・中文暫譯《跑步聖經》</span>
@@ -695,10 +757,12 @@ src="https://www.facebook.com/tr?id=404602746416082&ev=PageView&noscript=1"
             <span class="tag">跑步</span>
             <span class="tag">運動生理學</span>
           </div>
+          <a class="buy-link" href="https://www.books.com.tw/products/F010550001" target="_blank" rel="noreferrer noopener">購書連結 →</a>
         </li>
 
         <li class="book-card">
           <span class="book-no">02</span>
+          <a class="book-cover" href="https://www.books.com.tw/products/0010618659" target="_blank" rel="noreferrer noopener"><img src="assets/covers/books/0010618659.png" alt="《風靡全美的 MELT 零疼痛自療法》 書封" loading="lazy"></a>
           <h3 class="book-title">《風靡全美的 MELT 零疼痛自療法》</h3>
           <p class="book-orig">The MELT Method</p>
           <p class="book-meta">蘇・希茲曼（Sue Hitzmann）著・徐國峰為中文版撰推薦序</p>
@@ -717,10 +781,12 @@ src="https://www.facebook.com/tr?id=404602746416082&ev=PageView&noscript=1"
             <span class="tag">恢復</span>
             <span class="tag">筋膜</span>
           </div>
+          <a class="buy-link" href="https://www.books.com.tw/products/0010618659" target="_blank" rel="noreferrer noopener">購書連結 →</a>
         </li>
 
         <li class="book-card">
           <span class="book-no">03</span>
+          <a class="book-cover" href="https://www.books.com.tw/products/F013282315" target="_blank" rel="noreferrer noopener"><img src="assets/covers/books/F013282315.png" alt="Periodization Training for Sports 書封" loading="lazy"></a>
           <h3 class="book-title">
             Periodization Training for Sports
             <span class="book-title-sub">第三版・中文暫譯《運動員的週期化肌力訓練》</span>
@@ -743,6 +809,7 @@ src="https://www.facebook.com/tr?id=404602746416082&ev=PageView&noscript=1"
             <span class="tag">力量訓練</span>
             <span class="tag">週期化</span>
           </div>
+          <a class="buy-link" href="https://www.books.com.tw/products/F013282315" target="_blank" rel="noreferrer noopener">購書連結 →</a>
         </li>
 
       </ul>
@@ -764,7 +831,7 @@ src="https://www.facebook.com/tr?id=404602746416082&ev=PageView&noscript=1"
   <div class="foot-shell">
     <div class="foot-grid">
       <div class="foot-brand">
-        <img src="assets/kfcs-logo.png" alt="KFCS logo">
+        <img src="assets/kfcs-logo.svg" alt="KFCS logo">
         <p>把心、體能、力量與技術整合為一套可理解、可實踐、可傳承的耐力訓練系統，支持運動員進步，也支持教練成長。</p>
         <p>聯絡信箱：<a href="mailto:kuofengcoaching@gmail.com">kuofengcoaching@gmail.com</a></p>
       </div>
