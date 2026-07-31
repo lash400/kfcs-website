@@ -54,26 +54,17 @@ body {
 
 .kfcs-sitenav .nav-brand img {
   display: block;
-  width: 34px;
-  height: 34px;
+  width: 62px;
+  height: 62px;
   object-fit: contain;
 }
 
-.kfcs-sitenav .nav-brand .brand-word {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 1.5rem;
-  letter-spacing: 0.08em;
-  color: #fbf8f1;
-  line-height: 1;
-}
-
 .kfcs-sitenav .nav-brand .brand-sub {
-  font-size: 0.66rem;
+  font-size: 0.7rem;
   font-weight: 700;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.2em;
   color: #f6c213;
   display: block;
-  margin-top: 3px;
 }
 
 .kfcs-sitenav .nav-links {
@@ -272,6 +263,97 @@ body {
     width: 100%;
     justify-content: center;
     min-height: 46px;
+  }
+}
+
+/* ─────────────── 課程檔期通知（2027 招生預告） ─────────────── */
+.kfcs-notice {
+  font-family: 'Noto Sans TC', sans-serif;
+  background: linear-gradient(135deg, #141414 0%, #1d1d1d 100%);
+  border-top: 1px solid rgba(246, 194, 19, 0.28);
+  color: #ece6db;
+}
+
+.kfcs-notice .notice-shell {
+  width: min(1160px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: clamp(44px, 6vw, 72px) 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: clamp(24px, 4vw, 44px);
+}
+
+.kfcs-notice .notice-kicker {
+  display: inline-block;
+  margin-bottom: 14px;
+  color: #f6c213;
+  font-size: 0.76rem;
+  font-weight: 900;
+  letter-spacing: 0.24em;
+}
+
+.kfcs-notice .notice-title {
+  font-family: 'Noto Serif TC', serif;
+  font-size: clamp(1.28rem, 2.4vw, 1.68rem);
+  font-weight: 700;
+  line-height: 1.55;
+  color: #fbf8f1;
+  text-wrap: balance;
+}
+
+.kfcs-notice .notice-text {
+  margin-top: 12px;
+  max-width: 60ch;
+  font-family: 'Noto Serif TC', serif;
+  font-size: 1rem;
+  line-height: 2;
+  color: rgba(255, 255, 255, 0.76);
+}
+
+.kfcs-notice .notice-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 56px;
+  padding: 0 32px;
+  border-radius: 999px;
+  background: #f6c213;
+  color: #0f0f0f;
+  font-size: 0.88rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.18s ease, transform 0.18s ease;
+}
+
+.kfcs-notice .notice-btn:hover {
+  background: #ffd64b;
+  color: #0f0f0f;
+  transform: translateY(-2px);
+}
+
+.kfcs-notice .notice-mail {
+  display: block;
+  margin-top: 10px;
+  color: #f6c213;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.kfcs-notice .notice-mail:hover {
+  color: #ffd64b;
+  text-decoration: underline;
+}
+
+@media (max-width: 760px) {
+  .kfcs-notice .notice-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .kfcs-notice .notice-btn {
+    width: 100%;
   }
 }
 
