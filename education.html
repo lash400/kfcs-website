@@ -1235,6 +1235,79 @@ src="https://www.facebook.com/tr?id=404602746416082&ev=PageView&noscript=1"
     grid-template-columns: 1fr;
   }
 }
+
+/* ── 公開課程卡（課程簡章入口） ── */
+#kfcs-edu .course-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(16px, 2.2vw, 22px);
+}
+#kfcs-edu .course-card {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  padding: clamp(20px, 2.6vw, 26px);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(251, 248, 242, 0.94));
+  box-shadow: var(--shadow);
+  text-decoration: none;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+#kfcs-edu .course-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(246, 194, 19, 0.45);
+  box-shadow: 0 26px 54px rgba(15, 15, 15, 0.12);
+}
+#kfcs-edu .course-code {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  padding: 3px 12px;
+  border-radius: 999px;
+  background: #101010;
+  color: var(--yellow);
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.12em;
+}
+#kfcs-edu .course-name {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #1d1b18;
+}
+#kfcs-edu .course-desc {
+  font-size: 0.93rem;
+  line-height: 1.85;
+  color: #4f4a43;
+}
+#kfcs-edu .course-more {
+  margin-top: auto;
+  padding-top: 10px;
+  color: var(--yellow-deep);
+  font-size: 0.86rem;
+  font-weight: 800;
+}
+#kfcs-edu .course-card.is-wide {
+  grid-column: span 3;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+#kfcs-edu .course-card.is-wide .course-name { flex: 1 1 260px; }
+#kfcs-edu .course-card.is-wide .course-desc { flex: 2 1 320px; }
+#kfcs-edu .course-card.is-wide .course-more { margin-top: 0; padding-top: 0; }
+@media (max-width: 900px) {
+  #kfcs-edu .course-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  #kfcs-edu .course-card.is-wide { grid-column: span 2; }
+}
+@media (max-width: 620px) {
+  #kfcs-edu .course-grid { grid-template-columns: 1fr; }
+  #kfcs-edu .course-card.is-wide { grid-column: span 1; flex-direction: column; align-items: stretch; }
+}
 </style>
 
 <section class="kfcs-page page kfcs-education-page" id="kfcs-edu">
@@ -1244,15 +1317,16 @@ src="https://www.facebook.com/tr?id=404602746416082&ev=PageView&noscript=1"
     <span class="hero-label">KFCS EDUCATION / TRAINING</span>
     <h1 class="hero-title">
       <span class="no-break">教育訓練</span>
-      <em>企業內訓・<span class="no-break">團體講座</span>・教練培訓</em>
+      <em>公開課程・<span class="no-break">企業內訓</span>・教練培訓</em>
     </h1>
     <p class="hero-subtitle">
-      只要你想開始訓練自己、團隊或公司裡的夥伴成為一位跑者、泳者、鐵人或單車愛好者，都可以跟我們聯絡。
-      KFCS 可依企業、品牌、學校、社團與各單位需求，安排由銀牌、金牌教練或徐國峰老師主講的教育訓練內容。
+      KFCS 的訓練服務分成兩條路線：一是每年開設一次的公開實體課程，從跑步技術、力量、體能到週期化與練心，
+      循序建立完整的訓練系統；二是依企業、品牌、學校與社團需求規劃的客製化培訓，
+      由銀牌、金牌教練或徐國峰老師主講。
     </p>
     <div class="hero-meta">
+      <div class="meta-pill"><span class="dot"></span>公開課程 R1–R6</div>
       <div class="meta-pill"><span class="dot"></span>企業內訓與品牌合作</div>
-      <div class="meta-pill"><span class="dot"></span>校園講座與社團培訓</div>
       <div class="meta-pill"><span class="dot"></span>PB 班／訓練營</div>
       <div class="meta-pill"><span class="dot"></span>教練培訓制度</div>
     </div>
@@ -1263,12 +1337,72 @@ src="https://www.facebook.com/tr?id=404602746416082&ev=PageView&noscript=1"
   <div class="shell">
     <div class="sec-head">
       <span class="sec-num">01</span>
-      <h2 class="sec-title">培訓的核心與邀課對象</h2>
+      <h2 class="sec-title">公開課程與簡章</h2>
       <span class="sec-rule"></span>
     </div>
     <p class="intro-text">
-      KFCS 的主要服務之一是「培訓」。不論是企業福委會、品牌社群、校隊、社團、校園課程、教師研習，或是希望讓團隊成員更有系統開始跑步、游泳、公路車與鐵人三項訓練的各類單位，只要有明確的學習需求與訓練目標，都可以邀請 KFCS 規劃適合的教育訓練內容。
+      KFCS 每年開設一次跑步系列實體課程，共四個全天，可單日精修、四堂全修，或選擇含實習與認證的教練培訓路徑。
+      以下是各門課程的完整簡章，點進去可以看到課程目標、大綱與特色。下一梯課程尚未公告，
+      有興趣的人可以先來信登記，公告後我們會再通知你。
     </p>
+
+    <div class="course-grid" style="margin-top: 30px;">
+      <a class="course-card is-wide" href="blog/kfcs-running-course-overview.html">
+        <span class="course-code">總覽</span>
+        <span class="course-name">跑步課程總覽＆跑者培訓、教練認證</span>
+        <span class="course-desc">全年課程架構、每日課程大綱與方案說明一次看懂，先從這裡建立全貌。</span>
+        <span class="course-more">查看總覽 →</span>
+      </a>
+
+      <a class="course-card" href="blog/R1-running-course-technique.html">
+        <span class="course-code">R1</span>
+        <span class="course-name">跑步技術課程：姿勢跑法</span>
+        <span class="course-desc">從力學原理出發重建跑步本能，學習不傷、省力與跑快的移動技術。</span>
+        <span class="course-more">查看簡章 →</span>
+      </a>
+
+      <a class="course-card" href="blog/R2-running-course-strength.html">
+        <span class="course-code">R2</span>
+        <span class="course-name">跑步力量課程：跑者的力量金字塔</span>
+        <span class="course-desc">五大力量階層，把力量穩定轉化為跑步技術與動作品質。</span>
+        <span class="course-more">查看簡章 →</span>
+      </a>
+
+      <a class="course-card" href="blog/R3-running-fitness-syllabus.html">
+        <span class="course-code">R3</span>
+        <span class="course-name">跑步體能課程：能量系統與科學化訓練實務</span>
+        <span class="course-desc">用量化的方式設定訓練強度與跑量，打造扎實的體能引擎。</span>
+        <span class="course-more">查看簡章 →</span>
+      </a>
+
+      <a class="course-card" href="blog/R4-running-periodization-and-runners-heart.html">
+        <span class="course-code">R4</span>
+        <span class="course-name">跑步的週期化訓練以及練心課程</span>
+        <span class="course-desc">訓練量計算、週期規劃，以及跑者以身練心的訓練心法。</span>
+        <span class="course-more">查看簡章 →</span>
+      </a>
+
+      <a class="course-card" href="blog/R5-running-intensive-package.html">
+        <span class="course-code">R5</span>
+        <span class="course-name">四堂全修課程</span>
+        <span class="course-desc">一次修完 R1 到 R4，完整掌握技術、力量、體能與練心四大模組。</span>
+        <span class="course-more">查看簡章 →</span>
+      </a>
+
+      <a class="course-card" href="blog/R6-running-coaching-certification.html">
+        <span class="course-code">R6</span>
+        <span class="course-name">跑步教練認證課程</span>
+        <span class="course-desc">四堂完整課程加上至少三個月實習，完成後核發 KFCS 專屬編號教練證書。</span>
+        <span class="course-more">查看簡章 →</span>
+      </a>
+
+      <a class="course-card is-wide" href="blog/kfcs-registration-guide.html">
+        <span class="course-code">報名</span>
+        <span class="course-name">報名流程與注意事項</span>
+        <span class="course-desc">寄信報名、完成匯款、確認資格三步驟，以及裝備需求、退費機制與報名前必讀規範。</span>
+        <span class="course-more">查看流程 →</span>
+      </a>
+    </div>
   </div>
 </section>
 
