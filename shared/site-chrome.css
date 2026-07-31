@@ -1,0 +1,377 @@
+/* ============================================================
+   KFCS SITE CHROME — 全站共用導覽列與 FOOTER
+   獨立於各頁 scoped CSS，僅使用 .kfcs-sitenav / .kfcs-sitefooter
+   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+TC:wght@400;500;700;900&family=Noto+Serif+TC:wght@400;600;700;900&display=swap');
+
+.kfcs-sitenav,
+.kfcs-sitenav *,
+.kfcs-sitefooter,
+.kfcs-sitefooter * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+}
+
+.kfcs-sitenav .nav-menu {
+  display: contents;
+}
+
+/* ─────────────── 導覽列 ─────────────── */
+.kfcs-sitenav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  font-family: 'Noto Sans TC', sans-serif;
+  background: rgba(13, 13, 13, 0.86);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.kfcs-sitenav .nav-shell {
+  width: min(1160px, calc(100% - 40px));
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  min-height: 64px;
+}
+
+.kfcs-sitenav .nav-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  margin-right: auto;
+}
+
+.kfcs-sitenav .nav-brand img {
+  display: block;
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+}
+
+.kfcs-sitenav .nav-brand .brand-word {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 0.08em;
+  color: #fbf8f1;
+  line-height: 1;
+}
+
+.kfcs-sitenav .nav-brand .brand-sub {
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  color: #f6c213;
+  display: block;
+  margin-top: 3px;
+}
+
+.kfcs-sitenav .nav-links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  list-style: none;
+}
+
+.kfcs-sitenav .nav-links > li {
+  position: relative;
+}
+
+.kfcs-sitenav .nav-links a {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 999px;
+  color: #d7d3ca;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  transition: color 0.16s ease, background 0.16s ease;
+  white-space: nowrap;
+}
+
+.kfcs-sitenav .nav-links a:hover {
+  color: #f6c213;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.kfcs-sitenav .nav-links a.is-active {
+  color: #f6c213;
+  font-weight: 700;
+}
+
+/* 影音專區下拉 */
+.kfcs-sitenav .nav-drop {
+  position: relative;
+}
+
+.kfcs-sitenav .nav-drop > a::after {
+  content: '▾';
+  margin-left: 5px;
+  font-size: 0.7em;
+  opacity: 0.7;
+}
+
+.kfcs-sitenav .drop-panel {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%) translateY(-4px);
+  min-width: 168px;
+  padding: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  background: rgba(18, 18, 18, 0.96);
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.4);
+  list-style: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.16s ease, transform 0.16s ease, visibility 0.16s;
+}
+
+.kfcs-sitenav .nav-drop:hover .drop-panel,
+.kfcs-sitenav .nav-drop:focus-within .drop-panel {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+.kfcs-sitenav .drop-panel a {
+  display: flex;
+  width: 100%;
+  padding: 9px 14px;
+  border-radius: 10px;
+  font-size: 0.88rem;
+}
+
+/* CTA */
+.kfcs-sitenav .nav-cta {
+  display: inline-flex;
+  align-items: center;
+  min-height: 38px;
+  padding: 0 20px;
+  border-radius: 999px;
+  background: #f6c213;
+  color: #0f0f0f !important;
+  font-size: 0.84rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-decoration: none;
+  transition: background 0.16s ease, transform 0.16s ease;
+  white-space: nowrap;
+}
+
+.kfcs-sitenav .nav-cta:hover {
+  background: #ffd64b;
+  transform: translateY(-1px);
+}
+
+/* 手機版選單（checkbox 切換，無 JS） */
+.kfcs-sitenav .nav-toggle-box {
+  display: none;
+}
+
+.kfcs-sitenav .nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 42px;
+  height: 42px;
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.kfcs-sitenav .nav-toggle span {
+  display: block;
+  height: 2px;
+  border-radius: 2px;
+  background: #ece6db;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+@media (max-width: 1024px) {
+  .kfcs-sitenav .nav-toggle {
+    display: flex;
+  }
+
+  .kfcs-sitenav .nav-menu {
+    position: fixed;
+    top: 64px;
+    left: 0;
+    right: 0;
+    display: none;
+    max-height: calc(100dvh - 64px);
+    overflow-y: auto;
+    padding: 14px 20px 24px;
+    background: #0d0d0d;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.5);
+  }
+
+  .kfcs-sitenav .nav-toggle-box:checked ~ .nav-menu {
+    display: block;
+  }
+
+  .kfcs-sitenav .nav-toggle-box:checked ~ .nav-toggle span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .kfcs-sitenav .nav-toggle-box:checked ~ .nav-toggle span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .kfcs-sitenav .nav-toggle-box:checked ~ .nav-toggle span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  .kfcs-sitenav .nav-links {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2px;
+  }
+
+  .kfcs-sitenav .nav-links a {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 12px;
+    font-size: 1rem;
+  }
+
+  .kfcs-sitenav .nav-drop > a::after {
+    content: '';
+  }
+
+  .kfcs-sitenav .drop-panel {
+    position: static;
+    transform: none;
+    opacity: 1;
+    visibility: visible;
+    min-width: 0;
+    padding: 0 0 0 16px;
+    border: none;
+    background: none;
+    box-shadow: none;
+  }
+
+  .kfcs-sitenav .nav-cta {
+    margin-top: 12px;
+    width: 100%;
+    justify-content: center;
+    min-height: 46px;
+  }
+}
+
+/* ─────────────── FOOTER ─────────────── */
+.kfcs-sitefooter {
+  font-family: 'Noto Sans TC', sans-serif;
+  background: linear-gradient(180deg, #121212 0%, #0c0c0c 100%);
+  border-top: 2px solid rgba(246, 194, 19, 0.5);
+  color: #b8b3aa;
+}
+
+.kfcs-sitefooter .foot-shell {
+  width: min(1160px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: clamp(40px, 6vw, 64px) 0 28px;
+}
+
+.kfcs-sitefooter .foot-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr;
+  gap: clamp(28px, 4vw, 48px);
+}
+
+.kfcs-sitefooter .foot-brand img {
+  display: block;
+  width: 46px;
+  height: 46px;
+  object-fit: contain;
+  margin-bottom: 14px;
+}
+
+.kfcs-sitefooter .foot-brand .brand-word {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.7rem;
+  letter-spacing: 0.08em;
+  color: #fbf8f1;
+  line-height: 1.2;
+}
+
+.kfcs-sitefooter .foot-brand p {
+  margin-top: 12px;
+  max-width: 34ch;
+  font-family: 'Noto Serif TC', serif;
+  font-size: 0.92rem;
+  line-height: 1.95;
+}
+
+.kfcs-sitefooter .foot-brand a {
+  color: #f6c213;
+  text-decoration: none;
+}
+
+.kfcs-sitefooter .foot-brand a:hover {
+  text-decoration: underline;
+}
+
+.kfcs-sitefooter .foot-col h3 {
+  margin-bottom: 16px;
+  color: #f6c213;
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.22em;
+}
+
+.kfcs-sitefooter .foot-col ul {
+  list-style: none;
+  display: grid;
+  gap: 9px;
+}
+
+.kfcs-sitefooter .foot-col a {
+  color: #b8b3aa;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: color 0.16s ease;
+}
+
+.kfcs-sitefooter .foot-col a:hover {
+  color: #fbf8f1;
+}
+
+.kfcs-sitefooter .foot-bottom {
+  margin-top: clamp(32px, 5vw, 48px);
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 0.8rem;
+  color: #7c766c;
+}
+
+.kfcs-sitefooter .foot-bottom .motto {
+  letter-spacing: 0.18em;
+}
+
+@media (max-width: 860px) {
+  .kfcs-sitefooter .foot-grid {
+    grid-template-columns: 1fr;
+  }
+}

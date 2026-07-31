@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>Podcast 專區｜KFCS</title>
+<meta name="description" content="收錄徐國峰上過的 Podcast 節目：戴上耳機，從訓練科學一路聽到以身練心，依五大主題分類快速篩選。">
+<meta property="og:title" content="Podcast 專區｜KFCS">
+<meta property="og:description" content="收錄徐國峰上過的 Podcast 節目：戴上耳機，從訓練科學一路聽到以身練心，依五大主題分類快速篩選。">
+<meta property="og:image" content="https://lash400.github.io/kfcs-website/assets/kfcs-logo.png">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/png" href="assets/kfcs-logo.png">
+<link rel="stylesheet" href="shared/site-chrome.css">
+</head>
+<body>
+<nav class="kfcs-sitenav">
+  <div class="nav-shell">
+    <a class="nav-brand" href="index.html">
+      <img src="assets/kfcs-logo.png" alt="KFCS logo">
+      <span><span class="brand-word">KFCS</span><span class="brand-sub">耐力訓練系統</span></span>
+    </a>
+    <input class="nav-toggle-box" type="checkbox" id="kfcs-nav-toggle">
+    <label class="nav-toggle" for="kfcs-nav-toggle" aria-label="開啟選單"><span></span><span></span><span></span></label>
+    <div class="nav-menu">
+      <ul class="nav-links">
+        <li><a href="index.html">首頁</a></li>
+        <li><a href="courses.html">課程總覽</a></li>
+        <li><a href="coach-certification.html">教練認證</a></li>
+        <li><a href="education.html">教育訓練</a></li>
+        <li><a href="blog.html">部落格</a></li>
+        <li class="nav-drop"><a class="is-active" href="youtube.html">影音專區</a>
+          <ul class="drop-panel">
+            <li><a href="youtube.html">YouTube 專區</a></li>
+            <li><a href="podcast.html">Podcast 專區</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html">關於我們</a></li>
+        <li><a class="nav-cta" href="blog/kfcs-registration-guide.html">立即報名</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '404602746416082');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=404602746416082&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+TC:wght@400;500;700;900&family=Noto+Serif+TC:wght@400;600;700;900&display=swap');
+
+#kfcs-pod {
+  --yellow: #f6c213;
+  --yellow-deep: #8d6600;
+  --black: #101010;
+  --line: #e6ded2;
+  --muted: #6d675f;
+  --white: #fbf8f1;
+  --body-text: #181715;
+  --shadow: 0 24px 56px rgba(15, 15, 15, 0.08);
+  --c-engine-bg: #e3f3e8; --c-engine-fg: #1d7a45;
+  --c-chain-bg: #fde7e1;  --c-chain-fg: #b23a1f;
+  --c-craft-bg: #e3edfb;  --c-craft-fg: #1f5fae;
+  --c-mind-bg: #efe6f7;   --c-mind-fg: #6b3fa0;
+  --c-pose-bg: #fff0d2;   --c-pose-fg: #9a6b00;
+
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 16px;
+  line-height: 1.85;
+  color: var(--body-text);
+  -webkit-font-smoothing: antialiased;
+  background:
+    radial-gradient(circle at top left, rgba(246, 194, 19, 0.12), transparent 32%),
+    linear-gradient(180deg, #f4eee5 0, #fffaf3 20rem, #fff 52rem);
+  overflow-x: hidden;
+}
+
+#kfcs-pod *,
+#kfcs-pod *::before,
+#kfcs-pod *::after { box-sizing: border-box; }
+
+#kfcs-pod h1, #kfcs-pod h2, #kfcs-pod h3, #kfcs-pod p,
+#kfcs-pod ul, #kfcs-pod figure { margin: 0; }
+#kfcs-pod ul { list-style: none; padding: 0; }
+#kfcs-pod img { display: block; max-width: 100%; height: auto; }
+#kfcs-pod a { color: inherit; text-decoration: none; }
+
+#kfcs-pod .shell { width: min(1160px, calc(100% - 56px)); margin: 0 auto; }
+
+/* ---------- HERO ---------- */
+#kfcs-pod .hero {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background:
+    radial-gradient(circle at right top, rgba(246, 194, 19, 0.2), transparent 30%),
+    linear-gradient(118deg, rgba(10, 10, 10, 0.92), rgba(10, 10, 10, 0.64) 48%, rgba(10, 10, 10, 0.82)),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0));
+}
+#kfcs-pod .hero::after {
+  content: '';
+  position: absolute;
+  right: clamp(-72px, -4vw, -24px);
+  bottom: clamp(-88px, -6vw, -26px);
+  width: clamp(200px, 24vw, 280px);
+  height: clamp(200px, 24vw, 280px);
+  background: radial-gradient(circle, rgba(246, 194, 19, 0.2), rgba(246, 194, 19, 0.02) 62%, transparent 72%);
+  pointer-events: none;
+}
+#kfcs-pod .hero-inner {
+  position: relative;
+  z-index: 1;
+  padding-top: clamp(96px, 12vw, 156px);
+  padding-bottom: clamp(54px, 8vw, 96px);
+}
+#kfcs-pod .hero-kicker {
+  display: block;
+  margin-bottom: 16px;
+  color: var(--yellow);
+  font-size: 0.8rem;
+  font-weight: 900;
+  letter-spacing: 0.2em;
+}
+#kfcs-pod .hero-title {
+  max-width: 18ch;
+  font-family: 'Bebas Neue', 'Noto Serif TC', serif;
+  font-size: clamp(3.1rem, 8.8vw, 5.8rem);
+  line-height: 0.94;
+  letter-spacing: 0.04em;
+  color: var(--white);
+}
+#kfcs-pod .hero-title em {
+  display: block;
+  margin-top: 16px;
+  font-family: 'Noto Serif TC', serif;
+  font-style: normal;
+  font-size: 0.3em;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  line-height: 1.4;
+  color: var(--yellow);
+}
+#kfcs-pod .hero-text {
+  max-width: 62ch;
+  margin-top: 24px;
+  color: #ece6db;
+  font-family: 'Noto Serif TC', serif;
+  font-size: clamp(0.98rem, 1.2vw, 1.08rem);
+  line-height: 1.95;
+}
+#kfcs-pod .hero-text strong { color: var(--white); font-weight: 700; }
+#kfcs-pod .hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+#kfcs-pod .meta-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #d7d3ca;
+  font-size: 0.84rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  backdrop-filter: blur(10px);
+}
+#kfcs-pod .meta-pill .dot { width: 6px; height: 6px; border-radius: 999px; background: var(--yellow); }
+#kfcs-pod .hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 30px;
+}
+#kfcs-pod .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 54px;
+  padding: 0 30px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font-size: 0.86rem;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  box-shadow: 0 12px 30px rgba(15, 15, 15, 0.12);
+  cursor: pointer;
+  transition: transform 0.18s ease, background 0.18s ease, border-color 0.18s ease, color 0.18s ease;
+}
+#kfcs-pod .btn:hover { transform: translateY(-2px); }
+#kfcs-pod .btn-primary { background: var(--yellow); color: var(--black); }
+#kfcs-pod .btn-primary:hover { background: #ffd64b; color: var(--black); }
+#kfcs-pod .btn-ghost { background: rgba(255, 255, 255, 0.06); border-color: rgba(255, 255, 255, 0.2); color: var(--white); }
+#kfcs-pod .btn-ghost:hover { border-color: rgba(246, 194, 19, 0.5); color: var(--yellow); }
+
+/* ---------- SECTION SHELL ---------- */
+#kfcs-pod .section { padding: clamp(54px, 7vw, 96px) clamp(24px, 6vw, 56px); }
+#kfcs-pod .section > .shell { width: min(1160px, 100%); }
+#kfcs-pod .section.soft { background: linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(247, 242, 234, 0.96)); }
+#kfcs-pod .section.dark { background: linear-gradient(145deg, #111111 0%, #1d1d1d 100%); color: var(--white); }
+#kfcs-pod .section-head {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: clamp(22px, 3.5vw, 34px);
+}
+#kfcs-pod .section-index {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 0.12em;
+  color: var(--yellow-deep);
+}
+#kfcs-pod .section.dark .section-index { color: var(--yellow); }
+#kfcs-pod .section-title {
+  font-family: 'Noto Serif TC', serif;
+  font-size: clamp(1.45rem, 2.5vw, 1.82rem);
+  font-weight: 700;
+  color: inherit;
+}
+#kfcs-pod .section-rule {
+  flex: 1;
+  height: 2px;
+  min-width: 48px;
+  background: linear-gradient(90deg, rgba(246, 194, 19, 0.55), rgba(230, 222, 210, 0.92));
+}
+#kfcs-pod .lead {
+  max-width: 74ch;
+  padding: 24px 0 24px 24px;
+  border-left: 4px solid var(--yellow);
+  border-radius: 0 20px 20px 0;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.36));
+  font-family: 'Noto Serif TC', serif;
+}
+
+/* ---------- TAG LEGEND ---------- */
+#kfcs-pod .legend-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: clamp(12px, 1.6vw, 18px);
+  margin-top: 30px;
+}
+#kfcs-pod .legend-card {
+  padding: clamp(18px, 2vw, 24px);
+  border-radius: 22px;
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(251, 248, 242, 0.94));
+  box-shadow: var(--shadow);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+#kfcs-pod .legend-card:hover { transform: translateY(-4px); box-shadow: 0 28px 60px rgba(15, 15, 15, 0.12); }
+#kfcs-pod .legend-mark { display: block; margin-bottom: 12px; font-size: 0.66rem; font-weight: 900; letter-spacing: 0.16em; color: var(--yellow-deep); }
+#kfcs-pod .legend-name {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  font-family: 'Noto Serif TC', serif;
+  font-size: 1.14rem;
+  font-weight: 700;
+}
+#kfcs-pod .legend-name .swatch { width: 12px; height: 12px; border-radius: 4px; }
+#kfcs-pod .legend-desc { font-size: 0.86rem; color: var(--muted); line-height: 1.7; }
+
+/* ---------- FILTER CONTROLS ---------- */
+#kfcs-pod .filter-input {
+  position: absolute;
+  width: 1px; height: 1px;
+  margin: -1px; padding: 0; border: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+#kfcs-pod .media-controls { display: flex; flex-direction: column; gap: 14px; margin-bottom: clamp(24px, 3vw, 34px); }
+#kfcs-pod .filter-row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+#kfcs-pod .filter-legend {
+  min-width: 52px;
+  margin-right: 4px;
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.16em;
+  color: var(--muted);
+}
+#kfcs-pod .filter-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--body-text);
+  font-size: 0.84rem;
+  font-weight: 700;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.16s ease, border-color 0.16s ease, color 0.16s ease;
+}
+#kfcs-pod .filter-pill:hover { border-color: var(--yellow); }
+#kfcs-pod .filter-pill .dot { width: 9px; height: 9px; border-radius: 999px; }
+
+/* active states */
+#kfcs-pod .media-section:has(#pod-all:checked)    label[for="pod-all"],
+#kfcs-pod .media-section:has(#pod-engine:checked) label[for="pod-engine"],
+#kfcs-pod .media-section:has(#pod-chain:checked)  label[for="pod-chain"],
+#kfcs-pod .media-section:has(#pod-craft:checked)  label[for="pod-craft"],
+#kfcs-pod .media-section:has(#pod-mind:checked)   label[for="pod-mind"],
+#kfcs-pod .media-section:has(#pod-pose:checked)   label[for="pod-pose"] {
+  background: var(--yellow);
+  border-color: var(--yellow);
+  color: var(--black);
+}
+
+/* filtering rules */
+#kfcs-pod .media-section:has(#pod-engine:checked) .pod-row:not(.t-engine) { display: none; }
+#kfcs-pod .media-section:has(#pod-chain:checked)  .pod-row:not(.t-chain)  { display: none; }
+#kfcs-pod .media-section:has(#pod-craft:checked)  .pod-row:not(.t-craft)  { display: none; }
+#kfcs-pod .media-section:has(#pod-mind:checked)   .pod-row:not(.t-mind)   { display: none; }
+#kfcs-pod .media-section:has(#pod-pose:checked)   .pod-row:not(.t-pose)   { display: none; }
+
+/* ---------- PODCAST LIST (image-free) ---------- */
+#kfcs-pod .pod-list { display: flex; flex-direction: column; gap: 14px; }
+#kfcs-pod .pod-row {
+  display: grid;
+  grid-template-columns: 244px 1fr;
+  gap: clamp(18px, 2.6vw, 38px);
+  align-items: start;
+  padding: clamp(20px, 2.4vw, 26px) clamp(22px, 2.6vw, 30px);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--yellow);
+  border-radius: 18px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(251, 248, 242, 0.94));
+  box-shadow: var(--shadow);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-left-color 0.18s ease;
+}
+#kfcs-pod .pod-row:hover { transform: translateY(-3px); box-shadow: 0 28px 60px rgba(15, 15, 15, 0.12); border-left-color: #ffd64b; }
+
+#kfcs-pod .pod-aside { display: flex; gap: 12px; align-items: flex-start; min-width: 0; }
+#kfcs-pod .pod-badge {
+  flex: none;
+  width: 42px; height: 42px;
+  border-radius: 999px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.15rem;
+  background: linear-gradient(150deg, #161616, #2c2c2c);
+  color: var(--yellow);
+}
+#kfcs-pod .pod-aside-text { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+#kfcs-pod .pod-show { font-family: 'Noto Serif TC', serif; font-size: 1.04rem; font-weight: 700; line-height: 1.4; color: var(--body-text); }
+#kfcs-pod .pod-ep { font-size: 0.72rem; font-weight: 900; letter-spacing: 0.1em; color: var(--yellow-deep); }
+
+#kfcs-pod .pod-main { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+#kfcs-pod .pod-title { font-family: 'Noto Serif TC', serif; font-size: 1.1rem; font-weight: 700; line-height: 1.5; color: var(--body-text); }
+#kfcs-pod .pod-desc { font-size: 0.88rem; line-height: 1.75; color: var(--muted); }
+#kfcs-pod .pod-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+#kfcs-pod .chip { display: inline-block; padding: 3px 10px; border-radius: 999px; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.03em; }
+#kfcs-pod .chip.t-engine { background: var(--c-engine-bg); color: var(--c-engine-fg); }
+#kfcs-pod .chip.t-chain  { background: var(--c-chain-bg);  color: var(--c-chain-fg); }
+#kfcs-pod .chip.t-craft  { background: var(--c-craft-bg);  color: var(--c-craft-fg); }
+#kfcs-pod .chip.t-mind   { background: var(--c-mind-bg);   color: var(--c-mind-fg); }
+#kfcs-pod .chip.t-pose   { background: var(--c-pose-bg);   color: var(--c-pose-fg); }
+#kfcs-pod .pod-foot { display: flex; align-items: center; gap: 8px; margin-top: 2px; font-size: 0.78rem; color: var(--muted); }
+#kfcs-pod .pod-listen { margin-left: auto; color: var(--yellow-deep); font-weight: 800; }
+#kfcs-pod .pod-row:hover .pod-listen { text-decoration: underline; }
+
+/* ---------- CTA ---------- */
+#kfcs-pod .cta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(238px, 1fr));
+  gap: clamp(18px, 2.4vw, 26px);
+}
+#kfcs-pod .cta-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: clamp(22px, 3vw, 30px);
+  border-radius: 28px;
+  background: linear-gradient(160deg, rgba(17, 17, 17, 0.96), rgba(31, 31, 31, 0.92));
+  border: 1px solid #262626;
+  box-shadow: var(--shadow);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+#kfcs-pod .cta-card:hover { transform: translateY(-4px); box-shadow: 0 28px 60px rgba(15, 15, 15, 0.12); }
+#kfcs-pod .cta-label { font-size: 0.72rem; font-weight: 900; letter-spacing: 0.18em; color: var(--yellow); }
+#kfcs-pod .cta-title { font-family: 'Noto Serif TC', serif; font-size: 1.2rem; font-weight: 700; color: var(--white); }
+#kfcs-pod .cta-card p { font-size: 0.9rem; color: #cfcabf; line-height: 1.8; }
+#kfcs-pod .cta-link { margin-top: auto; padding-top: 12px; display: inline-flex; align-items: center; gap: 8px; color: var(--yellow); font-size: 0.88rem; font-weight: 800; }
+#kfcs-pod .cta-link:hover { text-decoration: underline; }
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 980px) {
+  #kfcs-pod .legend-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 720px) {
+  #kfcs-pod .shell { width: min(1160px, calc(100% - 32px)); }
+  #kfcs-pod .section { padding-inline: 20px; }
+  #kfcs-pod .hero-actions { flex-direction: column; }
+  #kfcs-pod .hero-actions .btn { width: 100%; }
+  #kfcs-pod .pod-row { grid-template-columns: 1fr; gap: 14px; }
+}
+@media (max-width: 540px) {
+  #kfcs-pod .legend-grid { grid-template-columns: 1fr; }
+  #kfcs-pod .hero-title { font-size: clamp(2.3rem, 12vw, 3.2rem); }
+  #kfcs-pod .section-title { font-size: 1.24rem; }
+}
+</style>
+
+<section class="kfcs-page page kfcs-pod" id="kfcs-pod">
+
+  <!-- ===================== HERO ===================== -->
+  <header class="hero">
+    <div class="shell hero-inner">
+      <span class="hero-kicker">KFCS MEDIA ・ Podcast 專區</span>
+      <h1 class="hero-title">
+        Podcast 專區
+        <em>戴上耳機聽科學化訓練心法。</em>
+      </h1>
+      <p class="hero-text">
+        <strong>徐國峰</strong>——運動科學教練、姿勢跑法推廣者、KFCS 跑力提升訓練系統創立者。
+        這裡收錄他上過的 Podcast 節目：戴上耳機，從訓練科學一路聽到以身練心。想用看的，歡迎前往 YouTube 專區。
+      </p>
+      <div class="hero-meta">
+        <div class="meta-pill"><span class="dot"></span>17 集 Podcast</div>
+        <div class="meta-pill"><span class="dot"></span>Apple Podcasts</div>
+        <div class="meta-pill"><span class="dot"></span>戴上耳機就能聽</div>
+      </div>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="about.html">認識 KFCS</a>
+        <a class="btn btn-ghost" href="courses.html">探索課程</a>
+        <a class="btn btn-ghost" href="youtube.html">前往 YouTube 專區</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== 標籤 × KFCS 理念 ===================== -->
+  <section class="section soft" id="topics">
+    <div class="shell">
+      <div class="section-head">
+        <span class="section-index">01</span>
+        <h2 class="section-title">用五個主題，找到你想聽的</h2>
+        <span class="section-rule"></span>
+      </div>
+      <p class="lead">
+        這五個主題不是隨意分類，而正好對應 KFCS 理解訓練的框架：從<strong>心</strong>出發，串起<strong>體能、力量、技術</strong>，
+        再加上徐國峰最具代表性的<strong>姿勢跑法</strong>。下面每一集都標好了主題，點下方的標籤就能快速篩選。
+      </p>
+
+      <div class="legend-grid">
+        <article class="legend-card">
+          <span class="legend-mark">ENGINE</span>
+          <h3 class="legend-name"><span class="swatch" style="background:var(--c-engine-fg)"></span>體能</h3>
+          <p class="legend-desc">心率、能量代謝與有氧基礎，談「跑量、強度與恢復」如何科學分配。</p>
+        </article>
+        <article class="legend-card">
+          <span class="legend-mark">CHAIN</span>
+          <h3 class="legend-name"><span class="swatch" style="background:var(--c-chain-fg)"></span>力量</h3>
+          <p class="legend-desc">核心穩定與動力鏈，讓能量穩定轉成動作、避免抽筋與受傷。</p>
+        </article>
+        <article class="legend-card">
+          <span class="legend-mark">CRAFT</span>
+          <h3 class="legend-name"><span class="swatch" style="background:var(--c-craft-fg)"></span>技術</h3>
+          <p class="legend-desc">動作品質與跑步經濟性，用對的方法跑得更省力、更流暢。</p>
+        </article>
+        <article class="legend-card">
+          <span class="legend-mark">MINDSET</span>
+          <h3 class="legend-name"><span class="swatch" style="background:var(--c-mind-fg)"></span>心</h3>
+          <p class="legend-desc">以身練心、覺察與心流，把跑步從忍耐變成可長期享受的事。</p>
+        </article>
+        <article class="legend-card">
+          <span class="legend-mark">POSE METHOD</span>
+          <h3 class="legend-name"><span class="swatch" style="background:var(--c-pose-fg)"></span>姿勢跑法</h3>
+          <p class="legend-desc">善用重力、專注拉起，徐國峰最具代表性的省力不受傷跑姿心法。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 節目清單 ===================== -->
+  <section class="section media-section" id="library">
+
+    <input class="filter-input" type="radio" name="kfcs-podtopic" id="pod-all" checked>
+    <input class="filter-input" type="radio" name="kfcs-podtopic" id="pod-engine">
+    <input class="filter-input" type="radio" name="kfcs-podtopic" id="pod-chain">
+    <input class="filter-input" type="radio" name="kfcs-podtopic" id="pod-craft">
+    <input class="filter-input" type="radio" name="kfcs-podtopic" id="pod-mind">
+    <input class="filter-input" type="radio" name="kfcs-podtopic" id="pod-pose">
+
+    <div class="shell">
+      <div class="section-head">
+        <span class="section-index">02</span>
+        <h2 class="section-title">所有節目</h2>
+        <span class="section-rule"></span>
+      </div>
+
+      <div class="media-controls">
+        <div class="filter-row">
+          <span class="filter-legend">主題</span>
+          <label class="filter-pill" for="pod-all">全部主題</label>
+          <label class="filter-pill" for="pod-engine"><span class="dot" style="background:var(--c-engine-fg)"></span>體能</label>
+          <label class="filter-pill" for="pod-chain"><span class="dot" style="background:var(--c-chain-fg)"></span>力量</label>
+          <label class="filter-pill" for="pod-craft"><span class="dot" style="background:var(--c-craft-fg)"></span>技術</label>
+          <label class="filter-pill" for="pod-mind"><span class="dot" style="background:var(--c-mind-fg)"></span>心</label>
+          <label class="filter-pill" for="pod-pose"><span class="dot" style="background:var(--c-pose-fg)"></span>姿勢跑法</label>
+        </div>
+      </div>
+
+      <div class="pod-list">
+
+        <!-- 1. 肉腳的跑步人蔘 EP.74 -->
+        <a class="pod-row t-mind" href="https://podcasts.apple.com/tw/podcast/id1571882607?i=1000579872933" target="_blank" rel="noreferrer">
+          <div class="pod-aside">
+            <span class="pod-badge">🎧</span>
+            <div class="pod-aside-text">
+              <span class="pod-show">肉腳的跑步人蔘</span>
+              <span class="pod-ep">EP.74</span>
+            </div>
+          </div>
+          <div class="pod-main">
+            <h3 class="pod-title">不只是教練：從「教練的教練」談訓練哲學與跑步之美</h3>
+            <p class="pod-desc">偏向國峰老師的背景與訓練哲學：從十八歲投入耐力運動、擔任鐵人隊教練，到成為「教練的教練」與科學的「轉譯者」；也談跑步之美三層次，最高是「神馳」。</p>
+            <div class="pod-tags"><span class="chip t-mind">心</span></div>
+            <div class="pod-foot"><span>Apple Podcasts</span><span class="pod-listen">收聽 →</span></div>
+          </div>
+        </a>
+
+        <!-- 2. 肉腳的跑步人蔘 EP.73 -->
+        <a class="pod-row t-pose t-craft" href="https://podcasts.apple.com/tw/podcast/id1571882607?i=1000579134689" target="_blank" rel="noreferrer">
+          <div class="pod-aside">
+            <span class="pod-badge">🎧</span>
+            <div class="pod-aside-text">
+              <span class="pod-show">肉腳的跑步人蔘</span>
+              <span class="pod-ep">EP.73</span>
+            </div>
+          </div>
+          <div class="pod-main">
+            <h3 class="pod-title">當跑者擁有武功秘笈之後…姿勢跑法與 Pose Method</h3>
+            <p class="pod-desc">聚焦姿勢跑法。談國峰老師讀到 Romanov 博士的 Pose Method 後如何投入練習與翻譯，並解釋姿勢跑法的核心概念，以及跑步與芭蕾原理的相通之處。</p>
+            <div class="pod-tags"><span class="chip t-pose">姿勢跑法</span><span class="chip t-craft">技術</span></div>
+            <div class="pod-foot"><span>Apple Podcasts</span><span class="pod-listen">收聽 →</span></div>
+          </div>
+        </a>
+
+        <!-- 3. 肉腳的跑步人蔘 EP.142 -->
+        <a class="pod-row t-pose t-craft" href="https://podcasts.apple.com/tw/podcast/id1571882607?i=1000640845299" target="_blank" rel="noreferrer">
+          <div class="pod-aside">
+            <span class="pod-badge">🎧</span>
+            <div class="pod-aside-text">
+              <span class="pod-show">肉腳的跑步人蔘</span>
+              <span class="pod-ep">EP.142</span>
+            </div>
+          </div>
+          <div class="pod-main">
+            <h3 class="pod-title">你真的了解跑步時是怎麼「移動」的嗎？談 Pose Method 鐵人三項技術</h3>
+            <p class="pod-desc">聚焦跑步與三鐵技術的「移動本質」。談《POSE METHOD 鐵人三項技術全書》：效率不只靠跑量或肌力，而是善用重力、掌握關鍵姿勢、借力使力，提升移動效率。</p>
+            <div class="pod-tags"><span class="chip t-pose">姿勢跑法</span><span class="chip t-craft">技術</span></div>
+            <div class="pod-foot"><span>Apple Podcasts</span><span class="pod-listen">收聽 →</span></div>
+          </div>
+        </a>
+
+        <!-- 4. 肉腳的跑步人蔘 EP.212 (Firstory) -->
+        <a class="pod-row t-engine t-chain t-craft t-mind" href="https://open.firstory.me/story/cmaav555i002701yzc6tq9nye" target="_blank" rel="noreferrer">
+          <div class="pod-aside">
+            <span class="pod-badge">🎧</span>
+            <div class="pod-aside-text">
+              <span class="pod-show">肉腳的跑步人蔘</span>
+              <span class="pod-ep">EP.212</span>
+            </div>
+          </div>
+          <div class="pod-main">
+            <h3 class="pod-title">如果有一本線上跑步百科全書…《跑力提升：科學化跑步訓練》線上課</h3>
+            <p class="pod-desc">《跑力提升：科學化跑步訓練》線上課介紹。從常見問題切入——加跑量一定進步嗎？跑快要跨大步嗎？整理課程如何從體能、力量、技術、心志四面向幫助跑者。</p>
+            <div class="pod-tags"><span class="chip t-engine">體能</span><span class="chip t-chain">力量</span><span class="chip t-craft">技術</span><span class="chip t-mind">心</span></div>
+            <div class="pod-foot"><span>Firstory</span><span class="pod-listen">收聽 →</span></div>
+          </div>
+        </a>
+
+        <!-- 5. 肉腳的跑步人蔘 EP.247 -->
+        <a class="pod-row t-engine t-mind" href="https://podcasts.apple.com/tw/podcast/id1571882607?i=1000745677169" target="_blank" rel="noreferrer">
+          <div class="pod-aside">
+            <span class="pod-badge">🎧</span>
+            <div class="pod-aside-text">
+              <span class="pod-show">肉腳的跑步人蔘</span>
+              <span class="pod-ep">EP.247</span>
+            </div>
+          </div>
+          <div class="pod-main">
+            <h3 class="pod-title">全馬不能破 2 小時只是一種心理限制？談跑力與成績推估</h3>
+            <p class="pod-desc">聚焦「跑力」與成績推估。談跑力表如何理解各距離 PB 的關係，用 RQ「當前跑力 vs. 體能指數」散布圖調整課表、降低受傷，後段延伸到全馬破 2 的討論。</p>
+            <div class="pod-tags"><span class="chip t-engine">體能</span><span class="chip t-mind">心</span></div>
+            <div class="pod-foot"><span>Apple Podcasts</span><span class="pod-listen">收聽 →</span></div>
+          </div>
+        </a>
+
+        <!-- 6. 張修修 EP92 -->
+        <a class="pod-row t-mind t-engine" href="https://podcasts.apple.com/tw/podcast/id1496354494?i=1000706654057" target="_blank" rel="noreferrer">
+          <div class="pod-aside">
+            <span class="pod-badge">🎧</span>
+            <div class="pod-aside-text">
+              <span class="pod-show">張修修的不正常人類研究所</span>
+              <span class="pod-ep">EP92</span>
+            </div>
+          </div>
+          <div class="pod-main">
+            <h3 class="pod-title">徐國峰：隱居花蓮，結合西方運動科學和東方儒道思想的跑步哲人</h3>
+            <p class="pod-desc">在花蓮隱居十餘年的跑步哲人，首度完整公開結合「西方運動科學」與「東方儒道思想」的 KFCS 以身練心法門，也為新手拆解「原地跑」與「超慢跑」的無痛入門。</p>
+            <div class="pod-tags"><span class="chip t-mind">心</span><span class="chip t-engine">體能</span></div>
+            <div class="pod-foot"><span>Apple Podcasts</span><span class="pod-listen">收聽 →</span></div>
+          </div>
+        </a>
+
+        <!-- 7. 吳淡如 EP2069 -->
+        <a class="pod-row t-engine t-mind" href="https://podcasts.apple.com/tw/podcast/id1536242998?i=1000721877619" target="_blank" rel="noreferrer">
+          <div class="pod-aside">
+            <span class="pod-badge">🎧</span>
+            <div class="pod-aside-text">
+              <span class="pod-show">吳淡如人生實用商學院</span>
+              <span class="pod-ep">EP2069</span>
+            </div>
+          </div>
+          <div class="pod-main">
+            <h3 class="pod-title">【吳淡如 X 徐國峰】跑得多不如跑得巧，教練的教練教你精準跑</h3>
+            <p class="pod-desc">「別用商業上的『狼性』去摧毀身體。」拒絕盲目追跑量的垃圾里程，改用科學化的「質」精準跑；有紀律分配高低強度、規律作息，健康也能像複利般累積。</p>
+            <div class="pod-tags"><span class="chip t-engine">體能</span><span class="chip t-mind">心</span></div>
+            <div class="pod-foot"><span>Apple Podcasts</span><span class="pod-listen">收聽 →</span></div>
+          </div>
+        </a>
+
+        <!-- 8. 跑步不要聽 ep243 -->
+        <a class="pod-row t-craft t-pose" href="https://podcasts.apple.com/tw/podcast/id1530709615?i=1000706605014" target="_blank" rel="noreferrer">
+          <div class="pod-aside">
+            <span class="pod-badge">🎧</span>
+            <div class="pod-aside-text">
+              <span class="pod-show">跑步不要聽</span>
+              <span class="pod-ep">ep. 243</span>
+            </div>
+          </div>
+          <div class="pod-main">
+            <h3 class="pod-title">其實你不一定要做馬克操 ft. 徐國峰</h3>
+            <p class="pod-desc">「其實，你不一定要做馬克操！」與其死磕公式化暖身、落入錯誤代償，不如真正理解身體的「知覺」與「重力」，精準找到屬於自己的跑步經濟性。</p>
+            <div class="pod-tags"><span class="chip t-craft">技術</span><span class="chip t-pose">姿勢跑法</span></div>
+            <div class="pod-foot"><span>Apple Podcasts</span><span class="pod-listen">收聽 →</span></div>
+          </div>
+        </a>
+
+        <!-- 9. 哇賽心觀點 ep154 -->
+        <a class="pod-row t-mind" href="https://podcasts.apple.com/tw/podcast/id1500162537?i=1000706721281" target="_blank" rel="noreferrer">
+          <div class="pod-aside">
+            <span class="pod-badge">🎧</span>
+            <div class="pod-aside-text">
+              <span class="pod-show">哇賽心觀點</span>
+              <span class="pod-ep">ep154</span>
+            </div>
+          </div>
+          <div class="pod-main">
+            <h3 class="pod-title">跑進心流，覺察每一步的愉悅累積 ft. 徐國峰</h3>
+            <p class="pod-desc">真正的跑步不是痛苦放空，而是與身體的「深度內觀」。細品每次呼吸、腳掌落地的體感與肌肉的緊繃放鬆，那些枯燥的移動，都會轉化為心流的愉悅累積。</p>
+            <div class="pod-tags"><span class="chip t-mind">心</span></div>
+            <div class="pod-foot"><span>Apple Podcasts</span><span class="pod-listen">收聽 →</span></div>
+          </div>
+        </a>
+
+        <!-- 10. 馬力歐陪你喝一杯 S8EP154 -->
+        <a class="pod-row t-mind" href="https://podcasts.apple.com/tw/podcast/id1192212072?i=1000759021840" target="_blank" rel="noreferrer">
+          <div class="pod-aside">
+            <span class="pod-badge">🎧</span>
+            <div class="pod-aside-text">
+              <span class="pod-show">馬力歐陪你喝一杯</span>
+              <span class="pod-ep">S8EP154</span>
+            </div>
+          </div>
+          <div class="pod-main">
+            <h3 class="pod-title">運動科學教練徐國峰：覺得跑步很無聊？那是因為你無法察覺身體的細微變化</h3>
+            <p class="pod-desc">以《KFCS 跑力提升訓練系統》為主軸，談體能、力量、技術、心的架構，也聊到課表只是工具、訓練的目的，以及 AI 與教練工作的關係。</p>
+            <div class="pod-tags"><span class="chip t-mind">心</span></div>
+            <div class="pod-foot"><span>Apple Podcasts</span><span class="pod-listen">收聽 →</span></div>
+          </div>
+        </a>
+
+        <!-- 11. 精算媽咪 #633 -->
+        <a class="pod-row t-pose t-engine t-mind" href="https://podcasts.apple.com/tw/podcast/id1501644109?i=1000715514112" target="_blank" rel="noreferrer">
+          <div class="pod-aside">
+            <span class="pod-badge">🎧</span>
+            <div class="pod-aside-text">
+              <span class="pod-show">精算媽咪的家計簿</span>
+              <span class="pod-ep">#633</span>
+            </div>
+          </div>
+          <div class="pod-main">
+            <h3 class="pod-title">不只練腿，更練心！科學跑步大師徐國峰，帶你跑出健康智慧人生</h3>
+            <p class="pod-desc">大家都說跑步練腿，徐國峰說跑步其實是最高級的「心智」修復。用「重力引導」的姿勢跑法與心率監測，把痛苦的體力活變成「一分鐘有氧間歇」的無痛享受。</p>
+            <div class="pod-tags"><span class="chip t-pose">姿勢跑法</span><span class="chip t-engine">體能</span><span class="chip t-mind">心</span></div>
+            <div class="pod-foot"><span>Apple Podcasts</span><span class="pod-listen">收聽 →</span></div>
+          </div>
+        </a>
+
+        <!-- 12. 精算媽咪 #632 -->
+        <a class="pod-row t-engine t-craft t-pose t-mind" href="https://podcasts.apple.com/tw/podcast/id1501644109?i=1000715046952" target="_blank" rel="noreferrer">
+          <div class="pod-aside">
+            <span class="pod-badge">🎧</span>
+            <div class="pod-aside-text">
+              <span class="pod-show">精算媽咪的家計簿</span>
+              <span class="pod-ep">#632</span>
+            </div>
+          </div>
+          <div class="pod-main">
+            <h3 class="pod-title">跑出新人生！從跑步小白到身心療癒來賓：科學跑步教練徐國峰</h3>
+            <p class="pod-desc">想跑卻總喘到放棄、怕小腿變粗掉肌肉？破解三大迷思——別盲信 130 心率、跑步不會掉肌肉、腿粗是發力錯誤，並傳授新手的「重心前傾、順勢拉起」心法。</p>
+            <div class="pod-tags"><span class="chip t-engine">體能</span><span class="chip t-craft">技術</span><span class="chip t-pose">姿勢跑法</span><span class="chip t-mind">心</span></div>
+            <div class="pod-foot"><span>Apple Podcasts</span><span class="pod-listen">收聽 →</span></div>
+          </div>
+        </a>
+
+        <!-- 13. 跑步不要聽 ep86 -->
+        <a class="pod-row t-mind" href="https://podcasts.apple.com/tw/podcast/id1530709615?i=1000558805240" target="_blank" rel="noreferrer">
+          <div class="pod-aside">
+            <span class="pod-badge">🎧</span>
+            <div class="pod-aside-text">
+              <span class="pod-show">跑步不要聽</span>
+              <span class="pod-ep">ep. 86</span>
+            </div>
+          </div>
+          <div class="pod-main">
+            <h3 class="pod-title">當時好像翻到武功秘笈 ft. 徐國峰</h3>
+            <p class="pod-desc">從初識科學化訓練的震撼，到深入體育哲學的淬鍊。談道家思想、無為跑姿、最大心率的個人性與超慢跑，帶你看穿數據迷思、找回身體的感知力。</p>
+            <div class="pod-tags"><span class="chip t-mind">心</span></div>
+            <div class="pod-foot"><span>Apple Podcasts</span><span class="pod-listen">收聽 →</span></div>
+          </div>
+        </a>
+
+        <!-- 14. 下一本讀什麼 EP462 -->
+        <a class="pod-row t-pose t-craft t-engine" href="https://podcasts.apple.com/tw/podcast/id1532820533?i=1000708658803" target="_blank" rel="noreferrer">
+          <div class="pod-aside">
+            <span class="pod-badge">🎧</span>
+            <div class="pod-aside-text">
+              <span class="pod-show">下一本讀什麼？</span>
+              <span class="pod-ep">EP.462</span>
+            </div>
+          </div>
+          <div class="pod-main">
+            <h3 class="pod-title">《跑步，該怎麼跑？》讀後心得：輕鬆流暢不受傷的姿勢跑法</h3>
+            <p class="pod-desc">瓦基與徐國峰的科學化跑步對談：真正的高手不和地球引力對抗。學會「落下」讓重力變推進力、專注「拉起」解放膝蓋，也談譯者為何想翻譯這本經典。</p>
+            <div class="pod-tags"><span class="chip t-pose">姿勢跑法</span><span class="chip t-craft">技術</span><span class="chip t-engine">體能</span></div>
+            <div class="pod-foot"><span>Apple Podcasts</span><span class="pod-listen">收聽 →</span></div>
+          </div>
+        </a>
+
+        <!-- 15. 強者我朋友 Podcast (志祺七七) -->
+        <a class="pod-row t-pose t-craft t-mind" href="https://podcasts.apple.com/tw/podcast/id1552655948?i=1000714045885" target="_blank" rel="noreferrer">
+          <div class="pod-aside">
+            <span class="pod-badge">🎧</span>
+            <div class="pod-aside-text">
+              <span class="pod-show">強者我朋友</span>
+              <span class="pod-ep">志祺七七 Podcast 版</span>
+            </div>
+          </div>
+          <div class="pod-main">
+            <h3 class="pod-title">跑步是最適合人類的運動？看完這集，你會超級想跑步！</h3>
+            <p class="pod-desc">談跑步為何讓人幸福、跑鞋的高低落差、如何開始跑步、天氣不好怎麼跑，以及心態如何影響表現。為志祺七七同名影片的 Podcast 版。</p>
+            <div class="pod-tags"><span class="chip t-pose">姿勢跑法</span><span class="chip t-craft">技術</span><span class="chip t-mind">心</span></div>
+            <div class="pod-foot"><span>Apple Podcasts</span><span class="pod-listen">收聽 →</span></div>
+          </div>
+        </a>
+
+        <!-- 16. 蘭萱時間 -->
+        <a class="pod-row t-craft" href="https://podcasts.apple.com/tw/podcast/id1609191682?i=1000628544098" target="_blank" rel="noreferrer">
+          <div class="pod-aside">
+            <span class="pod-badge">🎧</span>
+            <div class="pod-aside-text">
+              <span class="pod-show">蘭萱時間</span>
+              <span class="pod-ep">專訪</span>
+            </div>
+          </div>
+          <div class="pod-main">
+            <h3 class="pod-title">專訪三鐵教練／運動作家徐國峰：公開水域游泳訓練全書</h3>
+            <p class="pod-desc">這集主題是公開水域游泳。專訪三鐵教練／運動作家徐國峰，談游泳技術、泳池與公開水域的差異，以及面對環境變數時該如何補足技巧。</p>
+            <div class="pod-tags"><span class="chip t-craft">技術</span></div>
+            <div class="pod-foot"><span>Apple Podcasts</span><span class="pod-listen">收聽 →</span></div>
+          </div>
+        </a>
+
+        <!-- 17. 藍海就在你身邊 058 -->
+        <a class="pod-row t-craft t-pose" href="https://podcasts.apple.com/tw/podcast/id1658099649?i=1000640829629" target="_blank" rel="noreferrer">
+          <div class="pod-aside">
+            <span class="pod-badge">🎧</span>
+            <div class="pod-aside-text">
+              <span class="pod-show">藍海就在你身邊</span>
+              <span class="pod-ep">058</span>
+            </div>
+          </div>
+          <div class="pod-main">
+            <h3 class="pod-title">鐵人三項和馬拉松賽道上的藍海故事，教練的教練——徐國峰</h3>
+            <p class="pod-desc">從「看見本質」談運動科學：如何用科學方法定義標準跑姿、發展正確的訓練方法與流程，藉此提升運動表現並避免受傷。「教練的教練」的跨項目訓練觀。</p>
+            <div class="pod-tags"><span class="chip t-craft">技術</span><span class="chip t-pose">姿勢跑法</span></div>
+            <div class="pod-foot"><span>Apple Podcasts</span><span class="pod-listen">收聽 →</span></div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CTA ===================== -->
+  <section class="section dark" id="next-step">
+    <div class="shell">
+      <div class="section-head">
+        <span class="section-index">03</span>
+        <h2 class="section-title">聽完節目，下一步就從訓練開始</h2>
+        <span class="section-rule"></span>
+      </div>
+
+      <div class="cta-grid">
+        <article class="cta-card">
+          <span class="cta-label">COURSES</span>
+          <h3 class="cta-title">探索所有課程</h3>
+          <p>把節目裡談到的觀念，化成系統化的訓練。從課程總覽找到適合你的主題。</p>
+          <a class="cta-link" href="courses.html">前往課程總覽</a>
+        </article>
+        <article class="cta-card">
+          <span class="cta-label">ABOUT</span>
+          <h3 class="cta-title">認識徐國峰與 KFCS</h3>
+          <p>了解「以身練心」的訓練哲學，以及體能、力量、技術、心如何整合成一套系統。</p>
+          <a class="cta-link" href="about.html">認識我們</a>
+        </article>
+        <article class="cta-card">
+          <span class="cta-label">BLOG</span>
+          <h3 class="cta-title">繼續閱讀部落格</h3>
+          <p>想更深入耐力運動訓練知識，這裡整理了適合入門與持續深化的文章。</p>
+          <a class="cta-link" href="blog.html">前往部落格</a>
+        </article>
+        <article class="cta-card">
+          <span class="cta-label">COMMUNITY</span>
+          <h3 class="cta-title">學員限定群組</h3>
+          <p>想和徐國峰 × AI 教練持續互動，這裡是學員延伸學習與觀看內容的專屬入口。</p>
+          <a class="cta-link" href="https://www.runningquotient.com/group/videos/351" target="_blank" rel="noreferrer">進入學員限定群組</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+</section>
+<footer class="kfcs-sitefooter">
+  <div class="foot-shell">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <img src="assets/kfcs-logo.png" alt="KFCS logo">
+        <span class="brand-word">KFCS</span>
+        <p>把心、體能、力量與技術整合為一套可理解、可實踐、可傳承的耐力訓練系統，支持運動員進步，也支持教練成長。</p>
+        <p>聯絡信箱：<a href="mailto:kuofengcoaching@gmail.com">kuofengcoaching@gmail.com</a></p>
+      </div>
+      <div class="foot-col">
+        <h3>網站導覽</h3>
+        <ul>
+          <li><a href="index.html">首頁</a></li>
+          <li><a href="courses.html">課程總覽</a></li>
+          <li><a href="coach-certification.html">教練認證</a></li>
+          <li><a href="education.html">教育訓練</a></li>
+          <li><a href="blog.html">部落格</a></li>
+          <li><a href="youtube.html">YouTube 專區</a></li>
+          <li><a href="podcast.html">Podcast 專區</a></li>
+          <li><a href="about.html">關於我們</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h3>2026 課程</h3>
+        <ul>
+          <li><a href="blog/R1-running-course-technique.html">R1 跑步技術課程</a></li>
+          <li><a href="blog/R2-running-course-strength.html">R2 跑步力量課程</a></li>
+          <li><a href="blog/R3-running-fitness-syllabus.html">R3 跑步體能課程</a></li>
+          <li><a href="blog/R4-running-periodization-and-runners-heart.html">R4 週期化訓練與練心</a></li>
+          <li><a href="blog/R5-running-intensive-package.html">R5 四堂全修課程</a></li>
+          <li><a href="blog/R6-running-coaching-certification.html">R6 跑步教練認證課程</a></li>
+          <li><a href="blog/kfcs-registration-guide.html">報名流程</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 KFCS KuoFeng Coaching System・徐國峰</span>
+      <span class="motto">以身練心・去執著心</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

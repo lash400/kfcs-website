@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<meta name="description" content="R1 跑步技術課程簡章：以姿勢跑法為核心，從力學原理出發，學習避免受傷、節省力量與提升速度的移動技術。2026 年 6 月 13 日於國立臺北教育大學。">
+<meta property="og:title" content="跑步技術課程（課程編號：R1）簡章 — KFCS">
+<meta property="og:description" content="R1 跑步技術課程簡章：以姿勢跑法為核心，從力學原理出發，學習避免受傷、節省力量與提升速度的移動技術。2026 年 6 月 13 日於國立臺北教育大學。">
+<meta property="og:image" content="https://lash400.github.io/kfcs-website/assets/covers/r1-cover-16x9.jpg">
+<meta property="og:type" content="article">
+<link rel="icon" type="image/png" href="../assets/kfcs-logo.png">
+<link rel="stylesheet" href="../shared/site-chrome.css">
+<style>#kfcs-r1 .hero-inner { padding-top: clamp(100px, 12vw, 150px) !important; }</style>
+<title>跑步技術課程（課程編號：R1）簡章 — KFCS</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;700;900&family=Noto+Sans+TC:wght@400;500;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+<style>
+
+/* ═══════════════════════════════════════════
+   SCOPED ELEMENT RESET & CSS VARIABLES
+═══════════════════════════════════════════ */
+#kfcs-r1 {
+  all: initial;
+  display: block;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 16px;
+  color: #181715;
+  line-height: 1.85;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  width: 100%;
+  --yellow:      #FFCC00;
+  --yellow-dim:  #cc9f00;
+  --black:       #0f0f0f;
+  --dark:        #1a1a1a;
+  --mid:         #2e2e2e;
+  --border:      #3a3a3a;
+  --muted:       #888;
+  --light:       #ccc;
+  --white:       #f5f5f0;
+  --body-bg:     #ffffff;
+  --body-text:   #1c1c1c;
+  --section-bg:  #f8f7f4;
+}
+
+#kfcs-r1 *, #kfcs-r1 *::before, #kfcs-r1 *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#kfcs-r1 h1, #kfcs-r1 h2, #kfcs-r1 h3, #kfcs-r1 h4, #kfcs-r1 h5, #kfcs-r1 h6,
+#kfcs-r1 p, #kfcs-r1 figure, #kfcs-r1 blockquote, #kfcs-r1 dl, #kfcs-r1 dd,
+#kfcs-r1 hr, #kfcs-r1 pre, #kfcs-r1 table, #kfcs-r1 fieldset {
+  margin: 0; padding: 0; font-size: inherit; font-weight: inherit;
+}
+
+#kfcs-r1 ul, #kfcs-r1 ol { margin: 0; padding: 0; list-style: none; }
+#kfcs-r1 li { margin: 0; padding: 0; }
+#kfcs-r1 img { display: block; max-width: 100%; height: auto; border: 0; }
+#kfcs-r1 a { color: inherit; text-decoration: none; background-color: transparent; }
+#kfcs-r1 a[href]::after { content: none; }
+#kfcs-r1 table { border-collapse: collapse; border-spacing: 0; }
+#kfcs-r1 strong, #kfcs-r1 b { font-weight: bold; }
+#kfcs-r1 em, #kfcs-r1 i { font-style: italic; }
+
+/* ═══════════════════════════════════════════
+   TOKENS
+═══════════════════════════════════════════ */
+
+/* ═══════════════════════════════════════════
+   HERO
+═══════════════════════════════════════════ */
+#kfcs-r1 .hero {
+  background: var(--black);
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+#kfcs-r1 .hero::after {
+  content: '';
+  position: absolute;
+  bottom: -30px;
+  right: -30px;
+  width: 180px;
+  height: 180px;
+  background: var(--yellow);
+  opacity: 0.06;
+  transform: rotate(20deg);
+  pointer-events: none;
+}
+
+#kfcs-r1 .hero-inner {
+  padding: clamp(36px, 6vw, 72px) clamp(24px, 8vw, 100px) clamp(44px, 6vw, 72px);
+  position: relative;
+  z-index: 1;
+}
+
+#kfcs-r1 .hero-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.35em;
+  color: var(--yellow);
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  display: block;
+}
+
+#kfcs-r1 .hero-title {
+  font-family: 'Bebas Neue', 'Noto Serif TC', serif;
+  font-size: clamp(3rem, 9vw, 5.5rem);
+  line-height: 0.92;
+  color: var(--white);
+  letter-spacing: 0.02em;
+  margin-bottom: 20px;
+}
+
+#kfcs-r1 .hero-title em {
+  font-style: normal;
+  color: var(--yellow);
+  display: block;
+  font-size: 0.5em;
+  letter-spacing: 0.1em;
+  margin-top: 10px;
+  opacity: 0.9;
+}
+
+#kfcs-r1 .hero-subtitle {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 1rem;
+  color: var(--muted);
+  letter-spacing: 0.05em;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+#kfcs-r1 .hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+#kfcs-r1 .meta-pill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--mid);
+  border: 1px solid var(--border);
+  padding: 8px 16px;
+  font-size: 0.82rem;
+  color: var(--light);
+  font-weight: 500;
+}
+
+#kfcs-r1 .meta-pill .dot {
+  width: 6px;
+  height: 6px;
+  background: var(--yellow);
+  flex-shrink: 0;
+}
+
+/* ═══════════════════════════════════════════
+   COURSE CODE
+═══════════════════════════════════════════ */
+#kfcs-r1 .course-code-note {
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 0.72em;
+  font-weight: 500;
+  color: #777;
+  letter-spacing: 0.04em;
+  margin-left: 8px;
+  white-space: nowrap;
+}
+
+#kfcs-r1 .course-code-accent { color: var(--yellow); }
+
+#kfcs-r1 .hero-title .course-code-note {
+  font-size: 0.22em;
+  color: var(--light);
+  vertical-align: middle;
+  margin-left: 10px;
+}
+
+/* ═══════════════════════════════════════════
+   SECTION BASE
+═══════════════════════════════════════════ */
+#kfcs-r1 .section {
+  padding: clamp(36px, 5vw, 64px) clamp(24px, 8vw, 100px);
+  border-bottom: 1px solid #e8e6e0;
+}
+
+#kfcs-r1 .section:nth-child(even) { background: var(--section-bg); }
+
+#kfcs-r1 .sec-head {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin-bottom: 32px;
+}
+
+#kfcs-r1 .sec-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.6rem;
+  color: var(--yellow);
+  line-height: 1;
+  flex-shrink: 0;
+  width: 44px;
+}
+
+#kfcs-r1 .sec-title {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--body-text);
+  letter-spacing: 0.04em;
+  line-height: 1.3;
+}
+
+#kfcs-r1 .sec-rule {
+  flex: 1;
+  height: 1px;
+  background: #ddd;
+  margin-left: 8px;
+  align-self: center;
+}
+
+/* ═══════════════════════════════════════════
+   INTRO
+═══════════════════════════════════════════ */
+#kfcs-r1 .intro-text {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 1.05rem;
+  line-height: 2.1;
+  color: #333;
+  border-left: 4px solid var(--yellow);
+  padding-left: 24px;
+}
+
+/* ═══════════════════════════════════════════
+   INFO TABLE
+═══════════════════════════════════════════ */
+#kfcs-r1 .info-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#kfcs-r1 .info-table tr { border-bottom: 1px solid #e0ddd8; }
+#kfcs-r1 .info-table tr:last-child { border-bottom: none; }
+
+#kfcs-r1 .info-table td {
+  padding: 16px 0;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#kfcs-r1 .info-table td:first-child {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--yellow-dim);
+  text-transform: uppercase;
+  width: 110px;
+  padding-right: 20px;
+  padding-top: 18px;
+  flex-shrink: 0;
+}
+
+#kfcs-r1 .info-table td:last-child {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 1.05rem;
+  color: var(--body-text);
+  font-weight: 500;
+  line-height: 1.8;
+}
+
+#kfcs-r1 .info-table small {
+  display: block;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 0.88rem;
+  color: var(--muted);
+  font-weight: 400;
+  margin-top: 3px;
+}
+
+/* Goals numbered list */
+#kfcs-r1 .goal-list {
+  list-style: none;
+}
+
+#kfcs-r1 .goal-item {
+  display: flex;
+  gap: 0;
+  align-items: stretch;
+  border-bottom: 1px solid #e0ddd8;
+}
+
+#kfcs-r1 .goal-item:last-child { border-bottom: none; }
+
+#kfcs-r1 .goal-n {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3rem;
+  color: var(--yellow);
+  line-height: 1;
+  width: 56px;
+  flex-shrink: 0;
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+}
+
+#kfcs-r1 .goal-body {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 1.05rem;
+  color: #333;
+  line-height: 1.9;
+  padding: 20px 0 20px 16px;
+  border-left: 2px solid #e8e6e0;
+  flex: 1;
+}
+
+/* ═══════════════════════════════════════════
+   SCHEDULE TABLE
+═══════════════════════════════════════════ */
+#kfcs-r1 .sched-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#kfcs-r1 .sched-table thead tr { background: var(--black); }
+
+#kfcs-r1 .sched-table thead th {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--yellow);
+  text-transform: uppercase;
+  padding: 12px 16px;
+  text-align: left;
+}
+
+#kfcs-r1 .sched-table tbody tr { border-bottom: 1px solid #e0ddd8; }
+#kfcs-r1 .sched-table tbody tr:hover { background: #fefdf8; }
+
+#kfcs-r1 .sched-table td {
+  padding: 18px 16px;
+  font-size: 0.97rem;
+  color: #333;
+  vertical-align: middle;
+  text-align: left;
+  line-height: 1.75;
+}
+
+#kfcs-r1 .sched-table td.time-col {
+  font-family: 'Noto Serif TC', serif;
+  font-weight: 600;
+  color: var(--body-text);
+  white-space: nowrap;
+  width: 130px;
+  font-size: 0.95rem;
+}
+
+#kfcs-r1 .sched-table td.unit-col { width: 120px; }
+
+#kfcs-r1 .unit-name {
+  font-weight: 700;
+  color: var(--body-text);
+  font-size: 0.97rem;
+  display: block;
+  margin-bottom: 5px;
+}
+
+#kfcs-r1 .tag {
+  display: inline-block;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  margin-bottom: 4px;
+}
+
+#kfcs-r1 .tag-theory  { background: #fff3cd; color: #7a5c00; }
+#kfcs-r1 .tag-outdoor { background: #d4edda; color: #155724; }
+#kfcs-r1 .tag-qa      { background: #e8e8e8; color: #444; }
+#kfcs-r1 .tag-break   { background: #f0f0f0; color: #999; }
+
+#kfcs-r1 .sched-sub {
+  list-style: none;
+  margin-top: 6px;
+}
+
+#kfcs-r1 .sched-sub li {
+  font-size: 0.93rem;
+  color: #555;
+  padding: 3px 0 3px 16px;
+  position: relative;
+  line-height: 1.7;
+}
+
+#kfcs-r1 .sched-sub li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--yellow-dim);
+  font-size: 0.8em;
+  top: 6px;
+}
+
+/* ═══════════════════════════════════════════
+   FEATURES
+═══════════════════════════════════════════ */
+#kfcs-r1 .feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+#kfcs-r1 .feat-card {
+  background: var(--body-bg);
+  border: 1px solid #e0ddd8;
+  padding: 24px 22px;
+  position: relative;
+  overflow: hidden;
+}
+
+#kfcs-r1 .feat-card::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--yellow);
+}
+
+#kfcs-r1 .feat-icon {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+  display: block;
+}
+
+#kfcs-r1 .feat-title {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--body-text);
+  margin-bottom: 8px;
+}
+
+#kfcs-r1 .feat-desc {
+  font-size: 0.93rem;
+  color: #666;
+  line-height: 1.8;
+}
+
+/* ═══════════════════════════════════════════
+   RULES
+═══════════════════════════════════════════ */
+#kfcs-r1 .rule-list {
+  list-style: none;
+}
+
+#kfcs-r1 .rule-item {
+  padding: 22px 0;
+  border-bottom: 1px solid #e0ddd8;
+  display: flex;
+  gap: 0;
+}
+
+#kfcs-r1 .rule-item:last-child { border-bottom: none; }
+
+#kfcs-r1 .rule-n {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.2rem;
+  color: var(--yellow);
+  line-height: 1;
+  flex-shrink: 0;
+  width: 40px;
+  padding-top: 2px;
+}
+
+#kfcs-r1 .rule-body {
+  flex: 1;
+  padding-left: 16px;
+  border-left: 2px solid #e8e6e0;
+}
+
+#kfcs-r1 .rule-head {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--body-text);
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#kfcs-r1 .rule-head span { font-size: 1.1rem; }
+
+#kfcs-r1 .rule-text {
+  font-size: 0.97rem;
+  color: #555;
+  line-height: 1.85;
+}
+
+#kfcs-r1 .rule-sub {
+  list-style: none;
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+#kfcs-r1 .rule-sub li {
+  font-size: 0.95rem;
+  color: #555;
+  padding-left: 16px;
+  position: relative;
+  line-height: 1.85;
+}
+
+#kfcs-r1 .rule-sub li::before {
+  content: '·';
+  position: absolute;
+  left: 0;
+  color: var(--yellow-dim);
+  font-size: 1.3em;
+  line-height: 1.2;
+}
+
+/* ═══════════════════════════════════════════
+   PRICE PANEL
+═══════════════════════════════════════════ */
+#kfcs-r1 .price-panel {
+  background: var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  flex-wrap: wrap;
+  padding: clamp(32px, 5vw, 52px) clamp(24px, 8vw, 100px);
+}
+
+#kfcs-r1 .price-eyebrow {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  color: var(--muted);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+#kfcs-r1 .price-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 4rem;
+  color: var(--yellow);
+  line-height: 1;
+  letter-spacing: 0.02em;
+}
+
+#kfcs-r1 .price-unit {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-left: 4px;
+}
+
+#kfcs-r1 .price-incl {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 8px;
+}
+
+#kfcs-r1 .price-cta {
+  display: inline-block;
+  background: var(--yellow);
+  color: var(--black);
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  padding: 18px 36px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.15s;
+}
+
+#kfcs-r1 .price-cta:hover { background: #e6b800; }
+
+/* ═══════════════════════════════════════════
+   FOOTER
+═══════════════════════════════════════════ */
+#kfcs-r1 .site-footer {
+  background: var(--black);
+  padding: clamp(40px, 5vw, 64px) clamp(24px, 8vw, 100px);
+  text-align: center;
+  position: relative;
+}
+
+#kfcs-r1 .site-footer::before {
+  content: '';
+  display: block;
+  width: 48px;
+  height: 4px;
+  background: var(--yellow);
+  margin: 0 auto 28px;
+}
+
+#kfcs-r1 .footer-quote {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 1.1rem;
+  color: var(--light);
+  line-height: 2;
+  margin-bottom: 32px;
+}
+
+#kfcs-r1 .footer-quote em {
+  font-style: normal;
+  color: var(--yellow);
+}
+
+#kfcs-r1 .footer-btn {
+  display: inline-block;
+  background: var(--yellow);
+  color: var(--black);
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  padding: 18px 40px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background 0.15s;
+}
+
+#kfcs-r1 .footer-btn:hover { background: #e6b800; }
+
+/* ═══════════════════════════════════════════
+   RESPONSIVE
+═══════════════════════════════════════════ */
+@media (max-width: 768px) {
+  #kfcs-r1 .hero-title    { font-size: clamp(2.6rem, 8vw, 4rem); }
+  #kfcs-r1 .sec-title     { font-size: 1.35rem; }
+  #kfcs-r1 .feature-grid  { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 480px) {
+  #kfcs-r1 .hero-title    { font-size: 2.4rem; }
+  #kfcs-r1 .sec-title     { font-size: 1.15rem; }
+  #kfcs-r1 .sec-num       { font-size: 2rem; width: 34px; }
+  #kfcs-r1 .feature-grid  { grid-template-columns: 1fr; }
+  #kfcs-r1 .sched-table td.time-col { white-space: normal; width: auto; }
+  #kfcs-r1 .goal-item     { flex-direction: column; gap: 0; }
+  #kfcs-r1 .goal-n        { width: auto; padding: 12px 0 4px; }
+  #kfcs-r1 .goal-body     { padding-left: 0; border-left: none;
+                   border-top: 1px solid #e8e6e0; padding-top: 10px; }
+  #kfcs-r1 .rule-item     { flex-direction: column; gap: 4px; }
+  #kfcs-r1 .rule-n        { width: auto; }
+  #kfcs-r1 .rule-body     { padding-left: 0; border-left: none;
+                   border-top: 1px solid #e8e6e0; padding-top: 10px; }
+  #kfcs-r1 .price-panel   { flex-direction: column; text-align: center; }
+  #kfcs-r1 .hero-meta     { flex-direction: column; }
+  #kfcs-r1 .meta-pill     { width: 100%; }
+  #kfcs-r1 .section { padding-left: 16px; padding-right: 16px; }
+  #kfcs-r1 .hero-inner { padding: 24px 16px 28px; }
+  #kfcs-r1 .info-table tr { display: flex; flex-direction: column; }
+  #kfcs-r1 .info-table td:first-child { width: auto; padding-bottom: 2px; padding-top: 14px; }
+  #kfcs-r1 .info-table td:last-child { padding-top: 4px; }
+  #kfcs-r1 .sched-table { display: block; overflow-x: auto; }
+  #kfcs-r1 .sched-table td { padding: 12px 10px; font-size: 0.9rem; }
+  #kfcs-r1 .sched-table td.unit-col { width: auto; }
+  #kfcs-r1 .price-panel { padding: 28px 16px; }
+  #kfcs-r1 .price-num { font-size: 3rem; }
+  #kfcs-r1 .price-cta, #kfcs-r1 .footer-btn { padding: 16px 28px; width: 100%; text-align: center; }
+}
+
+@media (max-width: 360px) {
+  #kfcs-r1 .hero-title { font-size: 2rem; }
+  #kfcs-r1 .section { padding-left: 12px; padding-right: 12px; }
+  #kfcs-r1 .hero-inner { padding: 20px 12px 24px; }
+  #kfcs-r1 .price-num { font-size: 2.4rem; }
+  #kfcs-r1 .sched-table td { padding: 10px 8px; font-size: 0.85rem; }
+}
+
+</style>
+<link rel="stylesheet" href="../shared/kfcs-unified-theme.css">
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '404602746416082');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=404602746416082&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+</head>
+<body>
+<nav class="kfcs-sitenav">
+  <div class="nav-shell">
+    <a class="nav-brand" href="../index.html">
+      <img src="../assets/kfcs-logo.png" alt="KFCS logo">
+      <span><span class="brand-word">KFCS</span><span class="brand-sub">耐力訓練系統</span></span>
+    </a>
+    <input class="nav-toggle-box" type="checkbox" id="kfcs-nav-toggle">
+    <label class="nav-toggle" for="kfcs-nav-toggle" aria-label="開啟選單"><span></span><span></span><span></span></label>
+    <div class="nav-menu">
+      <ul class="nav-links">
+        <li><a href="../index.html">首頁</a></li>
+        <li><a href="../courses.html">課程總覽</a></li>
+        <li><a href="../coach-certification.html">教練認證</a></li>
+        <li><a href="../education.html">教育訓練</a></li>
+        <li><a class="is-active" href="../blog.html">部落格</a></li>
+        <li class="nav-drop"><a href="../youtube.html">影音專區</a>
+          <ul class="drop-panel">
+            <li><a href="../youtube.html">YouTube 專區</a></li>
+            <li><a href="../podcast.html">Podcast 專區</a></li>
+          </ul>
+        </li>
+        <li><a href="../about.html">關於我們</a></li>
+        <li><a class="nav-cta" href="../blog/kfcs-registration-guide.html">立即報名</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<article class="page" id="kfcs-r1">
+
+<!-- ══════════════════ HERO ══════════════════ -->
+<header class="hero">
+  <div class="hero-inner">
+
+    <span class="hero-label">KFCS Running Technique Course</span>
+
+    <h1 class="hero-title">
+      跑步技術課程<span class="course-code-note">（課程編號：<span class="course-code-accent">R1</span>）</span>
+      <em>姿勢跑法</em>
+    </h1>
+
+    <p class="hero-subtitle">從力學原理出發，重建你的跑步本能</p>
+
+    <div class="hero-meta">
+      <div class="meta-pill"><span class="dot"></span>2026 年 6 月 13 日（六）</div>
+      <div class="meta-pill"><span class="dot"></span>09:00 – 16:30</div>
+      <div class="meta-pill"><span class="dot"></span>國立臺北教育大學</div>
+      <div class="meta-pill"><span class="dot"></span>授課老師：徐國峰</div>
+      <div class="meta-pill"><span class="dot"></span>NT$ 12,000</div>
+    </div>
+
+  </div>
+</header>
+
+<!-- ══════════════════ 01 課程前言 ══════════════════ -->
+<section class="section">
+  <div class="sec-head">
+    <span class="sec-num">01</span>
+    <h2 class="sec-title">課程前言</h2>
+    <span class="sec-rule"></span>
+  </div>
+  <p class="intro-text">
+    很多跑者在追求成績時，往往只關注體能的訓練，卻忽略了「技術」才是所有運動的根基。<br><br>
+    身體是一個整體，不要把跑步課表單純拿來練體能。<br><br>
+    為什麼會受傷？為什麼跑不快？為什麼我跑起來特別沉重？這些問題的答案，往往隱藏在你的跑步技術之中。<br><br>
+    本課程以 KFCS 耐力訓練系統為指導原則，並以「姿勢跑法」作為理論基礎與訓練動作的核心來源，透過系統化的教學方式，引導學員學習跑姿與跑步技術。授課講師徐國峰，也是國內最早引進系統化跑姿與跑步技術教學的重要推廣者之一。
+  </p>
+</section>
+
+<!-- ══════════════════ 02 課程資訊 ══════════════════ -->
+<section class="section">
+  <div class="sec-head">
+    <span class="sec-num">02</span>
+    <h2 class="sec-title">課程資訊</h2>
+    <span class="sec-rule"></span>
+  </div>
+  <table class="info-table">
+    <tr>
+      <td>課程名稱</td>
+      <td>跑步技術課程<span class="course-code-note">（課程編號：<span class="course-code-accent">R1</span>）</span> ── 姿勢跑法</td>
+    </tr>
+    <tr>
+      <td>授課老師</td>
+      <td>徐國峰</td>
+    </tr>
+    <tr>
+      <td>開課日期</td>
+      <td>2026 年 6 月 13 日（星期六）</td>
+    </tr>
+    <tr>
+      <td>上課時間</td>
+      <td>
+        09:00 – 16:30
+        <small>中午休息 90 分鐘，共計 6 小時課程</small>
+      </td>
+    </tr>
+    <tr>
+      <td>上課地點</td>
+      <td>國立臺北教育大學</td>
+    </tr>
+    <tr>
+      <td>課程目標</td>
+      <td>
+        <ul class="goal-list" style="margin-top:8px;">
+          <li class="goal-item">
+            <span class="goal-n">1</span>
+            <p class="goal-body">透過技術觀點，解答如何「避免受傷」、「節省力量」與「提升速度」的跑步技術。</p>
+          </li>
+          <li class="goal-item">
+            <span class="goal-n">2</span>
+            <p class="goal-body">全面解析姿勢跑法的理論與實作細節。</p>
+          </li>
+          <li class="goal-item">
+            <span class="goal-n">3</span>
+            <p class="goal-body">學習關鍵跑姿、落下和拉起技術中的重要訓練動作。</p>
+          </li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+</section>
+
+<!-- ══════════════════ 03 課程大綱 ══════════════════ -->
+<section class="section">
+  <div class="sec-head">
+    <span class="sec-num">03</span>
+    <h2 class="sec-title">課程流程與大綱</h2>
+    <span class="sec-rule"></span>
+  </div>
+  <table class="sched-table">
+    <thead>
+      <tr>
+        <th>時間</th>
+        <th>單元</th>
+        <th>內容重點</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="time-col">09:00 – 11:50</td>
+        <td class="unit-col">
+          <span class="tag tag-theory">室內理論</span>
+          <span class="unit-name">理論研討</span>
+        </td>
+        <td>
+          <ul class="sched-sub">
+            <li>跑步技術的本質：探討技術教學的核心邏輯</li>
+            <li>受傷與省力的秘密：從力學與知覺探討不傷與省力的關鍵</li>
+            <li>速度與技術的關係：如何從技術層面提升跑步速度</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td class="time-col">11:50 – 12:00</td>
+        <td class="unit-col">
+          <span class="tag tag-qa">Q&amp;A</span>
+        </td>
+        <td>老師此時會針對跟本堂課內容有關的提問做回覆</td>
+      </tr>
+      <tr>
+        <td class="time-col">12:00 – 13:30</td>
+        <td class="unit-col">
+          <span class="tag tag-break">午休</span>
+        </td>
+        <td style="color:#999;">中午用餐與休息時間</td>
+      </tr>
+      <tr>
+        <td class="time-col">13:30 – 16:20</td>
+        <td class="unit-col">
+          <span class="tag tag-outdoor">戶外實訓</span>
+          <span class="unit-name">實體訓練</span>
+        </td>
+        <td>
+          <ul class="sched-sub">
+            <li>彈性站姿與關鍵跑姿：開發跑步技術與知覺的關聯</li>
+            <li>拉起訓練（Pull）：精準掌握腳掌拉起時機</li>
+            <li>落下訓練（Fall）：深度開發對重力與速度的知覺</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td class="time-col">16:20 – 16:30</td>
+        <td class="unit-col">
+          <span class="tag tag-qa">Q&amp;A</span>
+        </td>
+        <td>老師此時會針對跟本堂課內容有關的提問做回覆</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ══════════════════ 04 課程特色 ══════════════════ -->
+<section class="section">
+  <div class="sec-head">
+    <span class="sec-num">04</span>
+    <h2 class="sec-title">課程特色</h2>
+    <span class="sec-rule"></span>
+  </div>
+  <div class="feature-grid">
+    <div class="feat-card">
+      <span class="feat-icon">📐</span>
+      <div class="feat-title">系統化教學</div>
+      <p class="feat-desc">依循 KFCS 耐力訓練系統，建立完整的運動與訓練觀念。</p>
+    </div>
+    <div class="feat-card">
+      <span class="feat-icon">🔁</span>
+      <div class="feat-title">理論實作並重</div>
+      <p class="feat-desc">上午理解「為什麼」，下午練好「怎麼做」，確保知行合一。</p>
+    </div>
+    <div class="feat-card">
+      <span class="feat-icon">🎯</span>
+      <div class="feat-title">老師親自指導</div>
+      <p class="feat-desc">由徐國峰老師帶領，精準切入學員動作盲點，預防運動傷害。</p>
+    </div>
+    <div class="feat-card">
+      <span class="feat-icon">🔗</span>
+      <div class="feat-title">整合思維</div>
+      <p class="feat-desc">不只教技術，更說明技術如何與後續的力量與週期化訓練進行整合。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ PRICE PANEL ══════════════════ -->
+<div class="price-panel">
+  <div>
+    <p class="price-eyebrow">單日專修價</p>
+    <div>
+      <span class="price-num">12,000</span>
+      <span class="price-unit">NT$</span>
+    </div>
+  </div>
+  <a href="../blog/kfcs-registration-guide.html" class="price-cta">立即報名 →</a>
+</div>
+
+<!-- ══════════════════ FOOTER ══════════════════ -->
+<footer class="site-footer">
+  <p class="footer-quote">
+    想改善跑步受傷的惡性循環嗎？<br>
+    期待 <em>6/13</em> 與您一起在技術中，<em>找到奔跑的自由</em>！
+  </p>
+</footer>
+
+</article>
+<footer class="kfcs-sitefooter">
+  <div class="foot-shell">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <img src="../assets/kfcs-logo.png" alt="KFCS logo">
+        <span class="brand-word">KFCS</span>
+        <p>把心、體能、力量與技術整合為一套可理解、可實踐、可傳承的耐力訓練系統，支持運動員進步，也支持教練成長。</p>
+        <p>聯絡信箱：<a href="mailto:kuofengcoaching@gmail.com">kuofengcoaching@gmail.com</a></p>
+      </div>
+      <div class="foot-col">
+        <h3>網站導覽</h3>
+        <ul>
+          <li><a href="../index.html">首頁</a></li>
+          <li><a href="../courses.html">課程總覽</a></li>
+          <li><a href="../coach-certification.html">教練認證</a></li>
+          <li><a href="../education.html">教育訓練</a></li>
+          <li><a href="../blog.html">部落格</a></li>
+          <li><a href="../youtube.html">YouTube 專區</a></li>
+          <li><a href="../podcast.html">Podcast 專區</a></li>
+          <li><a href="../about.html">關於我們</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h3>2026 課程</h3>
+        <ul>
+          <li><a href="../blog/R1-running-course-technique.html">R1 跑步技術課程</a></li>
+          <li><a href="../blog/R2-running-course-strength.html">R2 跑步力量課程</a></li>
+          <li><a href="../blog/R3-running-fitness-syllabus.html">R3 跑步體能課程</a></li>
+          <li><a href="../blog/R4-running-periodization-and-runners-heart.html">R4 週期化訓練與練心</a></li>
+          <li><a href="../blog/R5-running-intensive-package.html">R5 四堂全修課程</a></li>
+          <li><a href="../blog/R6-running-coaching-certification.html">R6 跑步教練認證課程</a></li>
+          <li><a href="../blog/kfcs-registration-guide.html">報名流程</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 KFCS KuoFeng Coaching System・徐國峰</span>
+      <span class="motto">以身練心・去執著心</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
