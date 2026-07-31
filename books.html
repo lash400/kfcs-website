@@ -179,6 +179,56 @@ src="https://www.facebook.com/tr?id=404602746416082&ev=PageView&noscript=1"
   font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; line-height: 1;
   letter-spacing: 0.06em; color: rgba(141, 102, 0, 0.42);
 }
+
+/* ── 書封與購買連結 ── */
+#kfcs-books .book-cover {
+  display: block;
+  width: 132px;
+  margin: 12px 0 4px;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 10px 26px rgba(15, 15, 15, 0.18);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+#kfcs-books .book-cover img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  background: #ece6db;
+}
+#kfcs-books .book-card:hover .book-cover {
+  transform: translateY(-2px) rotate(-1deg);
+  box-shadow: 0 16px 34px rgba(15, 15, 15, 0.24);
+}
+#kfcs-books .buy-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  align-self: flex-start;
+  margin-top: 14px;
+  padding: 9px 20px;
+  border-radius: 999px;
+  background: #101010;
+  color: var(--yellow);
+  font-size: 0.84rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  transition: background 0.18s ease, color 0.18s ease, transform 0.18s ease;
+}
+#kfcs-books .buy-link:hover {
+  background: var(--yellow);
+  color: #101010;
+  transform: translateY(-2px);
+}
+#kfcs-books .buy-none {
+  align-self: flex-start;
+  margin-top: 14px;
+  color: #8b857c;
+  font-size: 0.82rem;
+}
 #kfcs-books .book-title {
   margin-top: 10px;
   font-family: 'Noto Serif TC', serif; font-size: 1.24rem; font-weight: 700;

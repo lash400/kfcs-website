@@ -60,11 +60,13 @@ body {
 }
 
 .kfcs-sitenav .nav-brand .brand-sub {
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.2em;
+  font-size: 1.32rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  line-height: 1;
   color: #f6c213;
   display: block;
+  white-space: nowrap;
 }
 
 .kfcs-sitenav .nav-links {
