@@ -177,6 +177,16 @@
   border: 1px solid var(--line);
 }
 
+.kfcs-article .art-body iframe {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  margin: 1.9em auto;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+}
+
 .kfcs-article .art-body blockquote {
   margin: 1.8em 0;
   padding: 20px 24px;
