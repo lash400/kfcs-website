@@ -6,5 +6,12 @@
   "compatibility_date": "2026-07-31",
   "assets": {
     "directory": "./"
-  }
+  },
+  // 自訂網域。custom_domain 會由 Cloudflare 自動建立對應的 proxied DNS 記錄，
+  // 不需要（也不應該）在 DNS 頁面手動新增 A/CNAME。
+  // www 另以 redirect rule 轉到 apex，避免同一份內容兩個網址。
+  "routes": [
+    { "pattern": "kfcs.tw", "custom_domain": true },
+    { "pattern": "www.kfcs.tw", "custom_domain": true }
+  ]
 }
