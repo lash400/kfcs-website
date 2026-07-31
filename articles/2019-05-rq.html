@@ -3,12 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="robots" content="noindex">
 <title>RQ二代即時跑力演算法上線 — KFCS</title>
 <meta name="description" content="「RQ即時跑力」已開放給所有跑者使用超過三年了，它是RQ最核心的演算法之一，因為一直有人反應跑完沒看到「即時跑力」會覺得很空虛，我個人也是。所以經過一番努力，我們完成了二代的即時跑力演算法，重新思考計算邏輯。算是重新來過">
+<meta property="og:url" content="https://kfcs.tw/articles/2019-05-rq">
 <meta property="og:title" content="RQ二代即時跑力演算法上線">
 <meta property="og:description" content="「RQ即時跑力」已開放給所有跑者使用超過三年了，它是RQ最核心的演算法之一，因為一直有人反應跑完沒看到「即時跑力」會覺得很空虛，我個人也是。所以經過一番努力，我們完成了二代的即時跑力演算法，重新思考計算邏輯。算是重新來過">
 <meta property="og:type" content="article">
+<link rel="canonical" href="https://kfcs.tw/articles/2019-05-rq">
 <link rel="icon" type="image/svg+xml" href="../assets/kfcs-logo.svg">
 <link rel="icon" type="image/png" href="../assets/kfcs-logo.png">
 <link rel="stylesheet" href="../shared/site-chrome.css">
@@ -60,13 +61,13 @@
 <p>這次我們的改版，雖然只是針對「一個數字」做優化，但背後真是絞盡腦汁，突破了許多困難點。過去RQ只能在像是LSD或節奏跑這種穩定數據的情況下才計算得出來，但現在我們已可計算出大部分的訓練類型的即時跑力了。</p>
 <p>在二代演算法中，RQ會先從跑者上傳的數據判斷今天是跑間歇、法特雷克、慢跑、LSD、超馬、節奏跑、跑坡還是越野跑，再針對不同的類型來計算即時跑力，所以不只是即時跑力的出現機率變高了，準度也跟著升級。能夠「自動區別訓練類型」是我們此次工作的一大進展。</p>
 <p>除此之外，Xjack也專門寫了一個測試平台讓我們可以從算不準的數據中找出計算失誤的點在哪，再進行更細緻的判斷與優化。</p>
-<p>昨天就找到一個計算失誤的案例，當前跑力才41.8，但即時跑力飆高到70，主因是GPS飄移造成的，但我們還是可以透過算法的調整來避免類似的誤算產生，盡量用限有的數據去逼近跑者當天的實力是我們的目標。</p>
+<p>昨天就找到一個計算失誤的案例，當前跑力才41.8，但即時跑力飆高到70，主因是GPS飄移造成的，但我們還是可以透過演算法的調整來避免類似的誤算產生，盡量用現有的數據去逼近跑者當天的實力是我們的目標。</p>
 <p>目前RQ即時跑力算不出來只有下列三種情況：<br>1、沒有心率數據。<br>2、單次訓練不足十二分鐘 (或十二分鐘內停錶)。因為時間太短，無法分析。<br>3、在跑步機上訓練。因為跑錶偵測跑步機上訓練的距離和配速都會有很大的誤差，所以無法分析。</p>
 <p>也就是說，只要你有帶心率錶，而且在「戶外連續跑步超過十二分鐘」，RQ就會幫跑者算出即時跑力，作為該次跑步當下的實力。當然，跑者必須先把最大心率和安靜心率設定準確，在這個前提下RQ才算得準。</p>
-<p>第1與第2點是無法去除的，因為沒有心率，RQ無法判斷你的的壓力；此外，一定要跑一段時間後算出來的即時跑力才會有意義，我們現在認為最短就要12分鐘。<br>第3點期待能跟跑步機廠商合作才能解決。</p>
-<p>有了更多即時跑力的之後，當前跑力才會愈來愈精準，而精準的當前跑力才能幫助跑者取得個人化的訓練配速區間，也才能幫助跑者進行課表的個人化。這也是為何我們這次特別為了「即時跑力」這個單一的數值花了很多時間討論與工程能量進行優化。</p>
-<p>這次的改版這真的是辛苦Xjack了，讓他多熬夜了好幾晚。現在要完成這種程度的計算邏輯還真是只有在懂跑步、懂訓練、懂數學又懂程式的人才能完成這個工作。</p>
-<p>我們對「即時跑力」的定義是「運用跑者的跑步數據來推算出他/她今天的跑步實力。」要達到這個目標，是條沒有盡頭的道路，當將來硬體能提供愈多類型而且愈加精準的數據之後，我們也將愈算愈準。但在那個時代來臨 之前，透過算法還是有很多努力可做。</p>
+<p>第1與第2點是無法去除的，因為沒有心率，RQ無法判斷你的壓力；此外，一定要跑一段時間後算出來的即時跑力才會有意義，我們現在認為最短就要12分鐘。<br>第3點期待能跟跑步機廠商合作才能解決。</p>
+<p>有了更多即時跑力之後，當前跑力才會愈來愈精準，而精準的當前跑力才能幫助跑者取得個人化的訓練配速區間，也才能幫助跑者進行課表的個人化。這也是為何我們這次特別為了「即時跑力」這個單一的數值花了很多時間討論與工程能量進行優化。</p>
+<p>這次的改版真的是辛苦Xjack了，讓他多熬夜了好幾晚。現在要完成這種程度的計算邏輯還真是只有在懂跑步、懂訓練、懂數學又懂程式的人才能完成這個工作。</p>
+<p>我們對「即時跑力」的定義是「運用跑者的跑步數據來推算出他/她今天的跑步實力。」要達到這個目標，是條沒有盡頭的道路，當將來硬體能提供愈多類型而且愈加精準的數據之後，我們也將愈算愈準。但在那個時代來臨之前，透過演算法還是有很多努力可做。</p>
 <p>--<br><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.runningquotient.com%2F%3Ffbclid%3DIwAR0AkrYC7rGrOHV4T_WfTz0VKZsVvVlBMGHZtTVh7bo8mdrYBQBxclOvvu8&amp;h=AT0qrAzWg1rF925m9vKdE0wnLO9LMrCkxMRT5df_ElHgHmdy_ydIkZ1a5ir4YQuOthzSYkFuq6dvDZevI_VR8c5z9BSQOaCpcaSjytwmS-ygjI0gPy8anr88j9TAIag_IyO3UZgoK1BZXBci-f7QKLLby4r3Dy863lmttPfeS0yLAekpBGeHI-j11DROgHdXP4TyWWs5Klre-KiiDrvHPkwVUeXSdCpc28pXLaJsNa2xSzFe5mmrt0wwiWrKFmPbiQIOnkEPloHGAiBu3GU5can9a1USK3Ax73uqjan8N3racT3nKS7ksbeM4vDm1J8AKk4Mg3opDNG-2Rgl86E8qUxHOdMC9Sa6qRrCzRUkXWqzo-y95n3_YMNQ3ql_7raMzXY2gT8DtKHeMYwPrpqrhkmqUMLfc8UHaQgWwWKOuAGTR-_oMNjj_EHmatUSJDEKJJ4PtJLPyvzF7lrPtf5C4aj6SXAWqk_-UzW9FHCbwWcRvjCwsYAjOhEdq9ULBQW8U0zja9otWzItTrUspmz7fjax4EGzTGbXVaYqnYIRhESir2K2NV_qHifz3GkUpdpIq04GlExz7ND4LrJ7xGB1ytTiWy3TOfzJKxwJEtdLvB6TX0ZpBKj8f33_zIAcLEtGL2waKtKF" target="_blank" rel="noreferrer noopener">https://www.runningquotient.com/</a></p>
   </div>
   <div class="art-foot">

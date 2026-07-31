@@ -1,0 +1,6 @@
+# KFCS 官網 robots.txt
+
+User-agent: *
+Allow: /
+
+Sitemap: https://kfcs.tw/sitemap.xml

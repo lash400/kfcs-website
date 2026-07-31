@@ -3,12 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="robots" content="noindex">
 <title>Garmin錶中的最大攝氧量是怎麼計算出來的？ — KFCS</title>
 <meta name="description" content="使用GARMIN的錶已經有好幾年了，每次最大攝氧量更新時手錶都會提示我，每次都很疑惑它是怎麼被估算出來的。後來發現最大攝氧量估算的功能是由Firstbeat這家公司所提供，同樣的功能也同時提供給 SUNTO 和SAMSU">
+<meta property="og:url" content="https://kfcs.tw/articles/2016-01-garmin">
 <meta property="og:title" content="Garmin錶中的最大攝氧量是怎麼計算出來的？">
 <meta property="og:description" content="使用GARMIN的錶已經有好幾年了，每次最大攝氧量更新時手錶都會提示我，每次都很疑惑它是怎麼被估算出來的。後來發現最大攝氧量估算的功能是由Firstbeat這家公司所提供，同樣的功能也同時提供給 SUNTO 和SAMSU">
 <meta property="og:type" content="article">
+<link rel="canonical" href="https://kfcs.tw/articles/2016-01-garmin">
 <link rel="icon" type="image/svg+xml" href="../assets/kfcs-logo.svg">
 <link rel="icon" type="image/png" href="../assets/kfcs-logo.png">
 <link rel="stylesheet" href="../shared/site-chrome.css">
@@ -110,7 +111,7 @@ SUNTO
 <p>心率受心理因素而上升時，因為裝置分辨不出來，它會以為你已經在加速，其實你只是緊張或受到驚嚇。</p>
 </li>
 <li>
-<p>跑在越野跑路線上。因在在比較柔軟的越野路面上，跑起來會相對吃力一點，你的裝置並無法分辨路面的狀況，所以它會以為你的表現退步了，量測出來的數值自然比較低。</p>
+<p>跑在越野跑路線上。因為在比較柔軟的越野路面上，跑起來會相對吃力一點，你的裝置並無法分辨路面的狀況，所以它會以為你的表現退步了，量測出來的數值自然比較低。</p>
 </li>
 </ul>
 <p>下列在白皮書中說可以偵測出來剔除，但若不太嚴重的話應該也會無法判別：</p>
@@ -127,10 +128,10 @@ SUNTO
 </ul>
 <p><strong><br></strong></p>
 <p><strong>誤差率在5%附近</strong></p>
-<p>透過這樣的篩選機制，在使用者設定正確的情況下，Firsrbeat官方報告指出，它們的誤差率都在5%附近。他們檢測的樣本數共79位跑者，在這些跑者6~9個月準備馬拉松的過程中，總共搜集了2690次日常練習的統計數據，他們用這些數據來分析估計值跟實際在實驗室測量的數據相差多少。極大多數跟實際最大攝氧量的差距都在3.5 (ml/kg/min)。</p>
+<p>透過這樣的篩選機制，在使用者設定正確的情況下，Firstbeat官方報告指出，它們的誤差率都在5%附近。他們檢測的樣本數共79位跑者，在這些跑者6~9個月準備馬拉松的過程中，總共搜集了2690次日常練習的統計數據，他們用這些數據來分析估計值跟實際在實驗室測量的數據相差多少。極大多數跟實際最大攝氧量的差距都在3.5 (ml/kg/min)。</p>
 <p>在報告書中指出，如果最大心率套公式，設定的值跟實際不符，估算出來的最大心率會有很大的誤差，誤差值隨著最大心率的偏差而加大。如下圖所示：橫軸「0」代表最大心率設定確實，沒有偏差，所以最大攝氧量的最大誤差率為5%，但如果最大心率偏差到「-10」，誤差率就會提升到7%。</p>
 <p><img src="https://lh5.googleusercontent.com/0p9PMWYa9YupghkIOydhMnbTe31YOeor5osUbOWiqx9zyMPWXTNZbjQKT_91GOj0pVACe-YOLx02O2cKY4f5z1vTjX1PGu2nzJqJ3nsVbp151fzAXVcJyTRP779ZFOhNllPTc-rh" alt="" loading="lazy"></p>
-<p>下面這張圖中第一條曲線是意思是，不管是在第幾公里量到的數據，誤差率都會在5%附近→意思就是：我們家Firsrbeat的演算法錯誤率很低，不管跑者訓練距離有多少，只要能量到最大攝氧量，它的錯誤率就會在5%附近。</p>
+<p>下面這張圖中第一條曲線是意思是，不管是在第幾公里量到的數據，誤差率都會在5%附近→意思就是：我們家Firstbeat的演算法錯誤率很低，不管跑者訓練距離有多少，只要能量到最大攝氧量，它的錯誤率就會在5%附近。</p>
 <p>第二條曲線的意思是：只要你戴著錶跑兩公里，有75%機率可以成功測到最大攝氧量，如果沒測到，就繼續跑，最遠跑到第8公里就有98%成功率率可以測到你的最大攝氧量。</p>
 <p>也就是說，大部分(75%)的跑者只要跑兩公里就能測到最大攝氧量，而且誤差率很低。</p>
 <p><strong><br></strong></p>

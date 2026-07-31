@@ -16,7 +16,7 @@ KFCS（KuoFeng Coaching System）耐力訓練系統官方網站，由徐國峰�
 | Podcast 專區 | `podcast.html` |
 | 關於我們 | `about.html` |
 | 課程簡章與報名資訊 | `blog/*.html`（8 篇） |
-| 耐力訓練文章 | `articles/*.html`（488 篇） |
+| 耐力訓練文章 | `articles/*.html`（575 篇） |
 
 ### 共用資源
 
@@ -30,18 +30,32 @@ KFCS（KuoFeng Coaching System）耐力訓練系統官方網站，由徐國峰�
 - 課程頁與影音專區：`KFCS_Website&Seminar/官方網站/`
 - 部落格文章：徐國峰 Obsidian 資料庫中歷年部落格與臉書發表的文章（2009–2026），
   篩選耐力訓練主題並轉為靜態頁面。
+- 舊部落格補匯：<https://rocky549.blogspot.com/> 共 642 篇，比對後補上官網原本缺漏
+  且屬訓練主題的 90 篇（2008–2020），保留原始發表日期與原文出處連結。訓練日誌、
+  生活日記、東華鐵人隊事務與過期課程活動公告未匯入。
 
 ## 維護注意事項
 
-- **全站設定 `<meta name="robots" content="noindex">`**（審核中）。正式上線時要移除所有頁面的這一行，否則搜尋引擎不會收錄。
+- 全站已開放搜尋引擎索引（`robots.txt` 允許全站、`sitemap.xml` 收錄 592 頁），每頁都有 `canonical` 與 `og:url` 指向 <https://kfcs.tw>。
 - 2026 年梯次的日期、時間、上課地點與費用已全部移除；報名相關的行動呼籲統一導向 2027 年課程預先登記（寄信至 <kuofengcoaching@gmail.com>）。下一梯課程確定後，需重新補上檔期資訊。
 - 部分訓練現場照片仍引用 imgur 外部圖床，文章內的圖片則引用原部落格圖床。若來源失效，圖片會消失。
 
 ## 部署
 
-GitHub Pages（main 分支根目錄），推送後自動部署：
-<https://lash400.github.io/kfcs-website/>
+正式站：<https://kfcs.tw>（Cloudflare Workers 靜態資產，設定見 `wrangler.jsonc`）
+備援站：<https://lash400.github.io/kfcs-website/>（GitHub Pages，main 分支根目錄）
+
+推送原始碼：
 
 ```bash
 git add -A && git commit -m "更新內容" && git push
 ```
+
+部署到 kfcs.tw（首次需先 `npx wrangler login`）：
+
+```bash
+npx wrangler deploy
+```
+
+Cloudflare 的靜態資產服務會把 `/about.html` 自動轉址到 `/about`，
+因此站內連結保留 `.html` 即可，sitemap 則使用無副檔名的正式網址。
