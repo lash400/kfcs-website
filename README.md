@@ -26,7 +26,8 @@ KFCS（KuoFeng Coaching System）耐力訓練系統官方網站，由徐國峰�
 - `assets/`：logo 與課程封面圖。
 - `assets/og-cover.jpg`：社群分享圖（Open Graph，1200×630）。首頁、關於我們、教育訓練、
   部落格、訓練書系、YouTube 與 Podcast 專區，以及 `articles/*.html` 全部 575 篇文章頁的
-  `og:image` 都指向這張；課程總覽、教練認證與 `blog/*.html` 則各自沿用專屬課程封面。原始設計檔為 `assets/og-cover.source.html`（用瀏覽器開啟即可預覽，
+  `og:image` 都指向這張，課程總覽與教練認證也是；只有 `blog/*.html` 8 篇課程簡章沿用
+  各自的專屬課程封面。原始設計檔為 `assets/og-cover.source.html`（用瀏覽器開啟即可預覽，
   已在 `.assetsignore` 中排除，不會部署）。改圖後以 headless Chrome 截圖 1200×630 重新輸出即可。
 
 ## 內容來源
