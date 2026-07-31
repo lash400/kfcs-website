@@ -1,0 +1,167 @@
+<meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Serif+TC:wght@700;900&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1200px; height: 630px; overflow: hidden; }
+  body {
+    background: #0b0b0b;
+    font-family: 'Noto Sans TC', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .card {
+    position: relative;
+    width: 1200px;
+    height: 630px;
+    overflow: hidden;
+    isolation: isolate;
+    background:
+      radial-gradient(circle at 96% -8%, rgba(246, 194, 19, 0.19), transparent 34%),
+      radial-gradient(circle at 100% 104%, rgba(246, 194, 19, 0.14), transparent 30%),
+      linear-gradient(122deg, #121110 0%, #0b0b0b 54%, #131110 100%);
+  }
+
+  /* 斜向細紋理 */
+  .card::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image: repeating-linear-gradient(
+      118deg, rgba(255,255,255,0.030) 0 1px, transparent 1px 48px);
+    z-index: 0;
+  }
+
+  /* 右側同心圓（呼應官網 hero-orbit） */
+  .orbit {
+    position: absolute;
+    right: -170px; top: 168px;
+    width: 470px; height: 470px;
+    border-radius: 50%;
+    border: 1px solid rgba(246, 194, 19, 0.26);
+    background: radial-gradient(circle, rgba(246,194,19,0.10) 0%, rgba(246,194,19,0.02) 58%, transparent 70%);
+    box-shadow: 0 0 0 34px rgba(246, 194, 19, 0.035);
+    z-index: 0;
+  }
+  .orbit::after {
+    content: '';
+    position: absolute; inset: 78px;
+    border-radius: 50%;
+    border: 1px solid rgba(246, 194, 19, 0.20);
+  }
+
+  /* 頂部金線 */
+  .topline {
+    position: absolute; top: 0; left: 0; right: 0; height: 6px;
+    background: linear-gradient(90deg, #f6c213 0%, #ffd64b 34%, rgba(246,194,19,0.16) 100%);
+    z-index: 3;
+  }
+
+  .inner {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    padding: 60px 76px 54px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* ── 頁首：logo + 品牌 ── */
+  .brand { display: flex; align-items: center; gap: 18px; }
+  .brand img { width: 96px; height: auto; display: block; }
+  .brand .bar { width: 1px; height: 42px; background: rgba(255,255,255,0.22); }
+  .brand .name {
+    font-size: 27px; font-weight: 900; letter-spacing: 0.16em; color: #f6c213;
+  }
+  .brand .by {
+    margin-left: auto;
+    font-size: 19px; font-weight: 500; letter-spacing: 0.10em; color: #bdb7ac;
+  }
+
+  /* ── 主標 ── */
+  .headline { margin-top: auto; }
+  .kicker {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 25px; letter-spacing: 0.34em; color: #f6c213;
+    margin-bottom: 22px;
+  }
+  h1 {
+    font-family: 'Noto Serif TC', serif;
+    font-weight: 900;
+    font-size: 84px;
+    line-height: 1.18;
+    letter-spacing: 0.015em;
+    color: #fffdf8;
+  }
+  h1 em {
+    display: block;
+    font-style: normal;
+    font-size: 46px;
+    line-height: 1.3;
+    letter-spacing: 0.10em;
+    color: #f6c213;
+    margin-top: 14px;
+  }
+
+  /* ── 四大模組 ── */
+  .modules {
+    margin-top: 36px;
+    display: flex; align-items: center; gap: 14px;
+  }
+  .modules .m {
+    font-size: 23px; font-weight: 700; letter-spacing: 0.10em;
+    color: #efe9dd;
+    padding: 9px 24px;
+    border: 1px solid rgba(246,194,19,0.40);
+    border-radius: 999px;
+    background: rgba(246,194,19,0.07);
+  }
+
+  /* ── 頁尾 ── */
+  .foot {
+    margin-top: auto;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255,255,255,0.10);
+    display: flex; align-items: baseline; gap: 20px;
+  }
+  .foot .sports {
+    font-size: 21px; font-weight: 500; letter-spacing: 0.14em; color: #b8b3aa;
+  }
+  .foot .url {
+    margin-left: auto;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 31px; letter-spacing: 0.14em; color: #f6c213;
+  }
+</style>
+
+<div class="card">
+  <div class="orbit"></div>
+  <div class="topline"></div>
+
+  <div class="inner">
+    <div class="brand">
+      <img src="kfcs-logo.svg" alt="KFCS">
+      <span class="bar"></span>
+      <span class="name">耐力訓練系統</span>
+      <span class="by">徐國峰 KuoFeng Coaching System</span>
+    </div>
+
+    <div class="headline">
+      <div class="kicker">KFCS ENDURANCE SYSTEM</div>
+      <h1>
+        訓練，是科學也是藝術
+        <em>耐力，是練身也是修心</em>
+      </h1>
+    </div>
+
+    <div class="modules">
+      <span class="m">練心</span>
+      <span class="m">練體能</span>
+      <span class="m">練力量</span>
+      <span class="m">練技術</span>
+    </div>
+
+    <div class="foot">
+      <span class="sports">跑步 · 游泳 · 公路車 · 鐵人三項</span>
+      <span class="url">KFCS.TW</span>
+    </div>
+  </div>
+</div>

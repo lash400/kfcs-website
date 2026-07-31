@@ -8,7 +8,11 @@
 <meta property="og:url" content="https://kfcs.tw/">
 <meta property="og:title" content="KFCS 耐力訓練系統｜訓練，是科學也是藝術">
 <meta property="og:description" content="KFCS 由徐國峰創立，以心、體能、力量、技術四大模組整合跑步、游泳、公路車與鐵人三項的科學化訓練，提供課程、教練培訓與教育訓練服務。">
-<meta property="og:image" content="https://kfcs.tw/assets/covers/course-overview-cover-16x9.jpg">
+<meta property="og:image" content="https://kfcs.tw/assets/og-cover.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="KFCS 耐力訓練系統｜訓練，是科學也是藝術">
+<meta name="twitter:card" content="summary_large_image">
 <meta property="og:type" content="website">
 <link rel="canonical" href="https://kfcs.tw/">
 <link rel="icon" type="image/svg+xml" href="assets/kfcs-logo.svg">
@@ -39,6 +43,7 @@
           </ul>
         </li>
         <li><a href="about.html">關於我們</a></li>
+        <li><a class="nav-social" href="https://www.facebook.com/rocky549" target="_blank" rel="noopener" aria-label="追蹤徐國峰的臉書"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.313 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="nav-social-label">臉書</span></a></li>
         <li><a class="nav-cta" href="mailto:kuofengcoaching@gmail.com?subject=%E3%80%902027%20%E8%AA%B2%E7%A8%8B%E3%80%91%E9%96%8B%E8%AA%B2%E9%80%9A%E7%9F%A5%E7%99%BB%E8%A8%98">2027 年課程通知我</a></li>
       </ul>
     </div>
@@ -1052,6 +1057,217 @@ src="https://www.facebook.com/tr?id=404602746416082&ev=PageView&noscript=1"
   white-space: normal;
 }
 
+/* === FACEBOOK 追蹤專區 === */
+#kfcs-hp .fb-band {
+  position: relative;
+  overflow: hidden;
+  border-bottom: none;
+  color: var(--white);
+  background:
+    radial-gradient(circle at 97% -4%, rgba(24, 119, 242, 0.18), transparent 24%),
+    radial-gradient(circle at 0% 100%, rgba(246, 194, 19, 0.09), transparent 30%),
+    linear-gradient(180deg, #1a1a1a 0%, #121212 100%);
+}
+
+#kfcs-hp .fb-band::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(246, 194, 19, 0.62), rgba(24, 119, 242, 0.55) 58%, transparent);
+}
+
+#kfcs-hp .fb-layout {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1.06fr) minmax(300px, 0.94fr);
+  gap: clamp(30px, 4.5vw, 58px);
+  align-items: center;
+}
+
+#kfcs-hp .fb-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+  color: var(--yellow);
+  font-size: 0.76rem;
+  font-weight: 900;
+  letter-spacing: 0.24em;
+}
+
+#kfcs-hp .fb-kicker::before {
+  content: '';
+  width: 28px;
+  height: 2px;
+  background: currentColor;
+}
+
+#kfcs-hp .fb-title {
+  font-family: 'Noto Serif TC', serif;
+  font-size: clamp(1.42rem, 2.6vw, 1.98rem);
+  font-weight: 700;
+  line-height: 1.45;
+  letter-spacing: 0.02em;
+  color: #fff;
+  text-wrap: balance;
+  word-break: auto-phrase;
+}
+
+#kfcs-hp .fb-text {
+  margin-top: 18px;
+  max-width: 56ch;
+  font-family: 'Noto Serif TC', serif;
+  font-size: 1rem;
+  line-height: 2;
+  color: rgba(255, 255, 255, 0.74);
+}
+
+#kfcs-hp .fb-nowrap {
+  white-space: nowrap;
+}
+
+#kfcs-hp .fb-points {
+  display: grid;
+  gap: 12px;
+  margin-top: 26px;
+}
+
+#kfcs-hp .fb-points li {
+  position: relative;
+  padding-left: 26px;
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 0.95rem;
+  line-height: 1.85;
+}
+
+#kfcs-hp .fb-points li::before {
+  content: '';
+  position: absolute;
+  top: 0.62em;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: #1877f2;
+  box-shadow: 0 0 0 4px rgba(24, 119, 242, 0.18);
+}
+
+#kfcs-hp .fb-card {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(24px, 3vw, 32px);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 28px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.03));
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.45);
+}
+
+#kfcs-hp .fb-card::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 4px;
+  background: linear-gradient(90deg, #1877f2, rgba(24, 119, 242, 0.22));
+}
+
+#kfcs-hp .fb-id {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+#kfcs-hp .fb-avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 54px;
+  height: 54px;
+  border-radius: 999px;
+  background: #1877f2;
+  color: #fff;
+  box-shadow: 0 12px 28px rgba(24, 119, 242, 0.4);
+}
+
+#kfcs-hp .fb-avatar svg {
+  display: block;
+  width: 28px;
+  height: 28px;
+  fill: currentColor;
+}
+
+#kfcs-hp .fb-name {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.35;
+  color: #fff;
+}
+
+#kfcs-hp .fb-handle {
+  display: block;
+  margin-top: 4px;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+}
+
+#kfcs-hp .fb-card-text {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.74);
+  font-size: 0.94rem;
+  line-height: 1.9;
+}
+
+#kfcs-hp .fb-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  min-height: 54px;
+  margin-top: 22px;
+  padding: 0 22px;
+  border-radius: 999px;
+  background: #1877f2;
+  color: #fff;
+  font-size: 0.92rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  box-shadow: 0 16px 34px rgba(24, 119, 242, 0.34);
+  transition: background 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+#kfcs-hp .fb-btn:hover {
+  background: #3d8bff;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 20px 44px rgba(24, 119, 242, 0.44);
+}
+
+#kfcs-hp .fb-btn svg {
+  display: block;
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+#kfcs-hp .fb-note {
+  display: block;
+  margin-top: 14px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.42);
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+}
+
 /* === CLOSING === */
 #kfcs-hp .closing {
   max-width: 840px;
@@ -1078,7 +1294,8 @@ src="https://www.facebook.com/tr?id=404602746416082&ev=PageView&noscript=1"
   #kfcs-hp .resource-grid,
   #kfcs-hp .about-layout,
   #kfcs-hp .cta-grid,
-  #kfcs-hp .featured-grid {
+  #kfcs-hp .featured-grid,
+  #kfcs-hp .fb-layout {
     grid-template-columns: 1fr;
   }
 
@@ -1207,9 +1424,20 @@ src="https://www.facebook.com/tr?id=404602746416082&ev=PageView&noscript=1"
   #kfcs-hp .cta-card,
   #kfcs-hp .featured-card,
   #kfcs-hp .about-highlight,
-  #kfcs-hp .system-panel {
+  #kfcs-hp .system-panel,
+  #kfcs-hp .fb-card {
     padding: 20px;
     border-radius: 20px;
+  }
+
+  #kfcs-hp .fb-avatar {
+    width: 46px;
+    height: 46px;
+  }
+
+  #kfcs-hp .fb-avatar svg {
+    width: 24px;
+    height: 24px;
   }
 
   #kfcs-hp .lead {
@@ -1600,6 +1828,41 @@ src="https://www.facebook.com/tr?id=404602746416082&ev=PageView&noscript=1"
     </div>
   </section>
 
+  <section class="section fb-band" id="follow-facebook">
+    <div class="shell">
+      <div class="fb-layout">
+        <div class="fb-copy">
+          <span class="fb-kicker">FOLLOW ON FACEBOOK</span>
+          <h2 class="fb-title">還在思考中的訓練想法，通常先寫在臉書</h2>
+          <p class="fb-text">這個網站放的是已經整理過的內容：課程資訊、訓練書系，以及<span class="fb-nowrap">二〇〇九年</span>至今、五百多篇寫成文章的訓練主題。但在成為文章之前，那些讀到的研究、帶課現場的觀察，還有對某個訓練問題當下的想法，多半是先發表在臉書上。</p>
+          <ul class="fb-points">
+            <li>訓練觀念與帶課現場的第一手筆記</li>
+            <li>課程、新書與活動的最新動態</li>
+            <li>本站多數文章最初發表的地方</li>
+          </ul>
+        </div>
+
+        <aside class="fb-card">
+          <div class="fb-id">
+            <span class="fb-avatar">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.313 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
+            </span>
+            <div>
+              <div class="fb-name">徐國峰</div>
+              <span class="fb-handle">facebook.com/rocky549</span>
+            </div>
+          </div>
+          <p class="fb-card-text">從<span class="fb-nowrap">二〇〇九年</span>寫到現在，耐力訓練的閱讀、思考與教學紀錄，大多先出現在這裡。</p>
+          <a class="fb-btn" href="https://www.facebook.com/rocky549" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.313 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
+            前往臉書追蹤
+          </a>
+          <span class="fb-note">在新分頁開啟</span>
+        </aside>
+      </div>
+    </div>
+  </section>
+
 </section>
 <footer class="kfcs-sitefooter">
   <div class="foot-shell">
@@ -1608,6 +1871,10 @@ src="https://www.facebook.com/tr?id=404602746416082&ev=PageView&noscript=1"
         <img src="assets/kfcs-logo.svg" alt="KFCS logo">
         <p>把心、體能、力量與技術整合為一套可理解、可實踐、可傳承的耐力訓練系統，支持運動員進步，也支持教練成長。</p>
         <p>聯絡信箱：<a href="mailto:kuofengcoaching@gmail.com">kuofengcoaching@gmail.com</a></p>
+        <a class="foot-social" href="https://www.facebook.com/rocky549" target="_blank" rel="noopener">
+          <span class="foot-social-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.313 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg></span>
+          <span class="foot-social-text"><b>追蹤徐國峰的臉書</b><span>FACEBOOK</span></span>
+        </a>
       </div>
       <div class="foot-col">
         <h3>網站導覽</h3>

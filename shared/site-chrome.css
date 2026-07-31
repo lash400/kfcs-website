@@ -148,6 +148,40 @@ body {
   font-size: 0.88rem;
 }
 
+/* 社群圖示（臉書） */
+.kfcs-sitenav .nav-links a.nav-social {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  margin-left: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+  color: #d7d3ca;
+  transition: color 0.16s ease, background 0.16s ease, border-color 0.16s ease, transform 0.16s ease;
+}
+
+.kfcs-sitenav .nav-links a.nav-social:hover {
+  background: #1877f2;
+  border-color: #1877f2;
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.kfcs-sitenav .nav-social svg {
+  display: block;
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+.kfcs-sitenav .nav-social .nav-social-label {
+  display: none;
+}
+
 /* CTA */
 .kfcs-sitenav .nav-cta {
   display: inline-flex;
@@ -258,6 +292,29 @@ body {
     border: none;
     background: none;
     box-shadow: none;
+  }
+
+  .kfcs-sitenav .nav-links a.nav-social {
+    width: 100%;
+    height: auto;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-left: 0;
+    margin-top: 4px;
+    padding: 12px 14px;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+  }
+
+  .kfcs-sitenav .nav-links a.nav-social:hover {
+    background: rgba(255, 255, 255, 0.06);
+    color: #f6c213;
+    transform: none;
+  }
+
+  .kfcs-sitenav .nav-social .nav-social-label {
+    display: inline;
   }
 
   .kfcs-sitenav .nav-cta {
@@ -410,6 +467,66 @@ body {
 
 .kfcs-sitefooter .foot-brand a:hover {
   text-decoration: underline;
+}
+
+/* 臉書追蹤卡 */
+.kfcs-sitefooter .foot-brand .foot-social {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 20px;
+  padding: 10px 22px 10px 11px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+  color: #ece6db;
+  text-decoration: none;
+  transition: background 0.18s ease, border-color 0.18s ease, transform 0.18s ease;
+}
+
+.kfcs-sitefooter .foot-brand .foot-social:hover {
+  border-color: rgba(24, 119, 242, 0.6);
+  background: rgba(24, 119, 242, 0.14);
+  text-decoration: none;
+  transform: translateY(-2px);
+}
+
+.kfcs-sitefooter .foot-social .foot-social-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  background: #1877f2;
+  color: #fff;
+}
+
+.kfcs-sitefooter .foot-social .foot-social-mark svg {
+  display: block;
+  width: 17px;
+  height: 17px;
+  fill: currentColor;
+}
+
+.kfcs-sitefooter .foot-social .foot-social-text {
+  display: block;
+  line-height: 1.35;
+}
+
+.kfcs-sitefooter .foot-social .foot-social-text b {
+  display: block;
+  color: #fbf8f1;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.kfcs-sitefooter .foot-social .foot-social-text span {
+  display: block;
+  color: #8d887e;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
 }
 
 .kfcs-sitefooter .foot-col h3 {
