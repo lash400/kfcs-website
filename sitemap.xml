@@ -3736,4 +3736,10 @@
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://kfcs.tw/articles/2017-11-13-2</loc>
+    <lastmod>2017-11-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>
