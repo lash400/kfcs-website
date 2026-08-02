@@ -2490,12 +2490,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://kfcs.tw/articles/2019-01-01</loc>
-    <lastmod>2019-01-01</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://kfcs.tw/articles/2019-02-2019</loc>
     <lastmod>2019-02-25</lastmod>
     <changefreq>yearly</changefreq>
@@ -3168,12 +3162,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://kfcs.tw/articles/2026-01-kfcs</loc>
-    <lastmod>2026-01-01</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://kfcs.tw/articles/2026-01-r015</loc>
     <lastmod>2026-01-01</lastmod>
     <changefreq>yearly</changefreq>
@@ -3434,21 +3422,6 @@
   <url>
     <loc>https://kfcs.tw/articles/2026-05-x-ai</loc>
     <lastmod>2026-05-15</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://kfcs.tw/articles/post-2</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://kfcs.tw/articles/post-3</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://kfcs.tw/articles/post</loc>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
