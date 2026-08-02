@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Garmin錶中的最大攝氧量是怎麼計算出來的？ — KFCS</title>
-<meta name="description" content="使用GARMIN的錶已經有好幾年了，每次最大攝氧量更新時手錶都會提示我，每次都很疑惑它是怎麼被估算出來的。後來發現最大攝氧量估算的功能是由Firstbeat這家公司所提供，同樣的功能也同時提供給 SUNTO 和SAMSU">
+<title>Garmin 錶中的最大攝氧量是怎麼計算出來的？ — KFCS</title>
+<meta name="description" content="使用GARMIN的錶已經有好幾年了，每次最大攝氧量更新時手錶都會提示我，每次都很疑惑它是怎麼被估算出來的。後來發現最大攝氧量估算的功能是由Firstbeat這家公司所提供，同樣的功能也同時提供給 SUUNTO 和SAMSU">
 <meta property="og:url" content="https://kfcs.tw/articles/2016-01-garmin">
 <meta property="og:title" content="Garmin錶中的最大攝氧量是怎麼計算出來的？">
-<meta property="og:description" content="使用GARMIN的錶已經有好幾年了，每次最大攝氧量更新時手錶都會提示我，每次都很疑惑它是怎麼被估算出來的。後來發現最大攝氧量估算的功能是由Firstbeat這家公司所提供，同樣的功能也同時提供給 SUNTO 和SAMSU">
+<meta property="og:description" content="使用GARMIN的錶已經有好幾年了，每次最大攝氧量更新時手錶都會提示我，每次都很疑惑它是怎麼被估算出來的。後來發現最大攝氧量估算的功能是由Firstbeat這家公司所提供，同樣的功能也同時提供給 SUUNTO 和SAMSU">
 <meta property="og:image" content="https://kfcs.tw/assets/og-cover.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -59,28 +59,28 @@
         <span class="art-cat">體能與課表</span>
         <span class="art-date">2016-01-03</span>
       </div>
-      <h1 class="art-title">Garmin錶中的最大攝氧量是怎麼計算出來的？</h1>
+      <h1 class="art-title">Garmin 錶中的最大攝氧量是怎麼計算出來的？</h1>
     </div>
   </header>
   <div class="art-body">
-<p>使用GARMIN的錶已經有好幾年了，每次最大攝氧量更新時手錶都會提示我，每次都很疑惑它是怎麼被估算出來的。後來發現最大攝氧量估算的功能是由Firstbeat這家公司所提供，同樣的功能也同時提供給
-SUNTO
-和SAMSUNG的穿戴裝置。</p>
-<p>原本大概猜得出來Firstbeat是怎麼做到的，但僅止於「大概」……茗傑花了一個星期的時間讀了好幾遍Firstbeat官網上開放的白皮書(White Paper): <a href="http://www.firstbeat.com/app/uploads/2015/10/white_paper_VO2max_11-11-20142.pdf" target="_blank" rel="noreferrer noopener">Aerobic Fitness Level (VO₂max) Estimation</a>，我也研究了好一陣子，我想除了Firstbeat自家的員工外，應該沒有人比我還熟他們家的白皮書了！</p>
-<p>今天下午和茗傑重新討論了這篇白皮書，透過不斷討論，總於解開了心中長期以來的疑惑，在這邊跟有興趣的朋友分享(感謝茗傑)：</p>
+<p>使用 Garmin 的錶已經有好幾年了，每次最大攝氧量更新時手錶都會提示我，每次都很疑惑它是怎麼被估算出來的。後來發現最大攝氧量估算的功能是由 Firstbeat 這家公司所提供，同樣的功能也同時提供給
+SUUNTO
+和 SAMSUNG 的穿戴裝置。</p>
+<p>原本大概猜得出來 Firstbeat 是怎麼做到的，但僅止於「大概」……茗傑花了一個星期的時間讀了好幾遍 Firstbeat 官網上開放的白皮書(White Paper): <a href="http://www.firstbeat.com/app/uploads/2015/10/white_paper_VO2max_11-11-20142.pdf" target="_blank" rel="noreferrer noopener">Aerobic Fitness Level (VO₂max) Estimation</a>，我也研究了好一陣子，我想除了 Firstbeat 自家的員工外，應該沒有人比我還熟他們家的白皮書了！</p>
+<p>今天下午和茗傑重新討論了這篇白皮書，透過不斷討論，終於解開了心中長期以來的疑惑，在這邊跟有興趣的朋友分享(感謝茗傑)：</p>
 <p><strong>透過心率可以準確估算最大攝氧量百分比</strong></p>
 <p><strong></p>
 <p></strong></p>
-<p>它主要是利用下面這張表來進行估算。這張表是運動科學家透過實驗，找到不同強度下最大攝氧量的百分比(%VO2max)、儲備心率百分比(%HRR)與最大心率百分比(%HRM) 之間的關係。我們研究白皮書後發現，Firstbeat是使用最大心率法，因此利用這張表，只要知道目前是最大心率的百分之幾，就能同時對應到最大攝氧量的百分比。但前提是要知道使用者的最大心率。</p>
-<p>以我的最大心率是190bpm來當例子，假設某次訓練過過程中穩定的平均心率是167bpm，因此可求得：</p>
+<p>它主要是利用下面這張表來進行估算。這張表是運動科學家透過實驗，找到不同強度下最大攝氧量的百分比(%VO2max)、儲備心率百分比(%HRR)與最大心率百分比(%HRM) 之間的關係。我們研究白皮書後發現，Firstbeat 是使用最大心率法，因此利用這張表，只要知道目前是最大心率的百分之幾，就能同時對應到最大攝氧量的百分比。但前提是要知道使用者的最大心率。</p>
+<p>以我的最大心率是 190bpm 來當例子，假設某次訓練過程中穩定的平均心率是 167bpm，因此可求得：</p>
 <ul>
 <li>167÷190= 88% 最大心率</li>
-<li>透過這張表格我們可以對應出88%MHR的強度是：80% 最大攝氧量</li>
+<li>透過這張表格我們可以對應出 88%MHR 的強度是：80% 最大攝氧量</li>
 </ul>
 <p>因此我只要知道此次訓練時攝氧量是多少，就能回推最大值。</p>
 <p><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhu4RKlmD6FP_DkGQJnpV1TqLx5JpRLkClf47ZhUzg6fi_oM-UMxv3cnodAvjmxz5FUbA7n_PhfajfyzGknEy4KGPllkqhoOWqkLmdnH-xV2cQ202hStte6JCzzBmXNjVSxtUJVQ-1o82Ag/s1600/%25E5%25B1%258F%25E5%25B9%2595%25E6%2588%25AA%25E5%259B%25BE+2017-01-21+22.18.33.png" target="_blank" rel="noreferrer noopener"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhu4RKlmD6FP_DkGQJnpV1TqLx5JpRLkClf47ZhUzg6fi_oM-UMxv3cnodAvjmxz5FUbA7n_PhfajfyzGknEy4KGPllkqhoOWqkLmdnH-xV2cQ202hStte6JCzzBmXNjVSxtUJVQ-1o82Ag/s640/%25E5%25B1%258F%25E5%25B9%2595%25E6%2588%25AA%25E5%259B%25BE+2017-01-21+22.18.33.png" alt="" loading="lazy"></a></p>
-<p>此表格摘自 Thomas R. Baechle, &amp; Roger W. Earle (2008). Essential of strength training and conditioning 3rd edition., 493. National Strength and Conditioning Association(U.S.): Human Kinetics.因為這張表格是我從美國體能與肌力協會(NSCA)第三版的教科書上摘上來的，我相信Firstbeat應該有更詳盡的表格。</p>
-<p>要如何估計訓練當下的攝氧量呢？Firsrtbeat是用配速。在白皮書中提到「一般來說」，配速和最大攝氧量間的關係是：</p>
+<p>此表格摘自 Thomas R. Baechle, &amp; Roger W. Earle (2008). Essentials of strength training and conditioning 3rd edition., 493. National Strength and Conditioning Association(U.S.): Human Kinetics.因為這張表格是我從美國體能與肌力協會(NSCA)第三版的教科書上摘下來的，我相信 Firstbeat 應該有更詳盡的表格。</p>
+<p>要如何估計訓練當下的攝氧量呢？Firstbeat 是用配速。在白皮書中提到「一般來說」，配速和最大攝氧量間的關係是：</p>
 <ul>
 <li><strong>
 速度：15.0 km/hr = 4:00/km → &nbsp;攝氧量需求：51 ml/kg/min
@@ -88,28 +88,28 @@ SUNTO
 <li>速度：19.3 km/hr = 3:06/km → &nbsp;攝氧量需求：67 ml/kg/min</li>
 <li>速度：22.5 km/hr = 2:40 /km →&nbsp;攝氧量需求：81 ml/kg/min</li>
 </ul>
-假設我在這段時間的平均配速是4:00/km，而且我剛好屬於「一般來說」的平均值，也就是我在80%VO2max的攝氧量需求是51ml/kg/min，因此我的最大攝氧量即可估算是：
+假設我在這段時間的平均配速是 4:00/km，而且我剛好屬於「一般來說」的平均值，也就是我在 80%VO2max 的攝氧量需求是 51ml/kg/min，因此我的最大攝氧量即可估算是：
 <ul>
 <li>51÷ 80% = 63.8 ml/kg/min</li>
 </ul>
 <p>但「一般來說」的意義是統計值，並不符合每一個人，有些人跑步經濟性高、技巧好或年紀輕、訓練有素……等因素都可以在相同的最大攝氧量下跑出更快的速度。性別、身高、體重也會有影響。
-我們認為「微調的方式」即是Firstbeat研究的重點和價值所在，這是他們長年的專業研究的累積，誰也模仿不走
-。他們可以利用不同的變因進行微調。以四分速(4:00/km)為例，體重輕的人、女性、身材較矮小或長年訓的跑者需氧量較少，所以應該會低於51 ml/kg/min。</p>
+我們認為「微調的方式」即是 Firstbeat 研究的重點和價值所在，這是他們長年的專業研究的累積，誰也模仿不來
+。他們可以利用不同的變因進行微調。以四分速(4:00/km)為例，體重輕的人、女性、身材較矮小或長年訓練的跑者需氧量較少，所以應該會低於 51 ml/kg/min。</p>
 <p>也就是說，如果你想用跑錶準確預估自己的最大攝氧量，需要確實填寫自己的性別、年齡、身高、體重，以及最重要的「活動層級」(Activity Class)。</p>
 <p><strong>
 先確認活動層級，才能確保最大攝氧量估得準
 </strong></p>
-<p>確認「活動層級」的目的是想知道你是否屬於訓練有素的跑者，評判標準是平均一個星期的訓練頻率或時數。目前Garmin跑錶並無法在錶上進行這項設定，必須到Garmin Connect網站左側欄的「設定」→「基本資料」中的「活動層級」中手動設定。</p>
+<p>確認「活動層級」的目的是想知道你是否屬於訓練有素的跑者，評判標準是平均一個星期的訓練頻率或時數。目前 Garmin 跑錶並無法在錶上進行這項設定，必須到 Garmin Connect 網站左側欄的「設定」→「基本資料」中的「活動層級」中手動設定。</p>
 <p>若沒有進行這項設定，跑錶中除了「最大攝氧量」的估測值會不準外，「訓練效果」與「恢復時間」也會有誤差。所以如果你很在意這三個數值的話，一定要來設定這個數值。</p>
 <p>我個人認為「活動層級」這個數值應該是系統自動偵測使用者近一個月來的訓練時數後自動填入，再提醒使用者確認會比較方便，目前設定的位置藏在太裡面，大部分的使用者應該都不知道要來這裡設定。</p>
 <p><strong>篩選機制</strong></p>
-<p>從上述可知，估計最大攝氧量時最重要的兩個訓練數據是「心率」與「配速」，但跑錶並非取訓練全程的平均心率和平均配速，而是會先把不合理的數據過濾掉。那它們是怎麼判定合理的標準是什麼呢？是這張圖：</p>
+<p>從上述可知，估計最大攝氧量時最重要的兩個訓練數據是「心率」與「配速」，但跑錶並非取訓練全程的平均心率和平均配速，而是會先把不合理的數據過濾掉。那它們判定合理的標準是什麼呢？是這張圖：</p>
 <p><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgasbFfEmpZvaN9vO7qKhwICUaYp3wUzvG54XKJoeYiWQpyKB5FlsiQv-LpmJZD_-AhCQ4UggCzBOkUWAboxGJ1eE9SQRZu5yjf4YYKoPX-grruGYj1YDx7Tr720QMZxKVKQsLOjvsrq1ne/s1600/%25E5%25BF%2583%25E7%258E%2587%25E8%2588%2587%25E9%2580%259F%25E5%25BA%25A6%25E5%2591%2588%25E6%25AD%25A3%25E7%259B%25B8%25E9%2597%259C.jpg" target="_blank" rel="noreferrer noopener"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgasbFfEmpZvaN9vO7qKhwICUaYp3wUzvG54XKJoeYiWQpyKB5FlsiQv-LpmJZD_-AhCQ4UggCzBOkUWAboxGJ1eE9SQRZu5yjf4YYKoPX-grruGYj1YDx7Tr720QMZxKVKQsLOjvsrq1ne/s400/%25E5%25BF%2583%25E7%258E%2587%25E8%2588%2587%25E9%2580%259F%25E5%25BA%25A6%25E5%2591%2588%25E6%25AD%25A3%25E7%259B%25B8%25E9%2597%259C.jpg" alt="" loading="lazy"></a></p>
 <p>從上圖可以得知，配速和心率呈現正相關→速度愈快，心率愈高。但在某些情況下心率錶會紀錄到一些無效的數據，例如在：</p>
 <ul>
-<li>2號：停紅綠燈時：當跑到一半停下來等紅燈時，此時的心率對應到的配速卻為0，因此要剔除。</li>
-<li>4號：不斷通過山洞時：因為被橋或是有地下道遮蔽，導致GPS接收不良，所以收到的配速資訊忽快忽慢</li>
-<li>6號：心率帶或感測裝置有問題：心跳錶偵測有問題，導致心率持續上下起伏，但實際配速卻沒有太大變化</li>
+<li>2 號：停紅綠燈時：當跑到一半停下來等紅燈時，此時的心率對應到的配速卻為 0，因此要剔除。</li>
+<li>4 號：不斷通過山洞時：因為被橋或是有地下道遮蔽，導致 GPS 接收不良，所以收到的配速資訊忽快忽慢</li>
+<li>6 號：心率帶或感測裝置有問題：心跳錶偵測有問題，導致心率持續上下起伏，但實際配速卻沒有太大變化</li>
 </ul>
 <p><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiw9VkD-O5FxnWFsAXi7q54o8QojzhcwueMM_spYqgMv6inwB6U_0S2H5-Z5Wmd57ptsinZM9KtHC_rzOimKBwbMIeGKJdgmED6yqDCa3zFLGHI461dRsFdK2bhS_JivswCSzGYDvt7p2r_/s1600/%25E5%258F%25AF%25E7%2594%25A8%25E6%2595%25B8%25E6%2593%259Avs%25E7%2584%25A1%25E6%2595%2588%25E6%2595%25B8%25E6%2593%259A.png" target="_blank" rel="noreferrer noopener"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiw9VkD-O5FxnWFsAXi7q54o8QojzhcwueMM_spYqgMv6inwB6U_0S2H5-Z5Wmd57ptsinZM9KtHC_rzOimKBwbMIeGKJdgmED6yqDCa3zFLGHI461dRsFdK2bhS_JivswCSzGYDvt7p2r_/s640/%25E5%258F%25AF%25E7%2594%25A8%25E6%2595%25B8%25E6%2593%259Avs%25E7%2584%25A1%25E6%2595%2588%25E6%2595%25B8%25E6%2593%259A.png" alt="" loading="lazy"></a></p>
 <p>因此在下列裝置無法判別的情況下估計值就會失準：</p>
@@ -130,16 +130,16 @@ SUNTO
 <p>坡度大的上下坡：例如跑上坡時配速變慢，心率卻狂飆。</p>
 </li>
 <li>
-心率飄移：例如長時間跑E配速，雖然速度一樣，但心率持續上升。
+心率飄移：例如長時間跑 E 配速，雖然速度一樣，但心率持續上升。
 </li>
 </ul>
 <p><strong><br></strong></p>
-<p><strong>誤差率在5%附近</strong></p>
-<p>透過這樣的篩選機制，在使用者設定正確的情況下，Firstbeat官方報告指出，它們的誤差率都在5%附近。他們檢測的樣本數共79位跑者，在這些跑者6~9個月準備馬拉松的過程中，總共搜集了2690次日常練習的統計數據，他們用這些數據來分析估計值跟實際在實驗室測量的數據相差多少。極大多數跟實際最大攝氧量的差距都在3.5 (ml/kg/min)。</p>
-<p>在報告書中指出，如果最大心率套公式，設定的值跟實際不符，估算出來的最大心率會有很大的誤差，誤差值隨著最大心率的偏差而加大。如下圖所示：橫軸「0」代表最大心率設定確實，沒有偏差，所以最大攝氧量的最大誤差率為5%，但如果最大心率偏差到「-10」，誤差率就會提升到7%。</p>
+<p><strong>誤差率在 5%附近</strong></p>
+<p>透過這樣的篩選機制，在使用者設定正確的情況下，Firstbeat 官方報告指出，它們的誤差率都在 5%附近。他們檢測的樣本數共 79 位跑者，在這些跑者 6~9 個月準備馬拉松的過程中，總共搜集了 2690 次日常練習的統計數據，他們用這些數據來分析估計值跟實際在實驗室測量的數據相差多少。極大多數跟實際最大攝氧量的差距都在 3.5 (ml/kg/min)。</p>
+<p>在報告書中指出，如果最大心率套公式，設定的值跟實際不符，估算出來的最大心率會有很大的誤差，誤差值隨著最大心率的偏差而加大。如下圖所示：橫軸「0」代表最大心率設定確實，沒有偏差，所以最大攝氧量的最大誤差率為 5%，但如果最大心率偏差到「-10」，誤差率就會提升到 7%。</p>
 <p><img src="https://lh5.googleusercontent.com/0p9PMWYa9YupghkIOydhMnbTe31YOeor5osUbOWiqx9zyMPWXTNZbjQKT_91GOj0pVACe-YOLx02O2cKY4f5z1vTjX1PGu2nzJqJ3nsVbp151fzAXVcJyTRP779ZFOhNllPTc-rh" alt="" loading="lazy"></p>
-<p>下面這張圖中第一條曲線是意思是，不管是在第幾公里量到的數據，誤差率都會在5%附近→意思就是：我們家Firstbeat的演算法錯誤率很低，不管跑者訓練距離有多少，只要能量到最大攝氧量，它的錯誤率就會在5%附近。</p>
-<p>第二條曲線的意思是：只要你戴著錶跑兩公里，有75%機率可以成功測到最大攝氧量，如果沒測到，就繼續跑，最遠跑到第8公里就有98%成功率率可以測到你的最大攝氧量。</p>
+<p>下面這張圖中第一條曲線的意思是，不管是在第幾公里量到的數據，誤差率都會在 5%附近→意思就是：我們家 Firstbeat 的演算法錯誤率很低，不管跑者訓練距離有多少，只要能量到最大攝氧量，它的錯誤率就會在 5%附近。</p>
+<p>第二條曲線的意思是：只要你戴著錶跑兩公里，有 75%機率可以成功測到最大攝氧量，如果沒測到，就繼續跑，最遠跑到第 8 公里就有 98%成功率可以測到你的最大攝氧量。</p>
 <p>也就是說，大部分(75%)的跑者只要跑兩公里就能測到最大攝氧量，而且誤差率很低。</p>
 <p><strong><br></strong></p>
 <p><img src="https://lh3.googleusercontent.com/BDJ9Mf3bjMtOU3Kv7X7tFUa20xFWKeGSgWlj1QDMst8D4Nn8ZQGWM81yXtKdXCLu1NPLka8X6wYFgo7iJMOr9BzAdQt0Uq4R6x6vVO7h4CPHa9GvvTvePZn3fR_gwloBaACt7YIP" alt="" loading="lazy"></p>

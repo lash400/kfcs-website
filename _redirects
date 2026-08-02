@@ -1,0 +1,35 @@
+# Cloudflare Workers 靜態資產的轉址規則（格式：來源 目標 狀態碼）
+#
+# 這些頁面已下架或合併，但先前都收錄在 sitemap.xml 中並被搜尋引擎索引，
+# 因此以 301 永久轉址取代直接 404，保留既有的連結與排名。
+#
+# 網址採無副檔名的正式格式；同時列出 .html 形式，避免多跳一次轉址。
+# 詳細下架判準見 PROOFREADING.md。
+
+# ── 書籍全文（付費書稿，不在部落格公開）→ 訓練書系 ──────────────
+/articles/2026-01-kfcs           /books  301
+/articles/2026-01-kfcs.html      /books  301
+/articles/2019-01-01             /books  301
+/articles/2019-01-01.html        /books  301
+/articles/post                   /books  301
+/articles/post.html              /books  301
+/articles/post-2                 /books  301
+/articles/post-2.html            /books  301
+/articles/post-3                 /books  301
+/articles/post-3.html            /books  301
+
+# ── 重複發表的文章 → 保留的那一篇 ──────────────────────────────
+/articles/2018-01-3-07-35-2-58-32       /articles/2018-01-3-07-2-58   301
+/articles/2018-01-3-07-35-2-58-32.html  /articles/2018-01-3-07-2-58   301
+/articles/2018-01-2-53-2-35             /articles/2018-01-2-53-13-2   301
+/articles/2018-01-2-53-2-35.html        /articles/2018-01-2-53-13-2   301
+/articles/2019-11-19                    /articles/2019-12-04          301
+/articles/2019-11-19.html               /articles/2019-12-04          301
+/articles/2016-01-20                    /articles/2016-08-12-2        301
+/articles/2016-01-20.html               /articles/2016-08-12-2        301
+/articles/2016-06-14                    /articles/2015-11-07-2        301
+/articles/2016-06-14.html               /articles/2015-11-07-2        301
+/articles/2025-01-b008                  /articles/2026-01-b008        301
+/articles/2025-01-b008.html             /articles/2026-01-b008        301
+/articles/2026-04-r010                  /articles/2026-04-h001        301
+/articles/2026-04-r010.html             /articles/2026-04-h001        301
