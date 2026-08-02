@@ -168,9 +168,10 @@
   color: #17150f;
 }
 
+/* 用 max-width 而非 width：大圖仍滿版，小圖維持原始尺寸置中，不會被放大到糊掉。 */
 .kfcs-article .art-body img {
   display: block;
-  width: 100%;
+  max-width: 100%;
   height: auto;
   margin: 1.9em auto;
   border-radius: 16px;
