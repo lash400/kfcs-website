@@ -12,9 +12,14 @@ KFCS（KuoFeng Coaching System）耐力訓練系統官方網站，由徐國峰�
 | 教育訓練 | `education.html` |
 | 部落格（列表＋搜尋＋標籤） | `blog.html` |
 | 訓練書系 | `books.html` |
+| 跑步線上課程 | `online-course.html` |
 | YouTube 專區 | `youtube.html` |
 | Podcast 專區 | `podcast.html` |
 | 關於我們 | `about.html` |
+
+導覽列的「影音專區」下拉已於 2026-08-04 更名為「學習資源」，並新增第一個子項目
+「跑步線上課程」（`online-course.html`），排在 YouTube 專區與 Podcast 專區之前。
+下拉主連結指向 `online-course.html`。
 | 課程簡章與報名資訊 | `blog/*.html`（8 篇） |
 | 耐力訓練文章 | `articles/*.html`（621 篇） |
 
@@ -25,6 +30,8 @@ KFCS（KuoFeng Coaching System）耐力訓練系統官方網站，由徐國峰�
 - `shared/article.css`：部落格文章的閱讀版型。
 - `assets/`：logo 與課程封面圖。
 - `_redirects`：已下架／合併頁面的 301 轉址規則。
+- `serve.mjs`：本機預覽用的極簡靜態伺服器（`node serve.mjs`，預設 <http://localhost:8799>）。
+  已列入 `.assetsignore`，不會部署。
 - `assets/og-cover.jpg`：社群分享圖（Open Graph，1200×630）。首頁、關於我們、教育訓練、
   部落格、訓練書系、YouTube 與 Podcast 專區，以及 `articles/*.html` 全部 621 篇文章頁的
   `og:image` 都指向這張，課程總覽與教練認證也是；只有 `blog/*.html` 8 篇課程簡章沿用
