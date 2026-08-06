@@ -1,0 +1,1715 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 教練｜徐國峰 × AI 線上跑步教練 - KFCS 耐力訓練系統</title>
+<meta name="description" content="徐國峰 × AI 線上跑步教練：不是聊天 AI，是訓練決策 AI。每一次訓練後的即時回饋、12 套 KFCS 訓練計畫與單次課表產生器，把徐國峰 20 年的訓練判斷變成你的全天候教練。">
+<meta property="og:url" content="https://kfcs.tw/ai-coach">
+<meta property="og:title" content="AI 教練｜徐國峰 × AI 線上跑步教練 - KFCS 耐力訓練系統">
+<meta property="og:description" content="徐國峰 × AI 線上跑步教練：不是聊天 AI，是訓練決策 AI。每一次訓練後的即時回饋、12 套 KFCS 訓練計畫與單次課表產生器，把徐國峰 20 年的訓練判斷變成你的全天候教練。">
+<meta property="og:image" content="https://kfcs.tw/assets/og-cover.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="徐國峰 × AI 線上跑步教練">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://kfcs.tw/ai-coach">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="stylesheet" href="shared/site-chrome.css">
+</head>
+<body>
+<nav class="kfcs-sitenav">
+  <div class="nav-shell">
+    <a class="nav-brand" href="index.html">
+      <img src="assets/kfcs-logo.svg" alt="KFCS logo">
+      <span class="brand-sub">耐力訓練系統</span>
+    </a>
+    <input class="nav-toggle-box" type="checkbox" id="kfcs-nav-toggle">
+    <label class="nav-toggle" for="kfcs-nav-toggle" aria-label="開啟選單"><span></span><span></span><span></span></label>
+    <div class="nav-menu">
+      <ul class="nav-links">
+        <li><a href="index.html">首頁</a></li>
+        <li><a class="is-active" href="ai-coach.html">AI 教練</a></li>
+        <li><a href="courses.html">課程總覽</a></li>
+        <li><a href="coach-certification.html">教練認證</a></li>
+        <li><a href="education.html">教育訓練</a></li>
+        <li><a href="blog.html">部落格</a></li>
+        <li><a href="books.html">訓練書系</a></li>
+        <li class="nav-drop"><a href="online-course.html">學習資源</a>
+          <ul class="drop-panel">
+            <li><a href="online-course.html">跑步線上課程</a></li>
+            <li><a href="youtube.html">YouTube 專區</a></li>
+            <li><a href="podcast.html">Podcast 專區</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html">關於我們</a></li>
+        <li><a class="nav-social" href="https://www.facebook.com/rocky549" target="_blank" rel="noopener" aria-label="追蹤徐國峰的臉書"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.313 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="nav-social-label">臉書</span></a></li>
+        <li><a class="nav-cta" href="mailto:kuofengcoaching@gmail.com?subject=%E3%80%902027%20%E8%AA%B2%E7%A8%8B%E3%80%91%E9%96%8B%E8%AA%B2%E9%80%9A%E7%9F%A5%E7%99%BB%E8%A8%98">2027 年課程通知我</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '404602746416082');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=404602746416082&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+TC:wght@400;500;700;900&family=Noto+Serif+TC:wght@400;600;700;900&display=swap');
+
+/* ============================================
+   KFCS AI COACH — SCOPED CSS
+   ============================================ */
+
+#kfcs-ai {
+  all: initial;
+  display: block;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 16px;
+  color: #181715;
+  line-height: 1.85;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+#kfcs-ai *, #kfcs-ai *::before, #kfcs-ai *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#kfcs-ai h1, #kfcs-ai h2, #kfcs-ai h3, #kfcs-ai h4,
+#kfcs-ai p, #kfcs-ai figure, #kfcs-ai blockquote, #kfcs-ai dl, #kfcs-ai dd {
+  margin: 0; padding: 0; font-size: inherit; font-weight: inherit;
+}
+
+#kfcs-ai ul, #kfcs-ai ol { margin: 0; padding: 0; list-style: none; }
+#kfcs-ai li { margin: 0; padding: 0; }
+#kfcs-ai img { display: block; max-width: 100%; height: auto; border: 0; }
+#kfcs-ai a { color: inherit; text-decoration: none; background-color: transparent; }
+#kfcs-ai a[href]::after { content: none; }
+#kfcs-ai strong, #kfcs-ai b { font-weight: 700; }
+#kfcs-ai table { border-collapse: collapse; width: 100%; }
+
+#kfcs-ai {
+  --yellow: #f6c213;
+  --yellow-soft: #ffd64b;
+  --yellow-deep: #8d6600;
+  --black: #101010;
+  --line: #e6ded2;
+  --muted: #6d675f;
+  --light: #ece6db;
+  --white: #fbf8f1;
+  --panel: #f7f1e8;
+  --card-shadow: 0 24px 56px rgba(15, 15, 15, 0.08);
+  background:
+    radial-gradient(circle at top left, rgba(246, 194, 19, 0.1), transparent 30%),
+    linear-gradient(180deg, #f4eee5 0, #fffaf3 18rem, #fff 44rem);
+}
+
+#kfcs-ai .shell {
+  width: min(1160px, calc(100% - 56px));
+  margin: 0 auto;
+}
+
+/* ─────────────── HERO ─────────────── */
+#kfcs-ai .hero {
+  position: relative;
+  isolation: isolate;
+  padding-top: clamp(100px, 12vw, 148px);
+  padding-bottom: clamp(48px, 6vw, 76px);
+  color: var(--white);
+  background:
+    radial-gradient(circle at 78% 12%, rgba(246, 194, 19, 0.22), transparent 42%),
+    linear-gradient(150deg, #0c0c0c 0%, #171614 52%, #0d0d0d 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+#kfcs-ai .hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap: clamp(28px, 4vw, 56px);
+  align-items: center;
+}
+
+#kfcs-ai .hero-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+  color: var(--yellow);
+  font-size: 0.74rem;
+  font-weight: 900;
+  letter-spacing: 0.24em;
+}
+
+#kfcs-ai .hero-label::before {
+  content: '';
+  width: 26px;
+  height: 2px;
+  background: var(--yellow);
+}
+
+#kfcs-ai .hero-title {
+  font-family: 'Noto Serif TC', serif;
+  font-size: clamp(1.9rem, 3.8vw, 2.95rem);
+  font-weight: 900;
+  line-height: 1.28;
+  letter-spacing: 0.01em;
+  text-wrap: balance;
+}
+
+#kfcs-ai .hero-title em {
+  display: block;
+  margin-top: 12px;
+  font-style: normal;
+  font-size: clamp(1rem, 1.9vw, 1.32rem);
+  font-weight: 600;
+  color: var(--yellow);
+  letter-spacing: 0.08em;
+}
+
+#kfcs-ai .hero-lede {
+  margin-top: 22px;
+  max-width: 46ch;
+  font-family: 'Noto Serif TC', serif;
+  font-size: clamp(0.98rem, 1.5vw, 1.06rem);
+  line-height: 2.05;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+#kfcs-ai .hero-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 26px;
+}
+
+#kfcs-ai .stat-pill {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 7px;
+  padding: 8px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+  font-size: 0.84rem;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+#kfcs-ai .stat-pill b {
+  font-family: 'Bebas Neue', 'Noto Sans TC', sans-serif;
+  font-size: 1.16rem;
+  letter-spacing: 0.04em;
+  color: var(--yellow);
+}
+
+#kfcs-ai .hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+#kfcs-ai .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 54px;
+  padding: 0 30px;
+  border-radius: 999px;
+  font-size: 0.92rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  transition: background 0.18s ease, color 0.18s ease, transform 0.18s ease, border-color 0.18s ease;
+}
+
+#kfcs-ai .btn-primary { background: var(--yellow); color: #0f0f0f; }
+#kfcs-ai .btn-primary:hover { background: var(--yellow-soft); color: #0f0f0f; transform: translateY(-2px); }
+#kfcs-ai .btn-ghost { border: 1px solid rgba(255, 255, 255, 0.28); color: var(--white); }
+#kfcs-ai .btn-ghost:hover { border-color: var(--yellow); color: var(--yellow); transform: translateY(-2px); }
+#kfcs-ai .btn-dark { background: #171614; color: var(--white); }
+#kfcs-ai .btn-dark:hover { background: #000; color: var(--yellow); transform: translateY(-2px); }
+
+#kfcs-ai .hero-note {
+  margin-top: 16px;
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.46);
+  letter-spacing: 0.02em;
+}
+
+/* 回饋卡（HERO 視覺） */
+#kfcs-ai .feedback-card {
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: #fffdf8;
+  color: #24211c;
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.45);
+  overflow: hidden;
+}
+
+#kfcs-ai .feedback-card .fc-head {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 15px 20px;
+  background: #171614;
+  color: var(--light);
+}
+
+#kfcs-ai .feedback-card .fc-avatar {
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  background: var(--yellow);
+  color: #101010;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+}
+
+#kfcs-ai .feedback-card .fc-who b {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--white);
+  line-height: 1.4;
+}
+
+#kfcs-ai .feedback-card .fc-who span {
+  display: block;
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  color: rgba(236, 230, 219, 0.6);
+}
+
+#kfcs-ai .feedback-card .fc-body { padding: 20px 22px 22px; }
+
+#kfcs-ai .feedback-card .fc-tag {
+  display: inline-block;
+  margin-bottom: 8px;
+  font-size: 0.74rem;
+  font-weight: 900;
+  letter-spacing: 0.16em;
+  color: var(--yellow-deep);
+}
+
+#kfcs-ai .feedback-card .fc-tag + .fc-text { margin-bottom: 18px; }
+
+#kfcs-ai .feedback-card .fc-text {
+  font-size: 0.9rem;
+  line-height: 1.95;
+  color: #35312b;
+}
+
+#kfcs-ai .feedback-card mark {
+  background: #dff0e2;
+  color: #1f2b21;
+  padding: 1px 2px;
+  border-radius: 3px;
+}
+
+#kfcs-ai .feedback-card .fc-time {
+  margin-top: 14px;
+  font-size: 0.7rem;
+  color: #9a938a;
+  letter-spacing: 0.08em;
+}
+
+/* ─────────────── 快速選單 ─────────────── */
+#kfcs-ai .quicknav {
+  position: sticky;
+  top: 64px;
+  z-index: 900;
+  background: rgba(255, 255, 255, 0.94);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--line);
+}
+
+#kfcs-ai .quicknav-inner {
+  width: min(1160px, calc(100% - 56px));
+  margin: 0 auto;
+  display: flex;
+  gap: 4px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+#kfcs-ai .quicknav-inner::-webkit-scrollbar { display: none; }
+
+#kfcs-ai .quicknav a {
+  position: relative;
+  flex: 0 0 auto;
+  padding: 17px 15px 15px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--muted);
+  white-space: nowrap;
+  border-bottom: 3px solid transparent;
+  transition: color 0.16s ease, border-color 0.16s ease;
+}
+
+#kfcs-ai .quicknav a:hover { color: #181715; }
+
+#kfcs-ai .quicknav a.is-current {
+  color: #181715;
+  font-weight: 900;
+  border-bottom-color: var(--yellow);
+}
+
+/* ─────────────── 區塊通用 ─────────────── */
+#kfcs-ai .section {
+  width: min(1160px, calc(100% - 56px));
+  margin: 0 auto;
+  padding: clamp(56px, 7vw, 92px) 0;
+  scroll-margin-top: 128px;
+}
+
+#kfcs-ai .section + .section { border-top: 1px solid var(--line); }
+
+#kfcs-ai .sec-head {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: clamp(28px, 3.6vw, 44px);
+}
+
+#kfcs-ai .sec-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 0.08em;
+  color: var(--yellow-deep);
+}
+
+#kfcs-ai .sec-title {
+  font-family: 'Noto Serif TC', serif;
+  font-size: clamp(1.42rem, 2.7vw, 1.94rem);
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+#kfcs-ai .sec-rule { flex: 1; height: 1px; background: var(--line); }
+
+#kfcs-ai .lead {
+  max-width: 62ch;
+  font-family: 'Noto Serif TC', serif;
+  font-size: clamp(1rem, 1.5vw, 1.08rem);
+  line-height: 2.1;
+  color: #35312b;
+}
+
+#kfcs-ai .lead + .lead { margin-top: 16px; }
+
+#kfcs-ai .lead a {
+  color: var(--yellow-deep);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+#kfcs-ai .sub-head {
+  margin: clamp(38px, 4.5vw, 56px) 0 20px;
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.22em;
+  color: var(--yellow-deep);
+}
+
+#kfcs-ai .pullquote {
+  margin: clamp(28px, 4vw, 40px) 0;
+  padding: clamp(26px, 3.4vw, 38px) clamp(24px, 3.4vw, 40px);
+  border-left: 4px solid var(--yellow);
+  border-radius: 0 18px 18px 0;
+  background: linear-gradient(120deg, var(--panel), #fffdf8);
+  font-family: 'Noto Serif TC', serif;
+  font-size: clamp(1.12rem, 2.1vw, 1.42rem);
+  font-weight: 700;
+  line-height: 1.85;
+  color: #211f1b;
+  text-wrap: balance;
+}
+
+/* 三張深色卡 */
+#kfcs-ai .modules {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+#kfcs-ai .module {
+  position: relative;
+  padding: 26px 24px 24px;
+  border-radius: 18px;
+  background: linear-gradient(158deg, #1c1b18, #101010);
+  color: var(--light);
+  overflow: hidden;
+}
+
+#kfcs-ai .module::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--yellow);
+  opacity: 0.85;
+}
+
+#kfcs-ai .module h3 {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 1.26rem;
+  font-weight: 900;
+  color: var(--white);
+  letter-spacing: 0.06em;
+}
+
+#kfcs-ai .module .m-en {
+  display: block;
+  margin-top: 4px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 0.86rem;
+  letter-spacing: 0.18em;
+  color: var(--yellow);
+}
+
+#kfcs-ai .module p {
+  margin-top: 14px;
+  font-size: 0.9rem;
+  line-height: 1.9;
+  color: rgba(236, 230, 219, 0.76);
+}
+
+/* 特色條列 */
+#kfcs-ai .features {
+  display: grid;
+  gap: 2px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  overflow: hidden;
+  background: var(--line);
+}
+
+#kfcs-ai .features li {
+  display: flex;
+  gap: 16px;
+  align-items: baseline;
+  padding: 20px 24px;
+  background: #fff;
+  font-size: 0.97rem;
+  line-height: 1.9;
+}
+
+#kfcs-ai .features li i {
+  flex: 0 0 auto;
+  font-family: 'Bebas Neue', sans-serif;
+  font-style: normal;
+  font-size: 1.02rem;
+  letter-spacing: 0.06em;
+  color: var(--yellow-deep);
+}
+
+/* 功能大區塊 */
+#kfcs-ai .funcs { display: grid; gap: 20px; }
+
+#kfcs-ai .func {
+  display: grid;
+  grid-template-columns: 76px minmax(0, 1fr);
+  gap: clamp(18px, 2.6vw, 30px);
+  padding: clamp(26px, 3.4vw, 36px);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: var(--card-shadow);
+}
+
+#kfcs-ai .func .func-num {
+  display: grid;
+  place-items: center;
+  width: 76px;
+  height: 76px;
+  border-radius: 20px;
+  background: #171614;
+  color: var(--yellow);
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.1rem;
+  letter-spacing: 0.04em;
+}
+
+#kfcs-ai .func h3 {
+  font-family: 'Noto Serif TC', serif;
+  font-size: clamp(1.14rem, 2.1vw, 1.4rem);
+  font-weight: 900;
+  line-height: 1.6;
+}
+
+#kfcs-ai .func .func-sub {
+  margin-top: 6px;
+  font-size: 0.86rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--yellow-deep);
+}
+
+#kfcs-ai .func .func-text {
+  margin-top: 14px;
+  max-width: 68ch;
+  font-size: 0.97rem;
+  line-height: 2;
+  color: #4a453d;
+}
+
+#kfcs-ai .func .func-list {
+  display: grid;
+  gap: 9px;
+  margin-top: 18px;
+}
+
+#kfcs-ai .func .func-list li {
+  position: relative;
+  padding-left: 20px;
+  font-size: 0.94rem;
+  line-height: 1.95;
+  color: #4a453d;
+}
+
+#kfcs-ai .func .func-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.82em;
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: var(--yellow);
+}
+
+#kfcs-ai .func .func-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+#kfcs-ai .func .chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #4a453d;
+}
+
+/* 案例 */
+#kfcs-ai .cases { display: grid; gap: 20px; }
+
+#kfcs-ai .case {
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: var(--card-shadow);
+  overflow: hidden;
+}
+
+#kfcs-ai .case .case-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 24px;
+  border-bottom: 1px solid var(--line);
+  background: var(--panel);
+}
+
+#kfcs-ai .case .case-no {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 0.94rem;
+  letter-spacing: 0.14em;
+  color: var(--yellow-deep);
+}
+
+#kfcs-ai .case .case-title {
+  font-family: 'Noto Serif TC', serif;
+  font-size: clamp(1.02rem, 1.9vw, 1.18rem);
+  font-weight: 900;
+  line-height: 1.6;
+}
+
+#kfcs-ai .case .case-body {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: clamp(20px, 3vw, 32px);
+  padding: clamp(22px, 3vw, 30px) 24px;
+}
+
+#kfcs-ai .case .case-col h4 {
+  margin-bottom: 12px;
+  font-size: 0.74rem;
+  font-weight: 900;
+  letter-spacing: 0.18em;
+  color: var(--muted);
+}
+
+#kfcs-ai .case .diary {
+  padding: 18px 20px;
+  border-left: 3px solid var(--line);
+  border-radius: 0 12px 12px 0;
+  background: #faf7f1;
+  font-family: 'Noto Serif TC', serif;
+  font-size: 0.95rem;
+  line-height: 1.95;
+  color: #3a352d;
+}
+
+#kfcs-ai .case .reply {
+  font-size: 0.93rem;
+  line-height: 1.98;
+  color: #35312b;
+}
+
+#kfcs-ai .case .reply mark {
+  background: #dff0e2;
+  color: #1f2b21;
+  padding: 1px 2px;
+  border-radius: 3px;
+}
+
+#kfcs-ai .case .reply .r-tag {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.76rem;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  color: var(--yellow-deep);
+}
+
+#kfcs-ai .case .reply .r-tag + p + .r-tag { margin-top: 16px; }
+
+#kfcs-ai .case .case-foot {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  padding: 16px 24px;
+  border-top: 1px solid var(--line);
+  background: #171614;
+  color: var(--white);
+  font-family: 'Noto Serif TC', serif;
+  font-size: clamp(0.98rem, 1.8vw, 1.08rem);
+  font-weight: 700;
+  line-height: 1.7;
+}
+
+#kfcs-ai .case .case-foot span { color: var(--yellow); flex: 0 0 auto; }
+
+#kfcs-ai .case-note {
+  margin-top: 18px;
+  font-size: 0.82rem;
+  line-height: 1.9;
+  color: var(--muted);
+}
+
+/* 比較表 */
+#kfcs-ai .table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: var(--card-shadow);
+}
+
+#kfcs-ai .cmp { min-width: 720px; }
+
+#kfcs-ai .cmp th, #kfcs-ai .cmp td {
+  padding: 18px 20px;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid var(--line);
+  font-size: 0.93rem;
+  line-height: 1.9;
+}
+
+#kfcs-ai .cmp thead th {
+  background: #171614;
+  color: var(--white);
+  font-size: 0.84rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  border-bottom: 0;
+}
+
+#kfcs-ai .cmp thead th.is-ours { color: var(--yellow); }
+
+#kfcs-ai .cmp tbody th {
+  width: 118px;
+  font-weight: 900;
+  color: #211f1b;
+  background: var(--panel);
+}
+
+#kfcs-ai .cmp td.generic { color: #6d675f; }
+#kfcs-ai .cmp td.ours { color: #211f1b; background: #fffdf5; }
+#kfcs-ai .cmp td.ours b { color: var(--yellow-deep); }
+#kfcs-ai .cmp tbody tr:last-child th,
+#kfcs-ai .cmp tbody tr:last-child td { border-bottom: 0; }
+
+#kfcs-ai .cmp .soon {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 1px 9px;
+  border-radius: 999px;
+  background: #171614;
+  color: var(--yellow);
+  font-size: 0.66rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  vertical-align: 2px;
+}
+
+/* 比較表：手機改為堆疊卡片，避免關鍵欄位被橫向捲軸藏起來 */
+@media (max-width: 760px) {
+  #kfcs-ai .table-wrap {
+    overflow: visible;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  #kfcs-ai .cmp { min-width: 0; }
+  #kfcs-ai .cmp thead { display: none; }
+
+  #kfcs-ai .cmp,
+  #kfcs-ai .cmp tbody,
+  #kfcs-ai .cmp tr,
+  #kfcs-ai .cmp th,
+  #kfcs-ai .cmp td {
+    display: block;
+    width: auto;
+  }
+
+  #kfcs-ai .cmp tbody tr {
+    margin-bottom: 14px;
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: var(--card-shadow);
+    overflow: hidden;
+  }
+
+  #kfcs-ai .cmp tbody tr:last-child { margin-bottom: 0; }
+
+  #kfcs-ai .cmp tbody th {
+    width: auto;
+    padding: 13px 18px;
+    background: #171614;
+    color: var(--yellow);
+    font-size: 0.86rem;
+    letter-spacing: 0.1em;
+    border-bottom: 0;
+  }
+
+  #kfcs-ai .cmp tbody td {
+    padding: 16px 18px;
+    border-bottom: 0;
+  }
+
+  #kfcs-ai .cmp tbody td::before {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 0.7rem;
+    font-weight: 900;
+    letter-spacing: 0.14em;
+  }
+
+  #kfcs-ai .cmp tbody td.generic::before {
+    content: 'CHATGPT／GEMINI 等通用 AI';
+    color: var(--muted);
+  }
+
+  #kfcs-ai .cmp tbody td.ours {
+    border-top: 1px solid var(--line);
+    background: #fffdf5;
+  }
+
+  #kfcs-ai .cmp tbody td.ours::before {
+    content: '徐國峰 × AI';
+    color: var(--yellow-deep);
+  }
+}
+
+/* 適合／不適合 */
+#kfcs-ai .fits {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+}
+
+#kfcs-ai .fit {
+  padding: 28px 26px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: var(--card-shadow);
+}
+
+#kfcs-ai .fit.no { background: #faf7f1; box-shadow: none; }
+
+#kfcs-ai .fit h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Noto Serif TC', serif;
+  font-size: 1.1rem;
+  font-weight: 900;
+}
+
+#kfcs-ai .fit h3 i {
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 999px;
+  font-style: normal;
+  font-size: 0.78rem;
+  font-weight: 900;
+}
+
+#kfcs-ai .fit.yes h3 i { background: var(--yellow); color: #101010; }
+#kfcs-ai .fit.no h3 i { background: #ddd5c8; color: #6d675f; }
+
+#kfcs-ai .fit ul { margin-top: 16px; display: grid; gap: 10px; }
+
+#kfcs-ai .fit li {
+  position: relative;
+  padding-left: 18px;
+  font-size: 0.94rem;
+  line-height: 1.95;
+  color: #4a453d;
+}
+
+#kfcs-ai .fit li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.82em;
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--yellow);
+}
+
+#kfcs-ai .fit.no li::before { background: #c4bbac; }
+
+/* 訂閱區 */
+#kfcs-ai .plan {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 20px;
+}
+
+#kfcs-ai .plan-card {
+  padding: clamp(28px, 3.4vw, 38px);
+  border-radius: 20px;
+  background: linear-gradient(158deg, #1c1b18, #0e0e0e);
+  color: var(--light);
+}
+
+#kfcs-ai .plan-card h3 {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 1.24rem;
+  font-weight: 900;
+  color: var(--white);
+}
+
+#kfcs-ai .plan-card .plan-list { margin-top: 20px; display: grid; gap: 13px; }
+
+#kfcs-ai .plan-card .plan-list li {
+  display: flex;
+  gap: 12px;
+  font-size: 0.95rem;
+  line-height: 1.9;
+  color: rgba(236, 230, 219, 0.86);
+}
+
+#kfcs-ai .plan-card .plan-list li::before {
+  content: '✓';
+  flex: 0 0 auto;
+  color: var(--yellow);
+  font-weight: 900;
+}
+
+#kfcs-ai .plan-card .plan-note {
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  font-size: 0.84rem;
+  line-height: 1.9;
+  color: rgba(236, 230, 219, 0.62);
+}
+
+#kfcs-ai .plan-card .btn { margin-top: 22px; width: 100%; }
+
+#kfcs-ai .plan-next {
+  padding: clamp(28px, 3.4vw, 38px);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: var(--card-shadow);
+}
+
+#kfcs-ai .plan-next h3 {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 1.24rem;
+  font-weight: 900;
+}
+
+#kfcs-ai .plan-next > p {
+  margin-top: 12px;
+  font-size: 0.95rem;
+  line-height: 1.95;
+  color: #4a453d;
+}
+
+#kfcs-ai .plan-next .next-list { margin-top: 20px; display: grid; gap: 12px; }
+
+#kfcs-ai .plan-next .next-list li {
+  display: flex;
+  gap: 13px;
+  align-items: baseline;
+  padding: 15px 18px;
+  border-radius: 14px;
+  background: var(--panel);
+  font-size: 0.94rem;
+  line-height: 1.9;
+  color: #3a352d;
+}
+
+#kfcs-ai .plan-next .next-list li i {
+  flex: 0 0 auto;
+  font-family: 'Bebas Neue', sans-serif;
+  font-style: normal;
+  font-size: 0.98rem;
+  color: var(--yellow-deep);
+}
+
+#kfcs-ai .plan-next .next-kicker {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.9;
+  color: var(--yellow-deep);
+}
+
+/* 常見問題 */
+#kfcs-ai .faqs {
+  display: grid;
+  gap: 2px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  overflow: hidden;
+  background: var(--line);
+}
+
+#kfcs-ai .faq { background: #fff; }
+
+#kfcs-ai .faq summary {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  padding: 20px 24px;
+  cursor: pointer;
+  list-style: none;
+  font-size: 0.98rem;
+  font-weight: 700;
+  line-height: 1.75;
+}
+
+#kfcs-ai .faq summary::-webkit-details-marker { display: none; }
+
+#kfcs-ai .faq summary::before {
+  content: 'Q';
+  flex: 0 0 auto;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.06rem;
+  color: var(--yellow-deep);
+}
+
+#kfcs-ai .faq[open] summary { color: var(--yellow-deep); }
+
+#kfcs-ai .faq .faq-body {
+  padding: 0 24px 22px 52px;
+  font-size: 0.92rem;
+  line-height: 1.95;
+  color: #4a453d;
+}
+
+#kfcs-ai .faq .faq-body a {
+  color: var(--yellow-deep);
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+#kfcs-ai .faq .faq-body p + p { margin-top: 10px; }
+
+/* 結尾 CTA */
+#kfcs-ai .closing {
+  margin-top: clamp(16px, 3vw, 32px);
+  padding: clamp(44px, 6vw, 76px) 0;
+  background:
+    radial-gradient(circle at 82% 20%, rgba(246, 194, 19, 0.2), transparent 44%),
+    linear-gradient(140deg, #0d0d0d, #1b1a18);
+  color: var(--white);
+}
+
+#kfcs-ai .closing-inner {
+  width: min(1160px, calc(100% - 56px));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: clamp(24px, 4vw, 44px);
+}
+
+#kfcs-ai .closing h2 {
+  font-family: 'Noto Serif TC', serif;
+  font-size: clamp(1.32rem, 2.6vw, 1.9rem);
+  font-weight: 900;
+  line-height: 1.6;
+  text-wrap: balance;
+}
+
+#kfcs-ai .closing p {
+  margin-top: 14px;
+  max-width: 56ch;
+  font-family: 'Noto Serif TC', serif;
+  font-size: 0.98rem;
+  line-height: 2;
+  color: rgba(255, 255, 255, 0.74);
+}
+
+/* ─────────────── RWD ─────────────── */
+@media (max-width: 980px) {
+  #kfcs-ai .hero-grid,
+  #kfcs-ai .case .case-body,
+  #kfcs-ai .plan,
+  #kfcs-ai .closing-inner {
+    grid-template-columns: 1fr;
+  }
+
+  #kfcs-ai .closing .btn { width: 100%; }
+}
+
+@media (max-width: 1024px) {
+  #kfcs-ai .quicknav { top: 64px; }
+}
+
+@media (max-width: 640px) {
+  #kfcs-ai .shell,
+  #kfcs-ai .section,
+  #kfcs-ai .quicknav-inner,
+  #kfcs-ai .closing-inner {
+    width: calc(100% - 36px);
+  }
+
+  #kfcs-ai .hero-actions .btn { width: 100%; }
+  #kfcs-ai .sec-title { white-space: normal; }
+  #kfcs-ai .func { grid-template-columns: 1fr; }
+  #kfcs-ai .func .func-num { width: 62px; height: 62px; font-size: 1.7rem; }
+  #kfcs-ai .case .case-body { padding: 22px 20px; }
+  #kfcs-ai .case .case-head { padding: 16px 20px; }
+  #kfcs-ai .case .case-foot { padding: 16px 20px; }
+}
+</style>
+
+<section class="kfcs-page page kfcs-ai-coach-page" id="kfcs-ai">
+
+<!-- ═══════════ HERO ═══════════ -->
+<header class="hero">
+  <div class="shell hero-grid">
+    <div class="hero-copy">
+      <span class="hero-label">AI COACH</span>
+      <h1 class="hero-title">
+        徐國峰 × AI 線上跑步教練
+        <em>不是聊天 AI，是訓練決策 AI</em>
+      </h1>
+      <p class="hero-lede">
+        把徐國峰的訓練判斷寫進系統，讓你每跑完一次，就有一位看得懂你數據、也讀得懂你感受的教練告訴你：
+        這次練得對不對、接下來該收還是該加。
+      </p>
+
+      <div class="hero-stats">
+        <span class="stat-pill"><b>30</b>萬字真人教練回饋</span>
+        <span class="stat-pill"><b>10</b>年訓練數據</span>
+        <span class="stat-pill"><b>20</b>年訓練判斷</span>
+        <span class="stat-pill"><b>24</b>小時隨時回饋</span>
+      </div>
+
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="https://www.runningquotient.com/ai-coach/index" target="_blank" rel="noopener">前往 RQ 查看方案</a>
+        <a class="btn btn-ghost" href="#cases">先看真實回饋案例</a>
+      </div>
+      <p class="hero-note">服務開設於 RQ 跑力平台，訂閱與使用皆在該平台完成。</p>
+    </div>
+
+    <div class="hero-media">
+      <div class="feedback-card">
+        <div class="fc-head">
+          <span class="fc-avatar">COACH</span>
+          <span class="fc-who"><b>徐國峰 × AI 教練</b><span>回覆於你的訓練紀錄下</span></span>
+        </div>
+        <div class="fc-body">
+          <span class="fc-tag">【教練分析】</span>
+          <p class="fc-text">
+            今天在 22 度、濕度 73% 的環境下，心率前段逐步爬升後，中後段反而有幾段明顯回落，顯示你有刻意把強度放掉，沒有一直硬撐。
+            <mark>末段步頻下降，對應到你提到的「腿很沉」，技術開始用意志在撐而不是自然帶動。</mark>
+          </p>
+          <span class="fc-tag">【教練指導】</span>
+          <p class="fc-text">
+            明天要做間歇的話，我會建議你把「先耐心把身體熱開」當成主課表的一部分：
+            <mark>熱開後做幾趟短加速，感覺到腳步回彈、呼吸變順，再決定要不要照表操課。</mark>
+          </p>
+          <p class="fc-time">11:31</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ═══════════ 快速選單 ═══════════ -->
+<nav class="quicknav" aria-label="頁面章節快速選單">
+  <div class="quicknav-inner" id="ai-quicknav">
+    <a href="#why">為什麼是 KFCS</a>
+    <a href="#features">服務內容</a>
+    <a href="#cases">真實回饋案例</a>
+    <a href="#compare">與通用 AI 的差別</a>
+    <a href="#fit">適合對象</a>
+    <a href="#plan">訂閱方案</a>
+    <a href="#faq">常見問題</a>
+  </div>
+</nav>
+
+<!-- ═══════════ 01 為什麼是 KFCS ═══════════ -->
+<section class="section" id="why">
+  <div class="sec-head">
+    <span class="sec-num">01</span>
+    <h2 class="sec-title">為什麼 KFCS 要做 AI 教練</h2>
+    <span class="sec-rule"></span>
+  </div>
+
+  <p class="lead">
+    KFCS 這些年做的事，是把耐力訓練拆成心、體能、力量、技術四個模組，
+    讓跑者知道自己在練什麼、為什麼要這樣練。但一套訓練系統要真正幫到人，最難的永遠是最後那一段：
+    你今天跑完的這一趟，到底練得對不對？
+  </p>
+  <p class="lead">
+    這個問題只有教練答得出來，而教練的時間是有限的。頂級教練通常不接新手、名額有限、要排隊等上數月，
+    費用也不是每個跑者都負擔得起。徐國峰 × AI 要處理的，就是這個結構性的缺口。
+  </p>
+
+  <div class="pullquote">
+    它不是模仿教練說話的聊天機器人，而是把「該收還是該加」的判斷順序寫成系統。
+  </div>
+
+  <div class="modules">
+    <article class="module">
+      <h3>知識源頭<span class="m-en">SOURCE</span></h3>
+      <p>30 萬字真人教練回饋與 10 年訓練數據，全部來自 KFCS 實際的教學與帶隊現場，不是從網路蒐集來的泛用訓練知識。</p>
+    </article>
+    <article class="module">
+      <h3>判斷邏輯<span class="m-en">LOGIC</span></h3>
+      <p>回饋要看的不只是配速與心率，還包括這堂課在週期裡的角色、你當天寫下的感受，以及最近累積的疲勞。判斷順序是固定的，不會今天一套、明天一套。</p>
+    </article>
+    <article class="module">
+      <h3>人的守門<span class="m-en">HUMAN</span></h3>
+      <p>AI 不取代專業判斷。每一版回饋邏輯都由徐國峰本人逐條審核與校準後才上線，訂閱者回報的問題也會回到他手上重新調整。</p>
+    </article>
+  </div>
+
+  <h3 class="sub-head">它和 KFCS 其他服務的關係</h3>
+  <ul class="features">
+    <li><i>01</i><span><b>實體課程與教練認證：把人培養成能自己判斷的跑者與教練。</b>現場動作檢查、即時修正與系統性訓練，是 AI 做不到的部分，詳見 <a href="courses.html">課程總覽</a> 與 <a href="coach-certification.html">教練認證</a>。</span></li>
+    <li><i>02</i><span><b>線上課程：建立完整的知識架構。</b>從跑步基礎概念到個人化課表安排，讓你看懂訓練背後的為什麼，詳見 <a href="online-course.html">跑步線上課程</a>。</span></li>
+    <li><i>03</i><span><b>徐國峰 × AI：在每一次訓練之後，直接給你判斷。</b>不需要你先學會當自己的教練，跑完寫下感受就會收到回饋。</span></li>
+  </ul>
+  <p class="lead" style="margin-top: 22px;">
+    三者是互補的：課程讓你看懂為什麼，AI 教練讓你每一次訓練都用得上。
+    在 2027 年的實體課程開課之前，這是現在就能開始、由徐國峰訓練邏輯陪你練的方式。
+  </p>
+</section>
+
+<!-- ═══════════ 02 服務內容 ═══════════ -->
+<section class="section" id="features">
+  <div class="sec-head">
+    <span class="sec-num">02</span>
+    <h2 class="sec-title">訂閱之後，你會用到什麼</h2>
+    <span class="sec-rule"></span>
+  </div>
+
+  <div class="funcs">
+    <article class="func">
+      <span class="func-num">1</span>
+      <div>
+        <h3>訓練即時回饋</h3>
+        <p class="func-sub">跑完、寫完，教練就回你</p>
+        <p class="func-text">
+          用 RQ 記錄訓練，再寫下一兩句當天的感受，AI 教練就會針對這一筆紀錄回饋。
+          它同時看數據（配速、心率、步頻、訓練指數）與你寫下的身體感受，而不是只從數字給通用建議。
+        </p>
+        <ul class="func-list">
+          <li>分析這次訓練的方向對不對，強度有沒有落在該落的地方。</li>
+          <li>指出你自己沒注意到、但可能導致受傷的訊號。</li>
+          <li>告訴你接下來該收還是該加，以及具體要怎麼調整。</li>
+          <li>回饋直接留在該筆紀錄底下，累積成你自己的訓練對話史。</li>
+        </ul>
+        <p class="func-text" style="margin-top: 16px;">
+          跑完當下是感受最強烈的時刻，也是學得最快、改得最快的時候。
+        </p>
+      </div>
+    </article>
+
+    <article class="func">
+      <span class="func-num">2</span>
+      <div>
+        <h3>12 套完整的 KFCS 訓練計畫</h3>
+        <p class="func-sub">四種目標距離 × 三種跑量</p>
+        <p class="func-text">
+          5K、10K、半馬、全馬各有低跑量、中跑量、高跑量三個版本，共 12 套。
+          你可以依目前的週跑量與體能狀況選擇適合的版本，跑量較低或稍微加量就容易疲累的跑者，從低跑量版本開始即可。
+        </p>
+        <div class="func-chips">
+          <span class="chip">課表解說影片</span>
+          <span class="chip">熱身跟練影片</span>
+          <span class="chip">收操跟練影片</span>
+          <span class="chip">力量訓練跟練影片</span>
+        </div>
+        <p class="func-text" style="margin-top: 18px;">
+          每一堂課都不只告訴你今天要跑什麼，還會說明為什麼這樣安排、這堂課在整個週期裡扮演什麼角色。
+          目的是讓你從照表操課，慢慢變成看得懂自己在練什麼。
+        </p>
+      </div>
+    </article>
+
+    <article class="func">
+      <span class="func-num">3</span>
+      <div>
+        <h3>單次跑步課表產生器</h3>
+        <p class="func-sub">依你的跑力與訓練指數，即時產生一份課表</p>
+        <p class="func-text">
+          想在計畫之外自己加一堂課的時候，選好課表結構、目標強度與訓練指數，系統會依照徐國峰的開課表邏輯，
+          立刻算出一份完整的單次課表。
+        </p>
+        <ul class="func-list">
+          <li>目前開放有氧、節奏跑、間歇跑、漸速跑、變速跑等課表結構。</li>
+          <li>輸出心率區間（BPM）與逐段配速分趟表，可直接照著執行。</li>
+          <li>跑力較低時自動以心率呈現，跑力足夠時改以配速呈現，強度載體選對才練得準。</li>
+        </ul>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ═══════════ 03 真實回饋案例 ═══════════ -->
+<section class="section" id="cases">
+  <div class="sec-head">
+    <span class="sec-num">03</span>
+    <h2 class="sec-title">真實回饋案例</h2>
+    <span class="sec-rule"></span>
+  </div>
+
+  <p class="lead">
+    以下三則是訂閱者實際收到的回饋摘錄。你可以從中看到 AI 教練怎麼把數據、環境條件與你寫下的一句話串在一起判斷。
+  </p>
+
+  <div class="cases" style="margin-top: 30px;">
+
+    <article class="case">
+      <div class="case-head">
+        <span class="case-no">CASE 01</span>
+        <h3 class="case-title">跑完很累，但數據看起來還行</h3>
+      </div>
+      <div class="case-body">
+        <div class="case-col">
+          <h4>你寫下的日誌</h4>
+          <p class="diary">「RPE 4，腿很沉，但配速還 OK。明天要間歇。」</p>
+        </div>
+        <div class="case-col">
+          <h4>教練回饋（摘錄）</h4>
+          <div class="reply">
+            <span class="r-tag">【教練分析】</span>
+            <p>心率前段逐步爬升後，中後段反而有幾段明顯回落，顯示你有刻意把強度放掉，沒有一直硬撐。速度雖有波動，但步頻大多維持在 177 至 180 左右，代表腳步節奏穩定；<mark>末段步頻下降，對應到你提到的「腿很沉」，技術開始用意志在撐而不是自然帶動。</mark></p>
+            <span class="r-tag">【教練指導】</span>
+            <p>明天要做間歇的話，我會建議你把「先耐心把身體熱開」當成主課表的一部分：<mark>熱開後做幾趟短加速，感覺到腳步回彈、呼吸變順，再決定要不要照表操課。</mark>若熱開後仍是腳步沉重、落地聲變大，那就把間歇改成輕鬆跑加幾段順順的加速即可，見好就收。</p>
+          </div>
+        </div>
+      </div>
+      <p class="case-foot"><span>結論</span>不讓你硬撐，但也不會永遠保守。</p>
+    </article>
+
+    <article class="case">
+      <div class="case-head">
+        <span class="case-no">CASE 02</span>
+        <h3 class="case-title">訓練出現警訊</h3>
+      </div>
+      <div class="case-body">
+        <div class="case-col">
+          <h4>你寫下的日誌</h4>
+          <p class="diary">「今天跑完膝外側開始緊緊的，可是最近想拉跑量。」</p>
+        </div>
+        <div class="case-col">
+          <h4>教練回饋（摘錄）</h4>
+          <div class="reply">
+            <span class="r-tag">【教練分析】</span>
+            <p>後段心率一路貼近閾值區，最後才明顯降速收尾，呈現「愈跑愈快、心率也跟著爬」的型態。技術面步頻多落在 186 至 187，提速時仍能維持穩定節奏，代表動作控制不錯；<mark>但你提到跑完膝外側緊，這是需要立刻重視的警訊，常見與髂脛束張力或臀中肌負荷有關。</mark></p>
+            <span class="r-tag">【教練指導】</span>
+            <p><mark>膝外側「緊緊的」不適合在此時硬拉跑量；接下來 3 至 7 天請把重點放在把症狀壓下來：跑量先降到平常的 50% 至 70%，取消任何需要提速的主課表，改成輕鬆跑或交叉訓練。</mark>跑後溫和放鬆股外側、臀部與髂腰，並加上臀中肌啟動。</p>
+          </div>
+        </div>
+      </div>
+      <p class="case-foot"><span>結論</span>先保住可持續性，再來談成績。</p>
+    </article>
+
+    <article class="case">
+      <div class="case-head">
+        <span class="case-no">CASE 03</span>
+        <h3 class="case-title">照表操課卻沒進步，也沒感覺</h3>
+      </div>
+      <div class="case-body">
+        <div class="case-col">
+          <h4>你寫下的日誌</h4>
+          <p class="diary">「今天訓練完沒有特別累、也不會特別輕鬆，但已經練了 6 週，配速卡住逐漸無感。」</p>
+        </div>
+        <div class="case-col">
+          <h4>教練回饋（摘錄）</h4>
+          <div class="reply">
+            <span class="r-tag">【教練分析】</span>
+            <p>整體速度起伏不大，但心率隨時間逐步上揚，後段已接近乳酸閾值上緣，顯示在濕度 89% 的環境下，身體為了散熱付出額外成本。步頻大多維持在 175 至 179，代表你在疲勞累積時仍能把腳步節奏守住。</p>
+            <span class="r-tag">【教練指導】</span>
+            <p>你提到「不特別累、也不特別輕鬆」與「配速卡住逐漸無感」，我會把它解讀成：<mark>身體已適應同類型刺激，短期內再用同一種配速硬撐，只會增加疲勞，卻不一定帶來新的適應。</mark><mark>建議你接下來 1 至 2 週把主課表做一點結構上的變化：例如同樣維持總量，但改成漸速（前段保守、後段小幅提速），或加入短段落的輕快加速，讓神經與跑姿重新被喚醒。</mark></p>
+          </div>
+        </div>
+      </div>
+      <p class="case-foot"><span>結論</span>不是叫你更拚，是讓你拚在正確的地方。</p>
+    </article>
+
+  </div>
+
+  <p class="case-note">
+    以上為訂閱者實際收到的回饋內容摘錄，為配合版面長度有節錄。每個人收到的回饋會依照當次數據、環境條件與日誌內容而不同。
+  </p>
+</section>
+
+<!-- ═══════════ 04 與通用 AI 的差別 ═══════════ -->
+<section class="section" id="compare">
+  <div class="sec-head">
+    <span class="sec-num">04</span>
+    <h2 class="sec-title">你不是缺工具，你是缺決策</h2>
+    <span class="sec-rule"></span>
+  </div>
+
+  <p class="lead">
+    通用 AI 不是不聰明，但它不是教練系統。它只回答你問的問題，所以你得先學會當自己的教練，才問得出正確的問題。
+  </p>
+
+  <div class="table-wrap" style="margin-top: 30px;">
+    <table class="cmp">
+      <thead>
+        <tr>
+          <th scope="col">面向</th>
+          <th scope="col">ChatGPT／Gemini 等通用 AI</th>
+          <th scope="col" class="is-ours">徐國峰 × AI</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">資料整理</th>
+          <td class="generic">要自己整理資料。跑錶欄位一大堆，你得先判斷哪些重要再貼給它。配速、心率、步頻、訓練量、睡眠、RPE，挑錯了就等於亂餵。</td>
+          <td class="ours">只要用 RQ 記錄訓練，<b>系統自己判讀</b>，不需要你先懂得挑資料。</td>
+        </tr>
+        <tr>
+          <th scope="row">建議回饋</th>
+          <td class="generic">要自己會提問，還要會追問。問得模糊，它就回得安全空泛；問偏了，它會順著你走。沒有教練的提問框架，就得不到教練的答案。</td>
+          <td class="ours">不用問。<b>跑完寫下感受，回饋自己會來</b>，直接指出這次訓練的問題與該注意的事。</td>
+        </tr>
+        <tr>
+          <th scope="row">記憶性</th>
+          <td class="generic">沒有記憶，每次都從零開始。它不知道你上週累積了多少疲勞、最近哪裡緊、哪裡在退步，只能針對這一次給通用建議。備賽期最容易犯錯：該收不收、該加亂加。</td>
+          <td class="ours">回饋留在訓練紀錄底下，累積成可回顧的訓練對話史。<b>跨次記憶</b>將讓過往在 RQ 記錄的數據一併納入判讀<span class="soon">即將推出</span></td>
+        </tr>
+        <tr>
+          <th scope="row">訓練邏輯</th>
+          <td class="generic">沒有統一的訓練邏輯，今天一套、明天一套。不會幫你維持週期一致性，也不會把刺激、恢復、累積當成同一條線來看，你得到的是一堆看似合理卻彼此不連貫的建議。</td>
+          <td class="ours">統一使用<b>徐國峰的耐力訓練邏輯</b>，以 30 萬字真人教練回饋與 10 年訓練數據為基礎，判斷標準前後一致。</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="pullquote">
+    你不用學會當教練，也能得到教練等級的回饋、訓練分析與提醒。
+  </div>
+</section>
+
+<!-- ═══════════ 05 適合對象 ═══════════ -->
+<section class="section" id="fit">
+  <div class="sec-head">
+    <span class="sec-num">05</span>
+    <h2 class="sec-title">適合誰，不適合誰</h2>
+    <span class="sec-rule"></span>
+  </div>
+
+  <p class="lead">
+    徐國峰 × AI 不是來陪你開心跑的，是來避免你亂練、白練、練到受傷，並在過程中讓你更了解自己。
+  </p>
+
+  <div class="fits" style="margin-top: 30px;">
+    <div class="fit yes">
+      <h3><i>✓</i>適合這樣的你</h3>
+      <ul>
+        <li>想穩定進步，但也擔心受傷。</li>
+        <li>願意在跑完後寫下簡單的感受，一個詞、一句話都可以。</li>
+        <li>希望有人告訴你什麼時候該收、什麼時候可以加，而不是永遠保守。</li>
+        <li>想知道自己忽略的力量與技術缺口在哪裡。</li>
+        <li>正在備賽，需要有人用一致的邏輯看你是不是在走回頭路。</li>
+        <li>目標是 5K 或只是想跑得健康，重點放在可持續、不受傷、穩定進步。</li>
+      </ul>
+    </div>
+    <div class="fit no">
+      <h3><i>✕</i>不適合這樣的你</h3>
+      <ul>
+        <li>只想被鼓勵，不想調整訓練。</li>
+        <li>希望有人叫你硬撐到底，不接受「今天該收」的建議。</li>
+        <li>完全不想記錄訓練，也不願意寫下任何感受。</li>
+        <li>期待立刻見效的捷徑，而不是長期可累積的訓練節奏。</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ 06 訂閱方案 ═══════════ -->
+<section class="section" id="plan">
+  <div class="sec-head">
+    <span class="sec-num">06</span>
+    <h2 class="sec-title">訂閱方案</h2>
+    <span class="sec-rule"></span>
+  </div>
+
+  <div class="plan">
+    <div class="plan-card">
+      <h3>訂閱後你會得到</h3>
+      <ul class="plan-list">
+        <li>訓練即時回饋，每一筆訓練紀錄都能收到教練分析與指導。</li>
+        <li>12 套完整的 KFCS 訓練計畫，含每堂課的解說、熱身、收操與力量訓練跟練影音。</li>
+        <li>單次跑步課表產生器，隨時產生一份完整的單次課表。</li>
+        <li>學員限定群組。</li>
+      </ul>
+      <p class="plan-note">
+        以月為單位訂閱，可隨時取消，取消後仍可使用到當期結束。
+        目前一般會員與白金會員皆可訂閱使用，方案內容與價格以 RQ 平台頁面為準。
+      </p>
+      <a class="btn btn-primary" href="https://www.runningquotient.com/ai-coach/index" target="_blank" rel="noopener">前往 RQ 查看方案與訂閱</a>
+    </div>
+
+    <div class="plan-next">
+      <h3>接下來會增加的功能</h3>
+      <p>徐國峰 × AI 仍在持續開發中，以下功能正在規劃與製作：</p>
+      <ul class="next-list">
+        <li><i>01</i>全天候即時問答，訓練上的問題隨時能問。</li>
+        <li><i>02</i>訓練數據與狀況記憶，讓過往紀錄一併納入判讀。</li>
+        <li><i>03</i>客製化排課與課表調整，依你的狀況安排整個週期。</li>
+      </ul>
+      <p class="next-kicker">
+        新功能上線後，訂閱價格會隨之調整。愈早訂閱，愈早開始累積屬於你自己的訓練對話史。
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ 07 常見問題 ═══════════ -->
+<section class="section" id="faq">
+  <div class="sec-head">
+    <span class="sec-num">07</span>
+    <h2 class="sec-title">常見問題</h2>
+    <span class="sec-rule"></span>
+  </div>
+
+  <div class="faqs">
+    <details class="faq">
+      <summary>跟 ChatGPT、Gemini 有什麼差別？</summary>
+      <div class="faq-body">
+        <p>完全不一樣。通用 AI 沒有一致的訓練邏輯，你問得模糊它就回得空泛，而且每次對話都從零開始。</p>
+        <p>徐國峰 × AI 的回饋來自徐國峰的判斷框架，判斷順序前後一致，也不需要你自己整理資料或學會提問。</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>我不太會看數據，也能用嗎？</summary>
+      <div class="faq-body">
+        <p>可以，你只要做兩件事：用 RQ 記錄訓練，以及寫下當天的感受（例如 RPE、腿部疲勞、呼吸狀況）。判讀交給徐國峰 × AI 就好。</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>一定要每天寫很長的日誌嗎？</summary>
+      <div class="faq-body">
+        <p>不用。一到兩句就足夠，甚至只回饋吃力程度也可以。寫得愈具體，回饋就愈貼近你的狀況，但不需要為了寫而寫。</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>一定要先買 RQ 白金會員嗎？</summary>
+      <div class="faq-body">
+        <p>不用。現階段一般會員與白金會員都可以訂閱使用。</p>
+        <p>若升級為白金會員，可以解鎖更完整的訓練數據，在讀完教練分析之後，能有更多數據依據去調整自己的狀況。</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>我跑 5K 或只是想變健康，也適合嗎？</summary>
+      <div class="faq-body">
+        <p>適合。可以選 5K 或 10K 的低跑量方案，重點放在可持續、不要受傷、穩定進步。AI 教練一樣會分析每次訓練狀況，並針對當次訓練提醒該注意的事。</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>可以隨時取消嗎？會不會綁約？</summary>
+      <div class="faq-body">
+        <p>可隨時取消，不綁約，取消後仍可使用到當期結束。若日後想重新訂閱，須依照當時的價格計算。</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>這和 KFCS 的實體課程、線上課程有什麼不同？</summary>
+      <div class="faq-body">
+        <p>實體課程（R1 至 R6）著重現場動作檢查、即時修正與教練認證訓練；<a href="online-course.html">線上課程</a> 提供完整、可反覆觀看的知識架構；徐國峰 × AI 則是在你每一次訓練之後直接給出判斷與調整建議。</p>
+        <p>三者互補：課程讓你看懂為什麼，AI 教練讓你每一次訓練都用得上。實體課程資訊請見 <a href="courses.html">課程總覽</a> 與 <a href="coach-certification.html">教練認證</a>。</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>訂閱與付款在哪裡完成？</summary>
+      <div class="faq-body">
+        <p>徐國峰 × AI 開設在 RQ 跑力平台，訂閱、付款與日常使用都在該平台完成。點選本頁的按鈕即可前往 RQ 的服務頁面查看完整方案與價格。</p>
+      </div>
+    </details>
+  </div>
+</section>
+
+<!-- ═══════════ 結尾 CTA ═══════════ -->
+<section class="closing">
+  <div class="closing-inner">
+    <div>
+      <h2>從下一次訓練開始，就有人告訴你這樣練對不對。</h2>
+      <p>
+        不必等到受傷了才知道該收，也不必練了六週才發現方向錯了。
+        跑完寫下一句話，剩下的交給徐國峰的訓練邏輯。
+      </p>
+    </div>
+    <a class="btn btn-primary" href="https://www.runningquotient.com/ai-coach/index" target="_blank" rel="noopener">前往 RQ 查看方案與訂閱</a>
+  </div>
+</section>
+
+</section>
+
+<footer class="kfcs-sitefooter">
+  <div class="foot-shell">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <img src="assets/kfcs-logo.svg" alt="KFCS logo">
+        <p>把心、體能、力量與技術整合為一套可理解、可實踐、可傳承的耐力訓練系統，支持運動員進步，也支持教練成長。</p>
+        <p>聯絡信箱：<a href="mailto:kuofengcoaching@gmail.com">kuofengcoaching@gmail.com</a></p>
+        <a class="foot-social" href="https://www.facebook.com/rocky549" target="_blank" rel="noopener">
+          <span class="foot-social-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.313 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg></span>
+          <span class="foot-social-text"><b>追蹤徐國峰的臉書</b><span>FACEBOOK</span></span>
+        </a>
+      </div>
+      <div class="foot-col">
+        <h3>網站導覽</h3>
+        <ul>
+          <li><a href="index.html">首頁</a></li>
+          <li><a href="ai-coach.html">AI 教練</a></li>
+          <li><a href="courses.html">課程總覽</a></li>
+          <li><a href="coach-certification.html">教練認證</a></li>
+          <li><a href="education.html">教育訓練</a></li>
+          <li><a href="blog.html">部落格</a></li>
+          <li><a href="books.html">訓練書系</a></li>
+          <li><a href="online-course.html">跑步線上課程</a></li>
+          <li><a href="youtube.html">YouTube 專區</a></li>
+          <li><a href="podcast.html">Podcast 專區</a></li>
+          <li><a href="about.html">關於我們</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h3>課程一覽</h3>
+        <ul>
+          <li><a href="blog/R1-running-course-technique.html">R1 跑步技術課程</a></li>
+          <li><a href="blog/R2-running-course-strength.html">R2 跑步力量課程</a></li>
+          <li><a href="blog/R3-running-fitness-syllabus.html">R3 跑步體能課程</a></li>
+          <li><a href="blog/R4-running-periodization-and-runners-heart.html">R4 週期化訓練與練心</a></li>
+          <li><a href="blog/R5-running-intensive-package.html">R5 四堂全修課程</a></li>
+          <li><a href="blog/R6-running-coaching-certification.html">R6 跑步教練認證課程</a></li>
+          <li><a href="blog/kfcs-registration-guide.html">報名流程</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© KFCS KuoFeng Coaching System・徐國峰</span>
+      <span class="motto">以身練心・去執著心</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll('#ai-quicknav a'));
+  if (!navLinks.length) return;
+
+  var sections = navLinks
+    .map(function (a) { return document.querySelector(a.getAttribute('href')); })
+    .filter(Boolean);
+
+  function sync() {
+    var line = window.scrollY + 180;
+    var current = 0;
+    sections.forEach(function (sec, i) {
+      if (sec.offsetTop <= line) current = i;
+    });
+    navLinks.forEach(function (a, i) {
+      a.classList.toggle('is-current', i === current);
+    });
+  }
+
+  var ticking = false;
+  window.addEventListener('scroll', function () {
+    if (ticking) return;
+    ticking = true;
+    window.requestAnimationFrame(function () { sync(); ticking = false; });
+  }, { passive: true });
+
+  sync();
+})();
+</script>
+</body>
+</html>

@@ -7,6 +7,7 @@ KFCS（KuoFeng Coaching System）耐力訓練系統官方網站，由徐國峰�
 | 頁面 | 檔案 |
 | --- | --- |
 | 首頁 | `index.html` |
+| AI 教練（徐國峰 × AI） | `ai-coach.html` |
 | 課程總覽 | `courses.html` |
 | 教練認證（R6） | `coach-certification.html` |
 | 教育訓練 | `education.html` |
@@ -20,6 +21,16 @@ KFCS（KuoFeng Coaching System）耐力訓練系統官方網站，由徐國峰�
 導覽列的「影音專區」下拉已於 2026-08-04 更名為「學習資源」，並新增第一個子項目
 「跑步線上課程」（`online-course.html`），排在 YouTube 專區與 Podcast 專區之前。
 下拉主連結指向 `online-course.html`。
+
+2026-08-06 新增「AI 教練」頁籤（`ai-coach.html`），位置在「首頁」之後、「課程總覽」之前，
+全站 632 個頁面（根目錄 11 頁、`blog/` 8 頁、`articles/` 613 頁）的導覽列與 footer 網站導覽
+都已同步加入。此頁介紹 RQ 平台上的「徐國峰 × AI 線上跑步教練」訂閱服務，頁面本身不處理金流，
+所有行動呼籲導向 <https://www.runningquotient.com/ai-coach/index>。
+依討論結果不在官網寫死訂閱價格（RQ 端已預告未來會調漲），價格一律以 RQ 頁面為準。
+
+首頁第 05 區「下一步，就從理解訓練開始」的 CTA 卡片區，第一張改為橫跨整列的
+`cta-card-feature`（金色外框），導向 `ai-coach.html`，其餘六張維持雙欄。
+同區最後一張「學員限定群組」是給已訂閱者的 RQ 群組入口，與這張新卡受眾不同，兩者並存。
 | 課程簡章與報名資訊 | `blog/*.html`（8 篇） |
 | 耐力訓練文章 | `articles/*.html`（621 篇） |
 
