@@ -147,6 +147,8 @@
 #kfcs-blog .chip.on {
   background: #101010; border-color: #101010; color: var(--yellow); font-weight: 700;
 }
+/* 手機版才出現的篩選收合開關（桌機一律展開） */
+#kfcs-blog .filter-toggle-box, #kfcs-blog .filter-toggle { display: none; }
 #kfcs-blog .count {
   margin-top: 12px; color: var(--muted); font-size: 0.86rem;
 }
@@ -227,6 +229,26 @@
   #kfcs-blog .filter-row { flex-direction: column; gap: 7px; }
   #kfcs-blog .filter-label { padding-top: 0; }
 }
+
+/* 手機與平板：分類與標籤預設收合，避免 sticky 工具列撐滿螢幕、蓋住文章列表 */
+@media (max-width: 1024px) {
+  #kfcs-blog .filter-toggle {
+    display: flex; align-items: center; justify-content: space-between; gap: 10px;
+    width: 100%; margin-top: 12px; padding: 11px 18px;
+    border: 1px solid var(--line); border-radius: 999px;
+    background: #fff; color: #4a453e;
+    font-size: 0.88rem; font-weight: 700; cursor: pointer;
+  }
+  #kfcs-blog .filter-toggle::after {
+    content: '▾'; flex-shrink: 0; color: var(--muted); font-size: 0.9rem; line-height: 1;
+  }
+  #kfcs-blog .filter-toggle-box:checked ~ .filter-toggle {
+    border-color: #101010; background: #101010; color: var(--yellow);
+  }
+  #kfcs-blog .filter-toggle-box:checked ~ .filter-toggle::after { content: '▴'; color: var(--yellow); }
+  #kfcs-blog .filter-panel { display: none; max-height: 44vh; overflow-y: auto; }
+  #kfcs-blog .filter-toggle-box:checked ~ .filter-panel { display: block; }
+}
 </style>
 </head>
 <body>
@@ -288,6 +310,9 @@
         <input id="q" type="search" placeholder="搜尋文章標題、內容與標籤⋯⋯" autocomplete="off">
         <button id="clear" type="button" aria-label="清除搜尋">✕</button>
       </div>
+      <input class="filter-toggle-box" type="checkbox" id="kfcs-filter-toggle">
+      <label class="filter-toggle" for="kfcs-filter-toggle"><span id="filter-summary">分類與標籤篩選</span></label>
+      <div class="filter-panel">
       <div class="filter-row">
         <span class="filter-label">分類</span>
         <div class="chip-wrap" id="cat-chips">
@@ -345,6 +370,7 @@
           <button class="chip" type="button" data-filter="tag" data-value="最大攝氧量">最大攝氧量</button>
           </div>
         </div>
+      </div>
       <p class="count">共 <strong id="n">621</strong> 篇文章</p>
     </div>
   </div>
@@ -5958,6 +5984,7 @@
   var more = document.getElementById('more');
   var empty = document.getElementById('empty');
   var nEl = document.getElementById('n');
+  var summary = document.getElementById('filter-summary');
   var shown = STEP;
   var activeCat = '', activeTag = '';
 
@@ -5979,6 +6006,8 @@
       }
     });
     nEl.textContent = matched;
+    var picked = [activeCat, activeTag].filter(Boolean);
+    summary.textContent = picked.length ? '篩選：' + picked.join('・') : '分類與標籤篩選';
     empty.style.display = matched ? 'none' : 'block';
     more.style.display = matched > visible ? 'inline-flex' : 'none';
     clear.style.display = q.value ? 'block' : 'none';

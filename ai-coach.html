@@ -144,10 +144,12 @@ src="https://www.facebook.com/tr?id=404602746416082&ev=PageView&noscript=1"
 
 #kfcs-ai .hero-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  grid-template-columns: minmax(0, 1fr);
   gap: clamp(28px, 4vw, 56px);
   align-items: center;
 }
+
+#kfcs-ai .hero-copy { max-width: 820px; }
 
 #kfcs-ai .hero-label {
   display: inline-flex;
@@ -254,86 +256,6 @@ src="https://www.facebook.com/tr?id=404602746416082&ev=PageView&noscript=1"
   font-size: 0.78rem;
   color: rgba(255, 255, 255, 0.46);
   letter-spacing: 0.02em;
-}
-
-/* 回饋卡（HERO 視覺） */
-#kfcs-ai .feedback-card {
-  border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  background: #fffdf8;
-  color: #24211c;
-  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.45);
-  overflow: hidden;
-}
-
-#kfcs-ai .feedback-card .fc-head {
-  display: flex;
-  align-items: center;
-  gap: 11px;
-  padding: 15px 20px;
-  background: #171614;
-  color: var(--light);
-}
-
-#kfcs-ai .feedback-card .fc-avatar {
-  display: grid;
-  place-items: center;
-  flex: 0 0 auto;
-  width: 36px;
-  height: 36px;
-  border-radius: 999px;
-  background: var(--yellow);
-  color: #101010;
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 0.82rem;
-  letter-spacing: 0.06em;
-}
-
-#kfcs-ai .feedback-card .fc-who b {
-  display: block;
-  font-size: 0.9rem;
-  color: var(--white);
-  line-height: 1.4;
-}
-
-#kfcs-ai .feedback-card .fc-who span {
-  display: block;
-  font-size: 0.7rem;
-  letter-spacing: 0.14em;
-  color: rgba(236, 230, 219, 0.6);
-}
-
-#kfcs-ai .feedback-card .fc-body { padding: 20px 22px 22px; }
-
-#kfcs-ai .feedback-card .fc-tag {
-  display: inline-block;
-  margin-bottom: 8px;
-  font-size: 0.74rem;
-  font-weight: 900;
-  letter-spacing: 0.16em;
-  color: var(--yellow-deep);
-}
-
-#kfcs-ai .feedback-card .fc-tag + .fc-text { margin-bottom: 18px; }
-
-#kfcs-ai .feedback-card .fc-text {
-  font-size: 0.9rem;
-  line-height: 1.95;
-  color: #35312b;
-}
-
-#kfcs-ai .feedback-card mark {
-  background: #dff0e2;
-  color: #1f2b21;
-  padding: 1px 2px;
-  border-radius: 3px;
-}
-
-#kfcs-ai .feedback-card .fc-time {
-  margin-top: 14px;
-  font-size: 0.7rem;
-  color: #9a938a;
-  letter-spacing: 0.08em;
 }
 
 /* ─────────────── 快速選單 ─────────────── */
@@ -1159,28 +1081,6 @@ src="https://www.facebook.com/tr?id=404602746416082&ev=PageView&noscript=1"
         <a class="btn btn-ghost" href="#cases">先看真實回饋案例</a>
       </div>
       <p class="hero-note">服務開設於 RQ 跑力平台，訂閱與使用皆在該平台完成。</p>
-    </div>
-
-    <div class="hero-media">
-      <div class="feedback-card">
-        <div class="fc-head">
-          <span class="fc-avatar">COACH</span>
-          <span class="fc-who"><b>徐國峰 × AI 教練</b><span>回覆於你的訓練紀錄下</span></span>
-        </div>
-        <div class="fc-body">
-          <span class="fc-tag">【教練分析】</span>
-          <p class="fc-text">
-            今天在 22 度、濕度 73% 的環境下，心率前段逐步爬升後，中後段反而有幾段明顯回落，顯示你有刻意把強度放掉，沒有一直硬撐。
-            <mark>末段步頻下降，對應到你提到的「腿很沉」，技術開始用意志在撐而不是自然帶動。</mark>
-          </p>
-          <span class="fc-tag">【教練指導】</span>
-          <p class="fc-text">
-            明天要做間歇的話，我會建議你把「先耐心把身體熱開」當成主課表的一部分：
-            <mark>熱開後做幾趟短加速，感覺到腳步回彈、呼吸變順，再決定要不要照表操課。</mark>
-          </p>
-          <p class="fc-time">11:31</p>
-        </div>
-      </div>
     </div>
   </div>
 </header>
