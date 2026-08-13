@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>當下用你過去的訓練數據，算出你今天該練什麼 — KFCS</title>
+<meta name="description" content="經過長期的努力，我跟 RQ 終於完成了一個重要的課表功能：用你過去的訓練數據，算出你今天該練什麼。這篇分享【AI 今日課表】三件難事，以及畫龍點睛的「教練的話」。">
+<meta property="og:url" content="https://kfcs.tw/articles/2026-08-ai-today-workout">
+<meta property="og:title" content="當下用你過去的訓練數據，算出你今天該練什麼">
+<meta property="og:description" content="經過長期的努力，我跟 RQ 終於完成了一個重要的課表功能：用你過去的訓練數據，算出你今天該練什麼。這篇分享【AI 今日課表】三件難事，以及畫龍點睛的「教練的話」。">
+<meta property="og:image" content="https://kfcs.tw/assets/og-cover.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="KFCS 耐力訓練系統｜訓練，是科學也是藝術">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:type" content="article">
+<link rel="canonical" href="https://kfcs.tw/articles/2026-08-ai-today-workout">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="stylesheet" href="../shared/site-chrome.css">
+<link rel="stylesheet" href="../shared/article.css">
+</head>
+<body>
+<nav class="kfcs-sitenav">
+  <div class="nav-shell">
+    <a class="nav-brand" href="../index.html">
+      <img src="../assets/kfcs-logo.svg" alt="KFCS logo">
+      <span class="brand-sub">耐力訓練系統</span>
+    </a>
+    <input class="nav-toggle-box" type="checkbox" id="kfcs-nav-toggle">
+    <label class="nav-toggle" for="kfcs-nav-toggle" aria-label="開啟選單"><span></span><span></span><span></span></label>
+    <div class="nav-menu">
+      <ul class="nav-links">
+        <li><a href="../index.html">首頁</a></li>
+        <li><a href="../ai-coach.html">AI 教練</a></li>
+        <li><a href="../courses.html">課程總覽</a></li>
+        <li><a href="../coach-certification.html">教練認證</a></li>
+        <li><a href="../education.html">教育訓練</a></li>
+        <li><a class="is-active" href="../blog.html">部落格</a></li>
+        <li><a href="../books.html">訓練書系</a></li>
+        <li class="nav-drop"><a href="../online-course.html">學習資源</a>
+          <ul class="drop-panel">
+            <li><a href="../online-course.html">跑步線上課程</a></li>
+            <li><a href="../youtube.html">YouTube 專區</a></li>
+            <li><a href="../podcast.html">Podcast 專區</a></li>
+          </ul>
+        </li>
+        <li><a href="../about.html">關於我們</a></li>
+        <li><a class="nav-social" href="https://www.facebook.com/rocky549" target="_blank" rel="noopener" aria-label="追蹤徐國峰的臉書"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.313 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="nav-social-label">臉書</span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<article class="kfcs-article">
+  <header class="art-hero">
+    <div class="art-hero-inner">
+      <a class="art-back" href="../blog.html">← 回部落格</a>
+      <div class="art-meta">
+        <span class="art-cat">體能與課表</span>
+        <span class="art-date">2026-08-13</span>
+      </div>
+      <h1 class="art-title">當下用你過去的訓練數據，算出你今天該練什麼</h1>
+    </div>
+  </header>
+  <div class="art-body">
+<p>【用你過去的訓練數據，算出你今天該練什麼】</p>
+<p>經過長期的努力，我跟 RQ 終於完成了一個重要的課表功能。這個功能可用一句話說完：</p>
+<p>❝ 用你過去的訓練數據，算出你今天該練什麼。 ❞</p>
+<p>「今天該練什麼，對自己最有幫助？」這應該是很多跑者練跑前會想的問題。<br>
+一位教練在為學員開課表時，也在想同一個問題：「今天他／她該練什麼，幫助最大？」</p>
+<p>這個問題並沒有標準答案，因為每個人對「幫助」的定義都不一樣。</p>
+<p>我想的「幫助」是要維持喜歡跑步的胃口與訓練的穩定性／規律性，我一開始不追求太明顯的訓練效果，而是先求打好基礎，並要透過訓練以降低受傷風險，最後才是追求成績目標。</p>
+<p>在上述的想法下才開始思考如何透過演算法來處理「用過去的訓練數據算出今天該練什麼」這個問題。</p>
+<p>這個問題背後藏著一整串的判斷：<br>
+▹ 這陣子的跑量有多少？最近的高峰週跑了多少？上一週又跑了多少？<br>
+▹ 你每週實際能練幾天？<br>
+▹ 上週是不是已經練過頭了？如果是，就不應再排質量課表。<br>
+▹ 這一週到今天為止已經累積了多少壓力？<br>
+▹ 過去三十小時內累積了多少訓練壓力？前一次訓練的疲勞退了沒？<br>
+▹ 最近七天的自覺吃力程度是幾分？愈吃力，這週的量應抓得愈保守。<br>
+▹ 今天應該排休息日嗎？<br>
+▹ 今天該不該排一堂質量課表？<br>
+▹ 今天該跑 LSD、有氧跑、節奏跑、漸速跑、變速跑、間歇跑還是較難的金字塔課表？<br>
+▹ 如果排間歇，要跑哪一種間歇？跑幾趟？每趟多長？每趟之間休多久？<br>
+▹ 這個強度該用心率來跑，還是用配速來跑？<br>
+▹ 如果今天是輕鬆日，要輕到什麼程度？</p>
+<p>這一整串判斷跑完之後，系統交到跑者手上的其實有兩樣東西：課表＋教練的話。前者決定今天練什麼，後者協助跑者提高這份課表的訓練品質。後者才是我認為這個功能最關鍵的部分。</p>
+<hr>
+<p>▎第一件難事：先要做到個人化</p>
+<p>要知道一個人今天能練多少，得先知道他過去做到過多少。如果我們用來衡量訓練的標準不夠個人化，那也無法用來計算今天的課表。</p>
+<p>例如用「距離」來衡量週跑量時，同樣跑 60 公里，一位全程輕鬆跑，另一位塞了兩份間歇課表，身體承受的壓力可是天差地遠。只從里程數會看不出其中的差異，它會把 5 公里慢跑和 5 公里比賽測驗的壓力等同來累計，這會出問題，若用距離當跑量來計算今天的課表，問題就更大了。</p>
+<p>「訓練時數」也不是適合用來計算跑量的單位，單純只看訓練時數，等於承認一小時的輕鬆跑與一小時的閾值跑是同一種量級。</p>
+<p>「自覺量表」是壓力的一種主觀量化單位，但主觀波動大，每個人的標準可能每週、每月都不同，累積起來的數據，效用有限。</p>
+<p>能拿來衡量訓練量的是「強度 × 時間」的累計值。</p>
+<p>難處在於那個「強度」本身也必須是個人化的，心率可以做到強度的個人化，但在間歇課表中，心率反應太慢，其實無法反映實際的強度，這時用配速來量化強度較佳，但配速區間要做到個人化，這得先知道這位跑者當前的實力才行（RQ 以「跑力」來決定跑者的實力）。</p>
+<p>RQ 花了好幾年的功夫，逐步改善「跑量」與「跑力」的個人化演算法，這為「個人化課表」打下了良好的基礎，這個基礎要穩，個人化課表才會算得準。</p>
+<p>「跑量」與「跑力」的個人化，說來簡單，但實際做下去才會知道有多複雜，有多少問題要處理，RQ 還無法做到完美，但一直在這條路上努力到現在。才有了現在的基礎，我們也才能朝著以數據主導的個人化課表邁進。</p>
+<hr>
+<p>▎第二件難事：判讀跑量的上限</p>
+<p>有了個人化的基礎後，下一個難題是如何判讀。這有兩條路，一條是眾多跑者的大數據模型，另一條是跑者個人的數據分析。對我來說，兩條路都可以走，但我選第二條。</p>
+<p>我有一個核心概念：每個人皆有一個適合自己的跑量上限，該上限因人因時因地而異。每個人不同，每個人在不同環境中的上限也會不同。這很容易理解：同一位跑者在臺灣高雄左訓中心練一年的最佳跑量上限，跟在日本長野縣菅平高原訓練一年的最佳跑量必然會不同！因為氣候和訓練環境不同會大大影響跑者所能吃下的量。</p>
+<p>此外，還有一個很重要的觀念：一位跑者所能承受的跑量上限跟實力的關係比較小，跟體質與環境的關係比較大。</p>
+<p>若確定是在相同環境下訓練，接著要回答的關鍵問題是：跑量的上限該停在哪裡？更具體的問題是：現在的我該練到哪裡就夠了？</p>
+<p>在尋找這個問題答案的過程中，我的發現是：答案要用跑者個人的歷史紀錄去尋找，同樣性別與年齡段、同一跑力、同樣身高體重的統計平均值並不適用。當跑者上傳愈多數據，也會愈接近真實的答案。</p>
+<p>所以我在研發這套課表系統時定下一條原則：每個人的量，應以他自己的歷史為準，不套用族群的統計資料。系統看的是這位跑者自己過去實際做到過什麼，再往上漸進增加，不拿年齡或程度去查表（未來將再透過跑者的跑力變化、體能與狀況指數變動、自覺量表與訓練日誌，加以判斷「當前這個量」是否就是自己的上限，或是還可以再往上加量，或者這就是它的上限了！）。</p>
+<p>這條原則講起來簡單，做起來很花工夫。它代表系統不能有一組通用的門檻，每一位跑者的每一條線，都要用他自己的長期資料重算一次。</p>
+<hr>
+<p>▎第三件難事：把我的判斷寫成系統</p>
+<p>這是演算法上的最後一關，也是最難的一關。</p>
+<p>知道一位跑者能吸收多少，跟知道他今天該練什麼，中間隔著一整套判斷。判斷時要參考的數據包括：這陣子累積的量、最近一次訓練留下的疲勞、跑者回報的吃力程度、各個距離的成績與對應跑力落在哪裡、跑者的目標是什麼。而且一週能練的天數不同，同樣的週跑量攤下來的每次訓練壓力也不同。此次的【AI 今日課表】系統把這件事也納入判斷，我會先分析過去四週的平均訓練天數，再據此攤分訓練壓力，不是直接把週量除以七天。</p>
+<p>我和 RQ 團隊在做的，就是把這一連串判斷一條一條拆開、寫成規則、再逐條驗證。課表呈現出來的只有幾行字，背後的邏輯卻是反覆推翻。</p>
+<p>舉例來說：在今晚產生明日課表的這個情境中，光是決定「該回頭看多長一段時間的訓練壓力」，就探討了三個方案。其中一個方案在數學上很漂亮，卻會讓早上剛跑完的那份間歇落在計算窗口之外。那會造成跑者才剛在早上跑完 30 公里長跑，系統晚上開給他的明日課表卻依然份量很重。那份需求書我來回改了好幾次。</p>
+<p>❝ 一份課表看起來只有幾行數字，它背後卻是一整套費心拆解與反覆驗證的判斷。❞</p>
+<hr>
+<p>▎畫龍點睛的那一筆：「教練的話」</p>
+<p>課表中有數據可以解決的部分，也有無法解決的部分；而後者才是課表中最重要的，那就是「教練的話」。</p>
+<p>一份課表如果沒被跑者理解，就只是一組數字，但人不是由數字驅動的機器。所以「教練的話」在【今日課表】裡並非課表的附註，而是核心！</p>
+<p>課表的強度、長度與趟數決定今天做什麼；<br>
+教練的話則有助於跑者提高這份課表的訓練品質。</p>
+<p>每一份排出來的課表旁邊，都會由 AI 依我的邏輯與這位跑者當下的狀態，加入一段話，這段話是依課表的難度、跑者的能力，以及近期的訓練量與身體狀態、還有近期的訓練日誌去調整出來的；透過 AI 工具，我盡量讓它如同我一樣思考與判斷：這份課表對這樣跑力與跑量的跑者，該說些什麼才能達到此課表的目的，以及才能提高訓練的品質？</p>
+<p>因為同樣一份「1km × 6」的間歇，讀懂了再去練，跟看著數字硬吃完，練出來的品質是兩回事。有教練引導才會知道自己在練什麼、知道哪一趟該忍住、知道休息要休到什麼程度才起跑；若只有距離、秒數和趟數，就只知道把秒數跑到、把趟數跑完而已。</p>
+<p>❝ 課表裡的數字決定訓練份量，教練的話決定訓練品質。❞</p>
+<hr>
+<p>▎最近這一版改了什麼</p>
+<p>這個功能其實在 2026/07/26 就上 beta 版了，當時只對訂閱 徐國峰 AI 教練的使用者公開；目前剛公開上線的這一版又做了幾項調整，一併在這裡說明：</p>
+<p>▹ 短期目標改由系統判定。系統會比對各位各個距離的競賽跑力，找出目前相對最弱的一項，當作接下來一個月的重點。補強弱項是這套課表系統的立場：多數人自己選的時候，會選比較擅長、練起來比較有成就感的那一項，而那通常不是進步空間最大的地方。</p>
+<p>▹ 建議語句會寫出目標賽事。有設定賽事的跑者，日期、名稱與距離都會出現在句子裡。</p>
+<p>▹ 強度較高的課表自動加熱身，長度在三到十五分鐘之間，直接寫進課表本體，傳到跑錶後可以按錶依序執行。系統也會依當天的重點，自動搭配適合的熱身跟練影片。</p>
+<p>▹ 課表可以存進 RQ 訓練行事曆，並同步到支援的跑錶。</p>
+<p>▹ 可以先產明天的課表。產生前先選今日或明日，系統會依選定的日期計算。</p>
+<p>* 注意：目前 AI 教練的今日課表只回顧過去，還不會把你未來的目標納入考慮。它依據你近期的訓練紀錄與當下的身體狀況決定今天該練什麼，並不會因為目標賽事將近而自動減量。如果你打算用它來備賽，比賽前兩週請自行降低訓練量。</p>
+<hr>
+<p>從二〇一五年帶訓練營到現在，我很清楚自己想做什麼。我最想做的就是自動化排課表的工作，因為我相信電腦可以讀取的數據量超過人類，所以應該讓系統讀取跑者的數據來排課表。人的邏輯可以很嚴密，但有可能百密一疏，會漏掉環節，但電腦不會漏，只要把它寫進程式與系統中，它就能一一實行。</p>
+<p>過去的問題是「教練的話」無法達到我的標準，但它卻是課表的靈魂；現在有了 AI 輔助，它能讀取與理解我的邏輯，補足了這一塊。現在，拜 RQ 與現代科技之賜，我終於能把個人化的訓練課表交到更多跑者手上了：<a href="https://www.runningquotient.com/workouts/kuofeng-today" target="_blank" rel="noreferrer noopener">https://www.runningquotient.com/workouts/kuofeng-today</a></p>
+<hr>
+<p>▎系統算得出你的課表，但算不出你是否想跑</p>
+<p>最後一件事要說清楚，免得被誤會。</p>
+<p>這整套算下來，交到跑者手上的仍然只是一份追求效率的科學化訓練課表。但人不是機器，若算出今天應排長距離的質量課表，而你這週工作很重、只想輕鬆跑，那就自行減量；系統判定今天該休息、你卻很想跑，那就自己安排一趟恢復跑。你實際跑出來的數據，都會成為明天課表的計算來源。</p>
+<p>數據是驗證感覺的工具。</p>
+<p>當數據很漂亮、體感卻很差的時候，先聽體感的。</p>
+  </div>
+  <div class="art-foot">
+    <span>徐國峰・KFCS 耐力訓練系統</span>
+    <span><a href="../blog.html">看更多文章 →</a></span>
+  </div>
+</article>
+<footer class="kfcs-sitefooter">
+  <div class="foot-shell">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <img src="../assets/kfcs-logo.svg" alt="KFCS logo">
+        <p>把心、體能、力量與技術整合為一套可理解、可實踐、可傳承的耐力訓練系統，支持運動員進步，也支持教練成長。</p>
+        <p>聯絡信箱：<a href="mailto:kuofengcoaching@gmail.com">kuofengcoaching@gmail.com</a></p>
+        <a class="foot-social" href="https://www.facebook.com/rocky549" target="_blank" rel="noopener">
+          <span class="foot-social-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.313 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg></span>
+          <span class="foot-social-text"><b>追蹤徐國峰的臉書</b><span>FACEBOOK</span></span>
+        </a>
+      </div>
+      <div class="foot-col">
+        <h3>網站導覽</h3>
+        <ul>
+          <li><a href="../index.html">首頁</a></li>
+          <li><a href="../ai-coach.html">AI 教練</a></li>
+          <li><a href="../courses.html">課程總覽</a></li>
+          <li><a href="../coach-certification.html">教練認證</a></li>
+          <li><a href="../education.html">教育訓練</a></li>
+          <li><a href="../blog.html">部落格</a></li>
+          <li><a href="../books.html">訓練書系</a></li>
+          <li><a href="../online-course.html">跑步線上課程</a></li>
+          <li><a href="../youtube.html">YouTube 專區</a></li>
+          <li><a href="../podcast.html">Podcast 專區</a></li>
+          <li><a href="../about.html">關於我們</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h3>課程一覽</h3>
+        <ul>
+          <li><a href="../blog/R1-running-course-technique.html">R1 跑步技術課程</a></li>
+          <li><a href="../blog/R2-running-course-strength.html">R2 跑步力量課程</a></li>
+          <li><a href="../blog/R3-running-fitness-syllabus.html">R3 跑步體能課程</a></li>
+          <li><a href="../blog/R4-running-periodization-and-runners-heart.html">R4 週期化訓練與練心</a></li>
+          <li><a href="../blog/R5-running-intensive-package.html">R5 四堂全修課程</a></li>
+          <li><a href="../blog/R6-running-coaching-certification.html">R6 跑步教練認證課程</a></li>
+          <li><a href="../blog/kfcs-registration-guide.html">報名流程</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© KFCS KuoFeng Coaching System・徐國峰</span>
+      <span class="motto">以身練心・去執著心</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
