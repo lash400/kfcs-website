@@ -3353,6 +3353,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://kfcs.tw/articles/2026-09-per-second-recording</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://kfcs.tw/blog/R1-running-course-technique</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
