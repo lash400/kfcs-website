@@ -93,13 +93,18 @@
 <p>Apple Watch 也不用改，內建的體能訓練 App 預設就是每秒記錄。但它有一個地方要檢查：體能訓練設定裡的「較少 GPS 和心率讀數」。這個選項是為了延長電池，一旦開啟，心率可能好幾分鐘才量一次。它不叫記錄間隔，效果跟智慧記錄一樣……不準，所以如果要帶它來跑間歇時，建議不要開啟。</p>
 <p>❸ 不能設定：小米與 Amazfit</p>
 <p>這兩個廠牌的取樣頻率由韌體接管，錶上與手機 App 都沒有這個選項。我逐項核對過 Amazfit GTS 2 mini 的官方手冊，運動設定只有自動暫停、心率警示、配速警示、距離警示、泳池長度五項，系統設定裡也找不到任何跟取樣頻率有關的東西。</p>
+<p>有跑者留言問到：同一個廠牌、不同型號的錶，記錄間隔會不會不一樣？他用的是 Amazfit Balance，從 Zepp app 匯出的 .tcx 檔打開後是每秒一筆紀錄。</p>
+<p>我把 Balance 的官方使用手冊也逐項核對了一遍。這是比 GTS 2 mini 高一階的旗艦運動錶，結果一樣：運動設定只有訓練輔助類的項目（各種警示、自動計圈、自動暫停）與間歇訓練，系統設定裡沒有記錄間隔，也沒有取樣頻率。錶上沒有，Zepp app 裡也沒有。從入門款到旗艦款，Amazfit 一律改不了。</p>
+<p>至於匯出的檔案每秒一筆，這裡有一個容易誤會的地方：檔案裡逐秒排列，不代表跑錶當下就是每秒取樣。Zepp 在輸出檔案時，會先把 GPS、心率、步頻這幾組原本各自獨立、間隔也不固定的資料，整理成一條每秒一格的時間軸，中間缺的秒數用前後的值補上。逐秒排列是它輸出檔案的固定格式，證明不了取樣頻率。</p>
+<p>想自己分辨的人可以打開檔案看心率：如果連續好幾秒都是同一個數字，像 148、148、148、148、151、151、151 這樣一階一階，就是補值的痕跡；實際逐秒量測的心率會小幅跳動。</p>
 <p>用這兩個廠牌的跑者，資料精細度會低於其他人。這不會讓你的訓練白練，但它會讓你的訓練紀錄看起來比實際上更平滑……也是比較不精確的意思。</p>
 <hr>
 <p>因為這次有接近 80% 的學員都有 Garmin，我有建議他／她們：「其實現在 Garmin 的電量很充足，建議所有跑步訓練都設定為『每秒紀錄』，這些原始數據很寶貴，不需要為了省一些電量而把自己努力訓練的數據省略掉。」</p>
 <hr>
 <p>📚 參考資料</p>
 <p>▹ Garmin. (n.d.). 系統設定. FORERUNNER 265 SERIES 使用者手冊. <a href="https://www8.garmin.com/manuals-apac/webhelp/forerunner265series/ZH-TW/GUID-A265325D-7484-4150-B3F3-2438C10928F9-4965.html" target="_blank" rel="noopener">連結</a><br>
-▹ Apple. (n.d.). Change settings in Workout on Apple Watch. Apple Support. <a href="https://support.apple.com/guide/watch/apde0be691be/watchos" target="_blank" rel="noopener">連結</a></p>
+▹ Apple. (n.d.). Change settings in Workout on Apple Watch. Apple Support. <a href="https://support.apple.com/guide/watch/apde0be691be/watchos" target="_blank" rel="noopener">連結</a><br>
+▹ Amazfit. (n.d.). Amazfit Balance User Manual. Amazfit Support. <a href="https://support.amazfit.com/en/amazfit_balance/files/user-manual.pdf.pdf" target="_blank" rel="noopener">連結</a></p>
   </div>
   <div class="art-foot">
     <span>徐國峰・KFCS 耐力訓練系統</span>
