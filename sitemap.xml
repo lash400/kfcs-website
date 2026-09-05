@@ -3791,4 +3791,10 @@
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://kfcs.tw/articles/2026-08-inswim-core-swimming</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>
