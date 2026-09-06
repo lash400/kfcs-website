@@ -3359,6 +3359,18 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://kfcs.tw/articles/2026-09-heart-rate-zones</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://kfcs.tw/articles/2026-09-max-hr-auto-detection-off</loc>
+    <lastmod>2026-09-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://kfcs.tw/blog/R1-running-course-technique</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
