@@ -43,7 +43,13 @@ KFCS（KuoFeng Coaching System）耐力訓練系統官方網站，由徐國峰�
 
 - `shared/site-chrome.css`：全站導覽列、footer 與課程檔期通知區塊。
 - `shared/kfcs-unified-theme.css`：課程簡章頁共用主題。
-- `shared/article.css`：部落格文章的閱讀版型。
+- `shared/article.css`：部落格文章的閱讀版型，含文末「相關文章」模組（`.art-related`）。
+- 每篇 `articles/*.html` 在 `.art-body` 之後、`.art-foot` 之前，都有一段
+  `<nav class="art-related">`，列出 3 篇相關文章。名單依 `blog.html` 既有的
+  `data-cat`、`data-tags` 與 `data-search` 計算：標籤重疊（罕見標籤加權較重）、
+  同分類、關鍵字重疊、標題相似度，另外對同系列文章（標題開頭相同 3 字以上）加分，
+  讓「第一章→第二章」「意志力考察之二→之三」這類續篇彼此相鄰。
+  新增文章時一併補上這一段，並視情況把新文章放進既有文章的名單裡。
 - `assets/`：logo 與課程封面圖。
 - `_redirects`：已下架／合併頁面的 301 轉址規則。
 - `serve.mjs`：本機預覽用的極簡靜態伺服器（`node serve.mjs`，預設 <http://localhost:8799>）。
@@ -67,6 +73,10 @@ KFCS（KuoFeng Coaching System）耐力訓練系統官方網站，由徐國峰�
 
 ## 維護注意事項
 
+- 文末「📚 參考資料」每一則各自一個 `<p>`，不要用 `<br>` 串在同一段。
+  原稿（markdown）每則之間要空一行；只換行不空行會被轉成同一段，
+  而行尾若留兩個空格（markdown 硬換行），轉出來的 `<br>` 還可能被
+  併進句尾網址的 `href` 裡，造成連結壞掉。2026-09-23 已修正既有的 14 篇。
 - 全站已開放搜尋引擎索引（`robots.txt` 允許全站、`sitemap.xml` 收錄 638 頁），每頁都有 `canonical` 與 `og:url` 指向 <https://kfcs.tw>。
 - 2026 年梯次的日期、時間、上課地點與費用已全部移除；報名相關的行動呼籲統一導向 2027 年課程預先登記（寄信至 <kuofengcoaching@gmail.com>）。下一梯課程確定後，需重新補上檔期資訊。
 - 已下架或合併的 12 個頁面以 301 轉址處理，規則寫在根目錄的 `_redirects`（Cloudflare Workers
@@ -81,13 +91,21 @@ KFCS（KuoFeng Coaching System）耐力訓練系統官方網站，由徐國峰�
 正式站：<https://kfcs.tw>（Cloudflare Workers 靜態資產，設定見 `wrangler.jsonc`）
 備援站：<https://lash400.github.io/kfcs-website/>（GitHub Pages，main 分支根目錄）
 
-推送原始碼：
+2026-09-23 起改為 Git 自動部署：Cloudflare 的 Workers Builds 已連上
+`lash400/kfcs-website`，推送到 `main` 就會自動建置並部署到 kfcs.tw，
+本機不需要安裝 Node 或 wrangler。
 
 ```bash
 git add -A && git commit -m "更新內容" && git push
 ```
 
-部署到 kfcs.tw（首次需先 `npx wrangler login`）：
+建置設定在 Cloudflare 後台 Workers & Pages → `kfcs-website` → Settings → Builds：
+Build command 留空（本站無建置步驟），Deploy command 為 `npx wrangler deploy`。
+Worker 名稱必須與 `wrangler.jsonc` 的 `name` 一致，否則會另外建出一個 Worker，
+與 kfcs.tw／www.kfcs.tw 兩個 custom domain 相衝。
+
+同一次推送也會更新 GitHub Pages 備援站。
+仍要手動部署時（需本機有 Node，首次要先 `npx wrangler login`）：
 
 ```bash
 npx wrangler deploy
