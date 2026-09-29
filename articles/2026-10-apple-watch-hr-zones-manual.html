@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apple Watch 的最大心率是怎麼來的？把心率區間改成「手動」，錶上的強度才對得上你 — KFCS</title>
+<meta name="description" content="Apple Watch 沒有 Garmin 那種最大心率「自動偵測」，它的最大心率是依「健康」App 裡的出生日期用年齡公式推估，跑出更高的心率也不會更新。解法是把心率區間改成「手動」，用實測的最大心率與安靜心率照儲備心率法算好五個區間再填入，RQ 上的最大心率也填同一個實測值。">
+<meta property="og:url" content="https://kfcs.tw/articles/2026-10-apple-watch-hr-zones-manual">
+<meta property="og:title" content="Apple Watch 的最大心率是怎麼來的？把心率區間改成「手動」，錶上的強度才對得上你">
+<meta property="og:description" content="Apple Watch 沒有 Garmin 那種最大心率「自動偵測」，它的最大心率是依「健康」App 裡的出生日期用年齡公式推估，跑出更高的心率也不會更新。解法是把心率區間改成「手動」，用實測的最大心率與安靜心率照儲備心率法算好五個區間再填入，RQ 上的最大心率也填同一個實測值。">
+<meta property="og:image" content="https://kfcs.tw/assets/og-cover.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="KFCS 耐力訓練系統｜訓練，是科學也是藝術">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:type" content="article">
+<link rel="canonical" href="https://kfcs.tw/articles/2026-10-apple-watch-hr-zones-manual">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="stylesheet" href="../shared/site-chrome.css">
+<link rel="stylesheet" href="../shared/article.css">
+</head>
+<body>
+<nav class="kfcs-sitenav">
+  <div class="nav-shell">
+    <a class="nav-brand" href="../index.html">
+      <img src="../assets/kfcs-logo.svg" alt="KFCS logo">
+      <span class="brand-sub">耐力訓練系統</span>
+    </a>
+    <input class="nav-toggle-box" type="checkbox" id="kfcs-nav-toggle">
+    <label class="nav-toggle" for="kfcs-nav-toggle" aria-label="開啟選單"><span></span><span></span><span></span></label>
+    <div class="nav-menu">
+      <ul class="nav-links">
+        <li><a href="../index.html">首頁</a></li>
+        <li><a href="../ai-coach.html">AI 教練</a></li>
+        <li><a href="../courses.html">課程總覽</a></li>
+        <li><a href="../coach-certification.html">教練認證</a></li>
+        <li><a href="../education.html">教育訓練</a></li>
+        <li><a class="is-active" href="../blog.html">部落格</a></li>
+        <li><a href="../books.html">訓練書系</a></li>
+        <li class="nav-drop"><a href="../online-course.html">學習資源</a>
+          <ul class="drop-panel">
+            <li><a href="../online-course.html">跑步線上課程</a></li>
+            <li><a href="../youtube.html">YouTube 專區</a></li>
+            <li><a href="../podcast.html">Podcast 專區</a></li>
+          </ul>
+        </li>
+        <li><a href="../about.html">關於我們</a></li>
+        <li><a class="nav-social" href="https://www.facebook.com/rocky549" target="_blank" rel="noopener" aria-label="追蹤徐國峰的臉書"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.313 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="nav-social-label">臉書</span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<article class="kfcs-article">
+  <header class="art-hero">
+    <div class="art-hero-inner">
+      <a class="art-back" href="../blog.html">← 回部落格</a>
+      <div class="art-meta">
+        <span class="art-cat">體能與課表</span>
+        <span class="art-date">2026-10-01</span>
+      </div>
+      <h1 class="art-title">Apple Watch 的最大心率是怎麼來的？把心率區間改成「手動」，錶上的強度才對得上你</h1>
+    </div>
+  </header>
+  <div class="art-body">
+<p>前陣子我寫了<a href="2026-09-max-hr-auto-detection-off.html">一篇文章</a>，建議 Garmin 使用者把「最大心率自動偵測」關掉，也分享在 PPA 跑步線上課的群組裡，其中有學員看到後提問道：「Apple Watch 也會有一樣的問題嗎？好像沒辦法關。」</p>
+<p>這個觀察沒錯，Apple Watch 上找不到這個開關，因為它本來就沒有這個功能。但這並不代表它的心率區間就沒問題：Apple Watch 的最大心率，是用你在「健康」App 裡填的出生日期算出來的。</p>
+<p>這個月的專欄文章想把兩件事講清楚：<br>
+一、Apple Watch 的最大心率是怎麼來的；<br>
+二、Apple Watch 使用者該怎麼把心率區間改成自己的。</p>
+<hr>
+<p>▎Apple Watch 的最大心率怎麼來</p>
+<p>Apple 的官方說明寫得很清楚：心率區間是根據你的健康資料自動計算，而且要先在 iPhone 的「健康」App 填好出生日期才會開始計算。</p>
+<p>Apple 沒有公開它用的是哪一條公式。我上網查到有幾位使用者拿錶上的數字反推，結果都吻合「208 - 0.7 × 年齡」這個公式，這是 Tanaka 等人在二〇〇一年提出的公式（Tanaka et al., 2001），所以 Apple 並不是使用最常見的「220 - 年齡」。</p>
+<p>這只是推測，官方文件中未找到實際引用的公式。</p>
+<p>但可以確認的是它也不會因為你跑出更高的心率就跟著更新。在 Apple 的使用者社群裡，有人實測跑到 195，錶上的最大心率卻一直停在 177，可見它不會因為使用者跑出更高心率就自動更新。</p>
+<hr>
+<p>▎用年齡計算最大心率的公式為何不適合用</p>
+<p>年齡公式給的是一整群同齡人的中間位置，但你不一定位在常態分佈的中間。</p>
+<p>以上述的「208 - 0.7 × 年齡」這個公式來算，30 歲的人會得到 187。文獻估算出來的個體差異，標準差大約是 10 下（Tanaka et al., 2001），也就是說 177～197 之間大約只涵蓋三分之二的 30 歲跑者，剩下的三分之一散落在這個範圍以外。</p>
+<p>二〇一五年起，我陸續為許多跑者實測過最大心率。同一個年齡層裡，我看過三十幾歲全力衝完、喘到說不出話，心率卻只到 170 出頭的跑者；也看過同齡的人跑出 210 以上。他們不是測錯了，也不是體能好壞的差別。</p>
+<p>最大心率跟身高很像，是個人的生理特徵，不是愈高愈好，就只是個數字。</p>
+<p>假設有兩位 30 歲的跑者，安靜心率都是 50，錶上的最大心率都是公式給的 187，照儲備心率法算出來，區間 2 的下緣是 151。</p>
+<p>▹ <strong>真實最大心率 170 的跑者</strong>：151 已經是他儲備心率的 84%，落在心率區間 2 的上緣，已逼近區間 3。</p>
+<p>▹ <strong>真實最大心率 210 的跑者</strong>：151 只有他儲備心率的 63%，連區間 2 都還沒進去。他照著錶上的心率區間跑，每天都乖乖完成課表，強度卻一直停在該有的位置以下。</p>
+<p>同一個 151，一位跑得太硬，一位跑得太輕鬆，成因相同：錶上的最大心率是公式推出來的。</p>
+<p>這些公式本身沒有錯，它們在研究裡有它們的位置。研究處理的是群體，個體的高估與低估會在大量樣本裡互相抵消；訓練面對的是你一個人，誤差不會被任何人抵消。樣本再大，也只能把平均值算得更準，沒辦法算出你在分佈上的位置。</p>
+<p>對 Garmin 的使用者來說，問題是演算法可能把最大心率推高，Apple 的問題則是公式跟你本人有很大機率對不上。兩種錶預設的最大心率，都不是你親身跑出來的數字。（若你是 Garmin 的使用者，如果本來最大心率就比較高的反而比較不容易出錯；如果天生是在常態分佈左側低於同齡平均值的跑者，就特別容易被高估）</p>
+<hr>
+<p>▎解決方法：把心率區間改成「手動」</p>
+<p>Apple Watch 的心率區間可以在手錶或 iPhone 上改成手動：</p>
+<p>▹ <strong>在手錶上</strong>：「設定」→「體能訓練」→「心率區間」→「手動」</p>
+<p>▹ <strong>在 iPhone 上</strong>：打開「Watch」App →「我的手錶」→「體能訓練」→「心率區間」→「手動」</p>
+<p class="art-fig"><img src="../assets/articles/2026-10-apple-watch-hr-zones-manual/apple-watch-app-my-watch-workout.png" alt="iPhone Watch App 的我的手錶分頁，體能訓練一列以紅框標示" loading="lazy"></p>
+<p><em>iPhone「Watch」App 的「我的手錶」分頁，往下找到「體能訓練」。</em></p>
+<p class="art-fig"><img src="../assets/articles/2026-10-apple-watch-hr-zones-manual/apple-watch-app-workout-hr-zones.png" alt="Watch App 的體能訓練設定頁，心率區間一列以紅框標示" loading="lazy"></p>
+<p><em>「體能訓練」設定頁，點進「心率區間」。</em></p>
+<p class="art-fig"><img src="../assets/articles/2026-10-apple-watch-hr-zones-manual/apple-watch-app-hr-zones-manual-five-zones.png" alt="心率設定頁已選手動，下方列出第 1 到第 5 區間與 Apple 預填的預設值" loading="lazy"></p>
+<p><em>切到「手動」後，會列出區間 1 到區間 5，每一區都可以點進去修改。區間 1 只顯示上限（&lt;134），區間 5 只顯示下限（167+）；圖中是 Apple 預填的預設值。</em></p>
+<p>切到「手動」之後，五個區間都可以點進去修改。畫面上寫著「預設數值為心率區間的平均值」，這些預填的數字要換成你自己算出來的。</p>
+<p>手動模式沒有地方可以直接填最大心率，所以要先把各區算好，再把數字填進去。我建議用儲備心率法來算，它只比最大心率法多用一個安靜心率：</p>
+<blockquote><p><strong>各區心率 = 安靜心率 +（最大心率 - 安靜心率）× 百分比</strong></p></blockquote>
+<p>▹ <strong>區間 1</strong>：74% 以下</p>
+<p>▹ <strong>區間 2</strong>：74%～84%</p>
+<p>▹ <strong>區間 3</strong>：84%～88%</p>
+<p>▹ <strong>區間 4</strong>：88%～95%</p>
+<p>▹ <strong>區間 5</strong>：95% 以上</p>
+<p>舉例來說，一位最大心率 190、安靜心率 50 的跑者，兩者相差 140，區間 2 到區間 5 的下限分別是 154、168、173、183，填進去就是：</p>
+<p>▹ <strong>區間 1</strong>：153 以下</p>
+<p>▹ <strong>區間 2</strong>：154～167</p>
+<p>▹ <strong>區間 3</strong>：168～172</p>
+<p>▹ <strong>區間 4</strong>：173～182</p>
+<p>▹ <strong>區間 5</strong>：183 以上</p>
+<p>相鄰兩區的數字要接起來：前一區的上限加 1，就是下一區的下限。Apple 的預設值也是這樣排的，例如區間 2 到 145，區間 3 就從 146 開始。改成手動之後，錶就會用你填的數字，不會再跟著年齡公式走。</p>
+<hr>
+<p>▎錶上的區間設定要改，RQ 上也要改</p>
+<p>錶上的心率區間，決定的是你跑步當下看到的強度與警示；RQ 上的最大心率，決定的是事後分析的準確度與 AI 教練課表的個人化程度。</p>
+<p>心率區間是 RQ 上訓練指數、跑力、體能指數、疲勞指數與狀況指數的原始資料來源，最大心率一旦設錯，這些分析都會跟著偏掉，而且不容易察覺，因為畫面上的數字看起來一切正常。</p>
+<p>所以實測出來的最大心率，要在兩個地方都填進去：Apple Watch 的心率區間，以及 RQ 的最大心率設定。兩邊用同一個數字，跑步當下看到的強度，才會跟事後 RQ 的分析對得上。</p>
+<p>還沒實測過最大心率的話，先用你在高強度間歇或測驗中跑出過的最高心率。那是你實際跑過的數字，用它來設區間比較安全；之後跑出更高的心率，再手動更新上去就好。</p>
+<p>如果你的 Apple Watch 紀錄已經透過 Apple Health 同步到 RQ，也可以用 RQ 的「最大心率分析工具」幫你從過去的數據裡找。它會列出近 365 天內「15 秒滾動平均心率」最高的 10 筆紀錄，並附上日期與訓練名稱，可以直接一鍵套用成你的最大心率。用 15 秒滾動平均，是為了濾掉光學心率常見的 1、2 秒瞬間突然飆高的峰值，留下身體確實撐住過一段時間的高心率。</p>
+<p>看排名時有一個判斷要自己做：如果第一名那筆紀錄的心率軌跡很奇怪，配速沒變、坡度也沒變，心率卻突然往上衝，通常是原始資料有誤，這時就改用第二名的數字。</p>
+<p>「最大心率分析」這個工具<a href="https://runningquotient.com/tools/mhr-v2" target="_blank" rel="noopener">新版</a>要 RQ 白金會員才能使用，一般會員則可以使用<a href="https://runningquotient.com/tools/mhr" target="_blank" rel="noopener">舊版</a>。</p>
+<hr>
+<p>▎另外兩個要留意的設定</p>
+<p><strong>❶ 所有運動共用一組區間。</strong> Apple Watch 的心率區間，跑步、騎車沒辦法分開設。照上面的方法設好之後，這組區間是依跑步的最大心率算的，如果你也用它騎車，錶上顯示的區間只能當參考。</p>
+<p><strong>❷ 「較少 GPS 和心率讀數」這個設定請別打開。</strong> 這個選項在體能訓練的設定裡，是為了延長電池設計的。一旦開啟，心率可能好幾分鐘才量一次，要用 Apple Watch 比較認真地跑課表（尤其是間歇）時，建議不要開啟。</p>
+<hr>
+<p>▎個人參數要自己實測</p>
+<p>跑錶愈做愈聰明，替我們省下很多設定的麻煩。但最大心率這個數字，只能靠自己的身體跑出來。用生日推的也好，用演算法算的也好，都只是估計。</p>
+<p>我一直認為，個人原始參數要自己實測、手動填入；訓練數據的變數分析，再交給演算法。最大心率屬於前者。把實測的數字親手填進錶裡、填進 RQ，後面的每一區、每一項分析，才會比較個人化與符合你的訓練需求。</p>
+<hr>
+<p>📚 參考資料</p>
+<p>▹ Apple. (n.d.). 檢視 Apple Watch 上的心率區間. Apple Watch 使用手冊. <a href="https://support.apple.com/zh-tw/guide/watch/apd897dccddf/watchos" target="_blank" rel="noopener">連結</a></p>
+<p>▹ Apple Community. (n.d.). Heart rate zones and max and resting heart rate [Online forum thread]. <a href="https://discussions.apple.com/thread/255321471" target="_blank" rel="noopener">連結</a></p>
+<p>▹ Garmin. (n.d.). 在我的 Garmin 手錶上，如何計算高心率和最大心率數值？ Garmin 客戶服務支援中心. <a href="https://support.garmin.com/zh-TW/?faq=FMKY5NYJJ71DbuPmFP4O7A" target="_blank" rel="noopener">連結</a></p>
+<p>▹ Maker, R. (2022, September 21). Apple Watch Ultra in-depth review: It's a start! DC Rainmaker. <a href="https://www.dcrainmaker.com/2022/09/apple-watch-ultra-review.html" target="_blank" rel="noopener">連結</a></p>
+<p>▹ Tanaka, H., Monahan, K. D., &amp; Seals, D. R. (2001). Age-predicted maximal heart rate revisited. <em>Journal of the American College of Cardiology, 37</em>(1), 153–156. <a href="https://doi.org/10.1016/S0735-1097(00)01054-8" target="_blank" rel="noopener">連結</a></p>
+<p>（本文同步刊登於 <a href="https://www.runningquotient.com/article/single/311" target="_blank" rel="noopener">RQ 跑力「徐國峰專欄」</a>）</p>
+  </div>
+  <nav class="art-related" aria-label="相關文章">
+    <h2>相關文章</h2>
+    <ul>
+      <li><a href="2026-09-max-hr-auto-detection-off.html">
+        <span class="rel-meta"><span class="rel-cat">體能與課表</span><span class="rel-date">2026-09-05</span></span>
+        <span class="rel-title">手動設定好最大心率之後，記得把「自動偵測」關掉</span>
+      </a></li>
+      <li><a href="2026-09-max-hr-formula-not-for-training.html">
+        <span class="rel-meta"><span class="rel-cat">體能與課表</span><span class="rel-date">2026-09-17</span></span>
+        <span class="rel-title">最大心率的公式是研究成果，不是拿來訓練用的</span>
+      </a></li>
+      <li><a href="2026-09-heart-rate-zones.html">
+        <span class="rel-meta"><span class="rel-cat">體能與課表</span><span class="rel-date">2026-09-05</span></span>
+        <span class="rel-title">心率區間設好了，錶為什麼還一直警示？｜Garmin、COROS、Amazfit、小米怎麼設</span>
+      </a></li>
+    </ul>
+  </nav>
+  <div class="art-foot">
+    <span>徐國峰・KFCS 耐力訓練系統</span>
+    <span><a href="../blog.html">看更多文章 →</a></span>
+  </div>
+</article>
+<footer class="kfcs-sitefooter">
+  <div class="foot-shell">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <img src="../assets/kfcs-logo.svg" alt="KFCS logo">
+        <p>把心、體能、力量與技術整合為一套可理解、可實踐、可傳承的耐力訓練系統，支持運動員進步，也支持教練成長。</p>
+        <p>聯絡信箱：<a href="mailto:kuofengcoaching@gmail.com">kuofengcoaching@gmail.com</a></p>
+        <a class="foot-social" href="https://www.facebook.com/rocky549" target="_blank" rel="noopener">
+          <span class="foot-social-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.313 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg></span>
+          <span class="foot-social-text"><b>追蹤徐國峰的臉書</b><span>FACEBOOK</span></span>
+        </a>
+      </div>
+      <div class="foot-col">
+        <h3>網站導覽</h3>
+        <ul>
+          <li><a href="../index.html">首頁</a></li>
+          <li><a href="../ai-coach.html">AI 教練</a></li>
+          <li><a href="../courses.html">課程總覽</a></li>
+          <li><a href="../coach-certification.html">教練認證</a></li>
+          <li><a href="../education.html">教育訓練</a></li>
+          <li><a href="../blog.html">部落格</a></li>
+          <li><a href="../books.html">訓練書系</a></li>
+          <li><a href="../online-course.html">跑步線上課程</a></li>
+          <li><a href="../youtube.html">YouTube 專區</a></li>
+          <li><a href="../podcast.html">Podcast 專區</a></li>
+          <li><a href="../about.html">關於我們</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h3>課程一覽</h3>
+        <ul>
+          <li><a href="../blog/R1-running-course-technique.html">R1 跑步技術課程</a></li>
+          <li><a href="../blog/R2-running-course-strength.html">R2 跑步力量課程</a></li>
+          <li><a href="../blog/R3-running-fitness-syllabus.html">R3 跑步體能課程</a></li>
+          <li><a href="../blog/R4-running-periodization-and-runners-heart.html">R4 週期化訓練與練心</a></li>
+          <li><a href="../blog/R5-running-intensive-package.html">R5 四堂全修課程</a></li>
+          <li><a href="../blog/R6-running-coaching-certification.html">R6 跑步教練認證課程</a></li>
+          <li><a href="../blog/kfcs-registration-guide.html">報名流程</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© KFCS KuoFeng Coaching System・徐國峰</span>
+      <span class="motto">以身練心・去執著心</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
