@@ -3,22 +3,294 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>徐國峰 × AI 教練 - KFCS 耐力訓練系統</title>
-<meta name="description" content="徐國峰 × AI 教練：不是聊天 AI，是訓練決策 AI。日常訓練方案給你每一次訓練後的即時回饋與今日課表；賽事訓練方案依你的數據與比賽日，排出一整份週期化的備賽計畫，另有熱身、力量與收操跟練影片。">
+<title>徐國峰 × AI 教練｜AI 跑步教練與個人化週期化課表 - KFCS</title>
+<meta name="description" content="把徐國峰 20 年訓練判斷寫成系統的 AI 跑步教練。每一次訓練後給你即時回饋與今日課表，還能依你的數據與比賽日排出一整份週期化備賽計畫。開設於 RQ 跑力平台。">
 <meta property="og:url" content="https://kfcs.tw/ai-coach">
-<meta property="og:title" content="徐國峰 × AI 教練 - KFCS 耐力訓練系統">
-<meta property="og:description" content="徐國峰 × AI 教練：不是聊天 AI，是訓練決策 AI。日常訓練方案給你每一次訓練後的即時回饋與今日課表；賽事訓練方案依你的數據與比賽日，排出一整份週期化的備賽計畫，另有熱身、力量與收操跟練影片。">
+<meta property="og:title" content="徐國峰 × AI 教練｜AI 跑步教練與個人化週期化課表">
+<meta property="og:description" content="把徐國峰 20 年訓練判斷寫成系統的 AI 跑步教練。每一次訓練後給你即時回饋與今日課表，還能依你的數據與比賽日排出一整份週期化備賽計畫。開設於 RQ 跑力平台。">
 <meta property="og:image" content="https://kfcs.tw/assets/og-cover.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="徐國峰 × AI 教練">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="author" content="徐國峰">
+<meta name="keywords" content="AI 跑步教練, 徐國峰, KFCS, 週期化訓練計畫, 個人化課表, 馬拉松訓練計畫, 半馬課表, 跑步課表產生器, RQ 跑力, 跑力, 訓練指數, 姿勢跑法, 線上跑步教練">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:site_name" content="KFCS 耐力訓練系統">
 <meta property="og:type" content="website">
 <link rel="canonical" href="https://kfcs.tw/ai-coach">
 <link rel="icon" href="/favicon.ico" sizes="32x32">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <link rel="stylesheet" href="shared/site-chrome.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://kfcs.tw/#website",
+      "url": "https://kfcs.tw/",
+      "name": "KFCS 耐力訓練系統",
+      "inLanguage": "zh-TW",
+      "publisher": {
+        "@id": "https://kfcs.tw/#organization"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://kfcs.tw/#organization",
+      "name": "KFCS 耐力訓練系統",
+      "alternateName": "KuoFeng Coaching System",
+      "url": "https://kfcs.tw/",
+      "logo": "https://kfcs.tw/assets/kfcs-logo.svg",
+      "image": "https://kfcs.tw/assets/og-cover.jpg",
+      "email": "kuofengcoaching@gmail.com",
+      "description": "KFCS 由徐國峰創立，以心、體能、力量、技術四大模組整合耐力運動的科學化訓練，提供課程、教練認證與 AI 教練服務。",
+      "founder": {
+        "@id": "https://kfcs.tw/#kuofeng"
+      },
+      "sameAs": [
+        "https://www.facebook.com/rocky549"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://kfcs.tw/#kuofeng",
+      "name": "徐國峰",
+      "jobTitle": "耐力運動教練",
+      "description": "KFCS 耐力訓練系統創辦人、RQ 跑力共同創辦人、姿勢跑法（Pose Method）華人官方總教練，臺灣知名耐力運動教練、作家與譯者，2012 年超鐵 226K 總排第一。",
+      "url": "https://kfcs.tw/about",
+      "worksFor": {
+        "@id": "https://kfcs.tw/#organization"
+      },
+      "knowsAbout": [
+        "耐力訓練",
+        "馬拉松訓練",
+        "週期化訓練",
+        "跑步技術",
+        "姿勢跑法",
+        "鐵人三項"
+      ],
+      "sameAs": [
+        "https://www.facebook.com/rocky549"
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://kfcs.tw/ai-coach#webpage",
+      "url": "https://kfcs.tw/ai-coach",
+      "name": "徐國峰 × AI 教練｜AI 跑步教練與個人化週期化課表",
+      "description": "把徐國峰 20 年訓練判斷寫成系統的 AI 跑步教練。每一次訓練後給你即時回饋與今日課表，還能依你的數據與比賽日排出一整份週期化備賽計畫。開設於 RQ 跑力平台。",
+      "inLanguage": "zh-TW",
+      "isPartOf": {
+        "@id": "https://kfcs.tw/#website"
+      },
+      "primaryImageOfPage": "https://kfcs.tw/assets/og-cover.jpg",
+      "about": {
+        "@id": "https://kfcs.tw/ai-coach#service"
+      },
+      "breadcrumb": {
+        "@id": "https://kfcs.tw/ai-coach#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://kfcs.tw/ai-coach#service"
+      },
+      "dateModified": "2026-10-03"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://kfcs.tw/ai-coach#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首頁",
+          "item": "https://kfcs.tw/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "徐國峰 × AI 教練",
+          "item": "https://kfcs.tw/ai-coach"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://kfcs.tw/ai-coach#service",
+      "name": "徐國峰 × AI 教練",
+      "serviceType": "AI 跑步教練與個人化訓練計畫訂閱服務",
+      "description": "把 KFCS 創辦人徐國峰 20 年耐力訓練判斷寫成系統的 AI 跑步教練服務。以 30 萬字真人教練回饋與 RQ 跑力平台累積 10 年的訓練數據為基礎，在每一次訓練之後給出分析與調整建議，並可依跑者的訓練數據與目標賽事日期，排出一整份從基礎期到比賽期的週期化訓練計畫。",
+      "provider": {
+        "@id": "https://kfcs.tw/#organization"
+      },
+      "author": {
+        "@id": "https://kfcs.tw/#kuofeng"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "臺灣"
+      },
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "跑者、馬拉松與半程馬拉松備賽者、想穩定進步又擔心受傷的市民跑者"
+      },
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "name": "RQ 跑力平台",
+        "serviceUrl": "https://www.runningquotient.com/ai-coach/index"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "徐國峰 × AI 教練訂閱方案",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "url": "https://www.runningquotient.com/ai-coach/index",
+            "category": "訂閱制",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "日常訓練方案",
+              "description": "每一筆訓練紀錄的即時回饋、今日課表、單次跑步課表產生器、12 套完整的 KFCS 訓練計畫，以及訂閱者群組與 26 部跟練影片。適合還沒有明確目標賽事的跑者。"
+            }
+          },
+          {
+            "@type": "Offer",
+            "url": "https://www.runningquotient.com/ai-coach/race-training",
+            "category": "訂閱制",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "賽事訓練方案",
+              "description": "依跑者在 RQ 累積的訓練數據與目標賽事日期，排出一整份從基礎期、進展期、巔峰期到比賽期的週期化訓練計畫，每日回饋並對照計畫進度。包含日常訓練方案的所有功能。"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://kfcs.tw/ai-coach#faq",
+      "inLanguage": "zh-TW",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "「日常訓練方案」和「賽事訓練方案」要選哪一個？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "看你現在有沒有一場確定日期的目標賽事。 有，而且距離比賽還有一段完整的備賽期，就選賽事訓練方案。系統會從比賽日往回排出整份週期化計畫，每天練完的回饋也會對照你在計畫裡的進度。 沒有，或是距離下一場比賽還很遠、想先把基礎與弱項練起來，就選日常訓練方案，用今日課表讓系統依你當下的狀況決定今天該練什麼。 賽事訓練方案包含日常訓練方案的所有功能，所以不會因為選了它而少掉什麼。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "賽事訓練方案需要在 RQ 累積多久的訓練紀錄？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "建議至少半年以上。訓練量要有足夠的數據才算得準，累積得愈多，算出來的計畫愈貼近你的需求。 如果紀錄還不夠，可以先把過往的紀錄上傳到 RQ，或先用日常訓練方案累積一段時間，資料足夠之後再回來建立計畫。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "我還沒報名，可以先建立計畫嗎？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "可以，只要你已經知道比賽日期。計畫是從比賽日往回排的，日期一旦決定，整份計畫的長度與每個週期的位置就跟著定下來，產生後目前無法更改，所以建議日期確定之後再開始。 距離賽事的時間比計畫週期短也沒關係，系統會從對應的週次開始排，這會比從第一週硬排更合適。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "可以同時準備兩場比賽嗎？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "一次專注一場。週期化訓練的前提，就是所有安排都往同一個比賽日收斂。兩份計畫同時跑，訓練量會重複疊加，原本設計好的節奏也會亂掉。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "比賽結束之後呢？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "計畫完成後，可以繼續用今日課表維持訓練，它會依照你當下的數據給出當天最適合的一堂課，不需要另外安排。等下一個目標賽事確定，再開始新的計畫。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "熱身、力量、收操的跟練影片在哪裡看？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "訂閱之後會加入「徐國峰 × AI 教練」訂閱者群組，影片都在群組的影片區，依熱身、力量、收操、恢復專用分類，目前共 26 部，隨時可以回去重看。 12 套 KFCS 訓練計畫裡的每一堂課也都附有課表解說、熱身、收操與力量訓練的跟練影音。另外，AI 教練在回饋裡提到的每一個訓練動作，都能在 RQ 的跑步訓練動作庫找到圖片、指導語與示範影片。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "跟 ChatGPT、Gemini 有什麼差別？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "完全不一樣。通用 AI 沒有一致的訓練邏輯，你問得模糊它就回得空泛，而且每次對話都從零開始。 徐國峰 × AI 的回饋來自徐國峰的判斷框架，判斷順序前後一致，也不需要你自己整理資料或學會提問。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "我不太會看數據，也能用嗎？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "可以，你只要做兩件事：用 RQ 記錄訓練，以及寫下當天的感受（例如 RPE、腿部疲勞、呼吸狀況）。判讀交給徐國峰 × AI 就好。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "一定要每天寫很長的日誌嗎？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "不用。一到兩句就足夠，甚至只回饋吃力程度也可以。寫得愈具體，回饋就愈貼近你的狀況，但不需要為了寫而寫。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "一定要先買 RQ 白金會員嗎？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "不用。現階段一般會員與白金會員都可以訂閱使用。 若升級為白金會員，可以解鎖更完整的訓練數據，在讀完教練分析之後，能有更多數據依據去調整自己的狀況。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "我跑 5K 或只是想變健康，也適合嗎？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "適合。可以選 5K 或 10K 的低跑量方案，重點放在可持續、不要受傷、穩定進步。AI 教練一樣會分析每次訓練狀況，並針對當次訓練提醒該注意的事。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "可以隨時取消嗎？取消之後，排好的計畫還在嗎？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "可隨時取消，不綁約，取消後仍可使用到當期結束。若日後想重新訂閱，須依照當時的價格計算。 已經練過的部分會保留，訓練紀錄與每一則回饋都留在你的 RQ 帳號裡，隨時可以回頭看。訓練日期在到期日之後的課表會鎖定、不再顯示內容，續訂之後即可解鎖。 週期化計畫是從比賽日往回排的，中間每一週都接著前一週，所以如果比賽還沒到，建議訂閱維持到比賽當天。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "這和 KFCS 的實體課程、線上課程有什麼不同？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "實體課程（R1 至 R6）著重現場動作檢查、即時修正與教練認證訓練；線上課程 提供完整、可反覆觀看的知識架構；徐國峰 × AI 則是在你每一次訓練之後直接給出判斷與調整建議。 三者互補：課程讓你看懂為什麼，AI 教練讓你每一次訓練都用得上。實體課程資訊請見 課程總覽 與 教練認證。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "訂閱與付款在哪裡完成？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "徐國峰 × AI 開設在 RQ 跑力平台，訂閱、付款與日常使用都在該平台完成。點選本頁的按鈕即可前往 RQ 的服務頁面查看完整方案與價格。"
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <nav class="kfcs-sitenav">
@@ -1144,28 +1416,8 @@ src="https://www.facebook.com/tr?id=404602746416082&ev=PageView&noscript=1"
   color: var(--yellow);
 }
 
-#kfcs-ai .plan-card .plan-price {
-  margin-top: 12px;
-  display: flex;
-  align-items: baseline;
-  gap: 9px;
-}
-
-#kfcs-ai .plan-card .plan-price b {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 2.6rem;
-  font-weight: 400;
-  letter-spacing: 0.03em;
-  color: var(--yellow);
-}
-
-#kfcs-ai .plan-card .plan-price span {
-  font-size: 0.86rem;
-  color: rgba(236, 230, 219, 0.66);
-}
-
 #kfcs-ai .plan-card .plan-for {
-  margin-top: 12px;
+  margin-top: 14px;
   padding-top: 14px;
   border-top: 1px solid rgba(255, 255, 255, 0.12);
   font-size: 0.93rem;
@@ -1182,6 +1434,87 @@ src="https://www.facebook.com/tr?id=404602746416082&ev=PageView&noscript=1"
   font-size: 0.86rem;
   line-height: 1.9;
   color: #6d675f;
+}
+
+
+/* 導購 CTA 條 */
+#kfcs-ai .cta-band {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: clamp(32px, 4vw, 46px);
+  padding: clamp(24px, 3vw, 32px) clamp(24px, 3.2vw, 36px);
+  border-radius: 20px;
+  background: linear-gradient(135deg, #1f1d19, #0d0d0d);
+}
+
+#kfcs-ai .cta-band p {
+  max-width: 52ch;
+  font-family: 'Noto Serif TC', serif;
+  font-size: clamp(1rem, 1.8vw, 1.15rem);
+  font-weight: 700;
+  line-height: 1.85;
+  color: var(--white);
+}
+
+#kfcs-ai .cta-band p span {
+  display: block;
+  margin-top: 6px;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 0.86rem;
+  font-weight: 400;
+  color: rgba(236, 230, 219, 0.6);
+}
+
+#kfcs-ai .cta-band .btn { flex: 0 0 auto; }
+
+/* 重點摘要 */
+#kfcs-ai .tldr-title {
+  font-family: 'Noto Serif TC', serif;
+  font-size: clamp(1.28rem, 2.6vw, 1.7rem);
+  font-weight: 900;
+  line-height: 1.5;
+}
+
+#kfcs-ai .tldr-sub {
+  margin-top: 10px;
+  font-size: 0.94rem;
+  line-height: 1.9;
+  color: var(--muted);
+}
+
+#kfcs-ai .tldr {
+  margin-top: 24px;
+  display: grid;
+  gap: 2px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  overflow: hidden;
+  background: var(--line);
+}
+
+#kfcs-ai .tldr > div {
+  display: grid;
+  grid-template-columns: 158px minmax(0, 1fr);
+  gap: 22px;
+  padding: 20px 24px;
+  background: #fff;
+}
+
+#kfcs-ai .tldr dt {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 0.98rem;
+  font-weight: 900;
+  line-height: 1.9;
+  color: var(--yellow-deep);
+}
+
+#kfcs-ai .tldr dd {
+  font-size: 0.95rem;
+  line-height: 1.95;
+  color: #4a453d;
 }
 
 /* ─────────────── RWD ─────────────── */
@@ -1209,6 +1542,9 @@ src="https://www.facebook.com/tr?id=404602746416082&ev=PageView&noscript=1"
   }
 
   #kfcs-ai .hero-actions .btn { width: 100%; }
+  #kfcs-ai .cta-band { flex-direction: column; align-items: stretch; text-align: left; }
+  #kfcs-ai .cta-band .btn { width: 100%; }
+  #kfcs-ai .tldr > div { grid-template-columns: 1fr; gap: 6px; padding: 18px 20px; }
   #kfcs-ai .sec-title { white-space: normal; }
   #kfcs-ai .func { grid-template-columns: 1fr; }
   #kfcs-ai .func .func-num { width: 62px; height: 62px; font-size: 1.7rem; }
@@ -1254,6 +1590,7 @@ src="https://www.facebook.com/tr?id=404602746416082&ev=PageView&noscript=1"
 <!-- ═══════════ 快速選單 ═══════════ -->
 <nav class="quicknav" aria-label="頁面章節快速選單">
   <div class="quicknav-inner" id="ai-quicknav">
+    <a href="#summary">一分鐘看懂</a>
     <a href="#why">為什麼是 KFCS</a>
     <a href="#features">服務內容</a>
     <a href="#race">賽事訓練方案</a>
@@ -1265,6 +1602,51 @@ src="https://www.facebook.com/tr?id=404602746416082&ev=PageView&noscript=1"
     <a href="#faq">常見問題</a>
   </div>
 </nav>
+
+
+<!-- ═══════════ 重點摘要 ═══════════ -->
+<section class="section" id="summary" aria-label="徐國峰 × AI 教練重點摘要">
+  <h2 class="tldr-title">一分鐘看懂徐國峰 × AI 教練</h2>
+  <p class="tldr-sub">想快速知道這是什麼、誰做的、怎麼用、適合誰，看這一張表就夠。</p>
+  <dl class="tldr">
+    <div>
+      <dt>這是什麼</dt>
+      <dd>一套把徐國峰 20 年耐力訓練判斷寫成系統的 AI 跑步教練服務。你用 RQ 跑力平台記錄訓練、寫下當天的感受，它會針對這一筆紀錄給出分析，並告訴你接下來該收還是該加。</dd>
+    </div>
+    <div>
+      <dt>誰做的</dt>
+      <dd>由 KFCS 耐力訓練系統創辦人徐國峰與 RQ 跑力平台共同開發。知識來源是 30 萬字真人教練回饋與 RQ 累積 10 年的訓練數據，每一版回饋邏輯都由徐國峰本人逐條審核與校準後才上線。</dd>
+    </div>
+    <div>
+      <dt>有哪些功能</dt>
+      <dd>訓練即時回饋、目標賽事的週期化訓練計畫、今日課表、12 套完整的 KFCS 訓練計畫、單次跑步課表產生器，以及 26 部熱身、力量與收操跟練影片。</dd>
+    </div>
+    <div>
+      <dt>兩種方案</dt>
+      <dd>日常訓練方案適合還沒有明確目標賽事的跑者；賽事訓練方案在日常方案的所有功能之外，再依你的數據與比賽日，排出一整份從基礎期到比賽期的週期化備賽計畫。</dd>
+    </div>
+    <div>
+      <dt>在哪裡使用</dt>
+      <dd>服務開設在 RQ 跑力平台，訂閱、付款與日常使用都在該平台完成。訓練紀錄可從 Garmin Connect、COROS 或 Apple Watch 直接同步，也可串接 Strava 或手動上傳 .fit／.tcx／.gpx 檔案。</dd>
+    </div>
+    <div>
+      <dt>適合誰</dt>
+      <dd>想穩定進步又擔心受傷、願意在跑完後寫下一兩句感受的跑者。從目標 5 公里到全程馬拉松，從只是想跑得健康到正在備賽，都適用。</dd>
+    </div>
+    <div>
+      <dt>和真人教練的差別</dt>
+      <dd>頂級真人教練通常不接新手、名額有限、往往要排隊等上數月，一個月的費用是數千到上萬元。AI 教練用的是同一套訓練判斷邏輯，以一般跑者負擔得起的價格，每天都用得到。</dd>
+    </div>
+  </dl>
+
+  <div class="cta-band">
+    <p>
+      想直接看方案內容與價格？
+      <span>徐國峰 × AI 開設於 RQ 跑力平台，訂閱與使用皆在該平台完成。</span>
+    </p>
+    <a class="btn btn-primary" href="https://www.runningquotient.com/ai-coach/index" target="_blank" rel="noopener">前往 RQ 查看方案與價格</a>
+  </div>
+</section>
 
 <!-- ═══════════ 01 為什麼是 KFCS ═══════════ -->
 <section class="section" id="why">
@@ -1324,8 +1706,8 @@ src="https://www.facebook.com/tr?id=404602746416082&ev=PageView&noscript=1"
   </div>
 
   <p class="lead">
-    以下五項是目前已經上線的功能。其中「目標賽事的週期化訓練計畫」屬於賽事訓練方案，
-    其餘四項兩種方案都包含，方案差異請見 <a href="#plan">兩種訂閱方案</a>。
+    以下六項是目前已經上線的功能。其中「目標賽事的週期化訓練計畫」屬於賽事訓練方案，
+    其餘五項兩種方案都包含，方案差異請見 <a href="#plan">兩種訂閱方案</a>。
   </p>
 
   <div class="funcs" style="margin-top: 30px;">
@@ -1377,6 +1759,30 @@ src="https://www.facebook.com/tr?id=404602746416082&ev=PageView&noscript=1"
     <article class="func">
       <span class="func-num">3</span>
       <div>
+        <h3>今日課表</h3>
+        <p class="func-sub">每天打開就有，不必自己想今天該練什麼</p>
+        <p class="func-text">
+          系統會依你過去累積的訓練數據，判斷接下來這一天最該練的內容，同時給出今日與明日各一堂，
+          每一堂都附上「教練的話」。適合目前還沒有明確目標賽事，或是距離下一場比賽還很遠、
+          想先把基礎與弱項練起來的跑者。
+        </p>
+        <ul class="func-list">
+          <li>判斷的重點放在補強弱項。有氧基礎還不夠穩固時，它會持續排入打基礎的有氧課表，直到基礎穩固到一定程度，才把強度較高的課表排進來。</li>
+          <li>基礎已經穩了，就比對各個距離的競賽跑力，找出目前相對最弱的那一項，把訓練重點放在那裡。</li>
+          <li>該休息的時候直接排上休息或恢復跑，不會為了填滿行事曆而加量。</li>
+          <li>一次只處理一天，每一天都是依當下累積的數據獨立判斷，不做週期化的規劃。</li>
+        </ul>
+        <p class="func-text" style="margin-top: 16px;">
+          已經有明確的目標賽事，而且距離比賽的時間與週期長度相近時，建議直接採用
+          <a href="#race">賽事訓練方案</a>的週期化計畫。兩者擇一當作主要的課表來源就好，
+          同時使用容易讓訓練量重複疊加，也會讓原本設計好的節奏亂掉。
+        </p>
+      </div>
+    </article>
+
+    <article class="func">
+      <span class="func-num">4</span>
+      <div>
         <h3>12 套完整的 KFCS 訓練計畫</h3>
         <p class="func-sub">四種目標距離 × 三種跑量</p>
         <p class="func-text">
@@ -1397,7 +1803,7 @@ src="https://www.facebook.com/tr?id=404602746416082&ev=PageView&noscript=1"
     </article>
 
     <article class="func">
-      <span class="func-num">4</span>
+      <span class="func-num">5</span>
       <div>
         <h3>單次跑步課表產生器</h3>
         <p class="func-sub">依你的跑力與訓練指數，即時產生一份課表</p>
@@ -1414,7 +1820,7 @@ src="https://www.facebook.com/tr?id=404602746416082&ev=PageView&noscript=1"
     </article>
 
     <article class="func">
-      <span class="func-num">5</span>
+      <span class="func-num">6</span>
       <div>
         <h3>熱身、力量、收操跟練影片</h3>
         <p class="func-sub">訂閱者群組影片區｜26 部完整跟練影片</p>
@@ -1433,6 +1839,14 @@ src="https://www.facebook.com/tr?id=404602746416082&ev=PageView&noscript=1"
         </p>
       </div>
     </article>
+  </div>
+
+  <div class="cta-band">
+    <p>
+      這六項功能，訂閱之後下一次訓練就用得到。
+      <span>不必等到受傷了才知道該收，也不必練了六週才發現方向錯了。</span>
+    </p>
+    <a class="btn btn-primary" href="https://www.runningquotient.com/ai-coach/index" target="_blank" rel="noopener">前往 RQ 開始使用</a>
   </div>
 </section>
 
@@ -1545,6 +1959,14 @@ src="https://www.facebook.com/tr?id=404602746416082&ev=PageView&noscript=1"
     比賽日期，以及你每週可以訓練的日子。想練一三五加禮拜天、想練二四六，或七天都練都可以，
     哪一天休息、哪一天排恢復跑，都由你自己勾選。填完之後，計畫就會生成。
   </p>
+
+  <div class="cta-band">
+    <p>
+      比賽日已經確定了？現在就可以排出整個備賽期的課表。
+      <span>花兩三分鐘把目標賽事與可以訓練的日子填完，計畫就會生成。</span>
+    </p>
+    <a class="btn btn-primary" href="https://www.runningquotient.com/ai-coach/race-training" target="_blank" rel="noopener">前往 RQ 建立備賽計畫</a>
+  </div>
 </section>
 
 <!-- ═══════════ 04 跟練影片 ═══════════ -->
@@ -1606,6 +2028,14 @@ src="https://www.facebook.com/tr?id=404602746416082&ev=PageView&noscript=1"
     影片都在群組的<a href="https://www.runningquotient.com/group/videos/351" target="_blank" rel="noopener">影片區</a>，
     依熱身、力量、收操、恢復專用分類，隨時可以回去重看。此連結僅訂閱者可開啟。
     另外，AI 教練在回饋裡提到的每一個訓練動作，也都能在 RQ 的跑步訓練動作庫找到圖片、指導語與示範影片。
+  </div>
+
+  <div class="cta-band">
+    <p>
+      跑前該做什麼、跑完該收什麼，不必再自己拼湊。
+      <span>訂閱之後就能加入群組，26 部跟練影片隨時可以打開跟著做。</span>
+    </p>
+    <a class="btn btn-primary" href="https://www.runningquotient.com/ai-coach/index" target="_blank" rel="noopener">前往 RQ 開始訂閱</a>
   </div>
 </section>
 
@@ -1697,6 +2127,14 @@ src="https://www.facebook.com/tr?id=404602746416082&ev=PageView&noscript=1"
   <p class="case-note">
     以上為訂閱者實際收到的回饋內容摘錄，為配合版面長度有節錄。每個人收到的回饋會依照當次數據、環境條件與日誌內容而不同。
   </p>
+
+  <div class="cta-band">
+    <p>
+      你的下一筆訓練紀錄，也會收到這樣一份回饋。
+      <span>跑完寫下一兩句感受，判讀與調整建議交給徐國峰的訓練邏輯。</span>
+    </p>
+    <a class="btn btn-primary" href="https://www.runningquotient.com/ai-coach/index" target="_blank" rel="noopener">前往 RQ 開始收到回饋</a>
+  </div>
 </section>
 
 <!-- ═══════════ 06 與通用 AI 的差別 ═══════════ -->
@@ -1789,6 +2227,14 @@ src="https://www.facebook.com/tr?id=404602746416082&ev=PageView&noscript=1"
       </ul>
     </div>
   </div>
+
+  <div class="cta-band">
+    <p>
+      如果「適合這樣的你」那幾點描述的是你，從下一次訓練就可以開始。
+      <span>以月為單位訂閱，無綁約，可隨時取消，取消後仍可使用到當期結束。</span>
+    </p>
+    <a class="btn btn-primary" href="https://www.runningquotient.com/ai-coach/index" target="_blank" rel="noopener">前往 RQ 查看方案與價格</a>
+  </div>
 </section>
 
 <!-- ═══════════ 08 兩種訂閱方案 ═══════════ -->
@@ -1800,7 +2246,21 @@ src="https://www.facebook.com/tr?id=404602746416082&ev=PageView&noscript=1"
   </div>
 
   <p class="lead">
-    差別只在一件事：你現在有沒有一場確定日期的目標賽事。
+    臺灣真人教練一對一帶訓練，一個月的行情是數千到上萬元。
+    而且頂級教練通常不接新手、名額有限，往往要排隊等上數月，費用也不是每個跑者都負擔得起。
+  </p>
+  <p class="lead">
+    徐國峰 × AI 不是要取代真人教練，是要補上那個結構性的缺口：
+    讓徐國峰累積二十年的訓練經驗、排課邏輯與指導方式，用一般跑者負擔得起的價格，
+    在每一次訓練之後都用得到，而且不受名額與時間的限制。
+  </p>
+
+  <div class="pullquote">
+    同一套訓練判斷邏輯，很實惠的價格，從下一次訓練就開始用得上。
+  </div>
+
+  <p class="lead">
+    目前有兩種方案，差別只在一件事：你現在有沒有一場確定日期的目標賽事。
     有的話選賽事訓練方案，系統會替你排出整份週期化的備賽計畫；
     沒有的話選日常訓練方案，每天練完一樣有回饋，也一樣有課表可以跟。
   </p>
@@ -1808,7 +2268,6 @@ src="https://www.facebook.com/tr?id=404602746416082&ev=PageView&noscript=1"
   <div class="plan" style="margin-top: 30px;">
     <div class="plan-card">
       <h3>日常訓練方案</h3>
-      <div class="plan-price"><b>NT$699</b><span>／月</span></div>
       <p class="plan-for">
         適合已經有自己的訓練節奏，或目前還沒有明確目標賽事的跑者。缺的不是課表，是每天練完之後有人幫你看「今天這樣練，對嗎」。
       </p>
@@ -1825,9 +2284,8 @@ src="https://www.facebook.com/tr?id=404602746416082&ev=PageView&noscript=1"
     <div class="plan-card is-feature">
       <span class="plan-tag">新上線</span>
       <h3>賽事訓練方案</h3>
-      <div class="plan-price"><b>NT$1,099</b><span>／月</span></div>
       <p class="plan-for">
-        適合已經有確定日期的目標賽事，想用週期化的方式備賽。備賽期通常是四到六個月，以 16 週計算，整個備賽期大約 NT$4,400。
+        適合已經有確定日期的目標賽事，想用週期化的方式備賽。備賽期通常是四到六個月，一份計畫會從比賽日往回鋪滿整段備賽期。
       </p>
       <ul class="plan-list">
         <li>目標賽事的週期化訓練計畫，一次為一場目標賽事安排。</li>
@@ -1851,8 +2309,8 @@ src="https://www.facebook.com/tr?id=404602746416082&ev=PageView&noscript=1"
       新功能上線後，訂閱價格會隨之調整。愈早訂閱，愈早開始累積屬於你自己的訓練對話史。
     </p>
     <p class="plan-note">
-      兩種方案皆為每月自動續訂、無綁約，可隨時取消，取消後仍可使用到當期結束。
-      目前一般會員與白金會員皆可訂閱使用。方案內容與價格以 RQ 平台頁面為準。
+      兩種方案皆為以月為單位訂閱、無綁約，可隨時取消，取消後仍可使用到當期結束。
+      目前一般會員與白金會員皆可訂閱使用。<b>方案內容與價格以 RQ 平台頁面為準</b>，點選上方按鈕即可前往查看。
     </p>
   </div>
 </section>
