@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>徐國峰 × AI 教練 - KFCS 耐力訓練系統</title>
-<meta name="description" content="徐國峰 × AI 教練：不是聊天 AI，是訓練決策 AI。每一次訓練後的即時回饋、12 套 KFCS 訓練計畫與單次課表產生器，把徐國峰 20 年的訓練判斷變成你的全天候教練。">
+<meta name="description" content="徐國峰 × AI 教練：不是聊天 AI，是訓練決策 AI。日常訓練方案給你每一次訓練後的即時回饋與今日課表；賽事訓練方案依你的數據與比賽日，排出一整份週期化的備賽計畫，另有熱身、力量與收操跟練影片。">
 <meta property="og:url" content="https://kfcs.tw/ai-coach">
 <meta property="og:title" content="徐國峰 × AI 教練 - KFCS 耐力訓練系統">
-<meta property="og:description" content="徐國峰 × AI 教練：不是聊天 AI，是訓練決策 AI。每一次訓練後的即時回饋、12 套 KFCS 訓練計畫與單次課表產生器，把徐國峰 20 年的訓練判斷變成你的全天候教練。">
+<meta property="og:description" content="徐國峰 × AI 教練：不是聊天 AI，是訓練決策 AI。日常訓練方案給你每一次訓練後的即時回饋與今日課表；賽事訓練方案依你的數據與比賽日，排出一整份週期化的備賽計畫，另有熱身、力量與收操跟練影片。">
 <meta property="og:image" content="https://kfcs.tw/assets/og-cover.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -1018,6 +1018,172 @@ src="https://www.facebook.com/tr?id=404602746416082&ev=PageView&noscript=1"
   color: rgba(255, 255, 255, 0.74);
 }
 
+
+/* 內文連結（功能區塊 / 方案卡） */
+#kfcs-ai .func .func-text a,
+#kfcs-ai .func .func-list a,
+#kfcs-ai .vid-note a {
+  color: var(--yellow-deep);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+/* 週期階段 */
+#kfcs-ai .phases {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(196px, 1fr));
+  gap: 12px;
+  margin-top: 22px;
+}
+
+#kfcs-ai .phase {
+  padding: 20px 20px 19px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--panel);
+}
+
+#kfcs-ai .phase i {
+  display: block;
+  font-family: 'Bebas Neue', sans-serif;
+  font-style: normal;
+  font-size: 0.9rem;
+  letter-spacing: 0.16em;
+  color: var(--yellow-deep);
+}
+
+#kfcs-ai .phase b {
+  display: block;
+  margin-top: 2px;
+  font-family: 'Noto Serif TC', serif;
+  font-size: 1.08rem;
+  font-weight: 900;
+  color: #1b1a17;
+}
+
+#kfcs-ai .phase span {
+  display: block;
+  margin-top: 9px;
+  font-size: 0.87rem;
+  line-height: 1.85;
+  color: #5b554c;
+}
+
+/* 跟練影片 */
+#kfcs-ai .vids {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(196px, 1fr));
+  gap: 12px;
+  margin-top: 26px;
+}
+
+#kfcs-ai .vid {
+  padding: 22px 20px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: var(--card-shadow);
+}
+
+#kfcs-ai .vid b {
+  display: block;
+  font-family: 'Noto Serif TC', serif;
+  font-size: 1.08rem;
+  font-weight: 900;
+  color: #1b1a17;
+}
+
+#kfcs-ai .vid em {
+  display: block;
+  margin-top: 4px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-style: normal;
+  font-size: 1.9rem;
+  letter-spacing: 0.04em;
+  color: var(--yellow-deep);
+}
+
+#kfcs-ai .vid span {
+  display: block;
+  margin-top: 8px;
+  font-size: 0.86rem;
+  line-height: 1.85;
+  color: #6d675f;
+}
+
+#kfcs-ai .vid-note {
+  margin-top: 24px;
+  padding: 20px 22px;
+  border-left: 4px solid var(--yellow);
+  border-radius: 0 14px 14px 0;
+  background: var(--panel);
+  font-size: 0.92rem;
+  line-height: 1.95;
+  color: #4a453d;
+}
+
+/* 方案卡：價格、標記與適用對象 */
+#kfcs-ai .plan-card.is-feature {
+  background: linear-gradient(158deg, #272419, #121009);
+  box-shadow: 0 24px 56px rgba(15, 15, 15, 0.2);
+  outline: 1px solid rgba(246, 194, 19, 0.5);
+}
+
+#kfcs-ai .plan-card .plan-tag {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 14px;
+  padding: 5px 13px;
+  border: 1px solid rgba(246, 194, 19, 0.42);
+  border-radius: 999px;
+  background: rgba(246, 194, 19, 0.14);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--yellow);
+}
+
+#kfcs-ai .plan-card .plan-price {
+  margin-top: 12px;
+  display: flex;
+  align-items: baseline;
+  gap: 9px;
+}
+
+#kfcs-ai .plan-card .plan-price b {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.6rem;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  color: var(--yellow);
+}
+
+#kfcs-ai .plan-card .plan-price span {
+  font-size: 0.86rem;
+  color: rgba(236, 230, 219, 0.66);
+}
+
+#kfcs-ai .plan-card .plan-for {
+  margin-top: 12px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  font-size: 0.93rem;
+  line-height: 1.9;
+  color: rgba(236, 230, 219, 0.82);
+}
+
+#kfcs-ai .plan-wide { margin-top: 20px; }
+
+#kfcs-ai .plan-next .plan-note {
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+  font-size: 0.86rem;
+  line-height: 1.9;
+  color: #6d675f;
+}
+
 /* ─────────────── RWD ─────────────── */
 @media (max-width: 980px) {
   #kfcs-ai .hero-grid,
@@ -1065,7 +1231,8 @@ src="https://www.facebook.com/tr?id=404602746416082&ev=PageView&noscript=1"
       </h1>
       <p class="hero-lede">
         把徐國峰的訓練判斷寫進系統，讓你每跑完一次，就有一位看得懂你數據、也讀得懂你感受的教練告訴你：
-        這次練得對不對、接下來該收還是該加。
+        這次練得對不對、接下來該收還是該加。已經有目標賽事的人，它還會從比賽日往回推，
+        替你排出一整份只屬於你的週期化備賽計畫。
       </p>
 
       <div class="hero-stats">
@@ -1079,7 +1246,7 @@ src="https://www.facebook.com/tr?id=404602746416082&ev=PageView&noscript=1"
         <a class="btn btn-primary" href="https://www.runningquotient.com/ai-coach/index" target="_blank" rel="noopener">前往 RQ 查看方案</a>
         <a class="btn btn-ghost" href="#cases">先看真實回饋案例</a>
       </div>
-      <p class="hero-note">服務開設於 RQ 跑力平台，訂閱與使用皆在該平台完成。</p>
+      <p class="hero-note">服務開設於 RQ 跑力平台，分為「日常訓練方案」與「賽事訓練方案」兩種，訂閱與使用皆在該平台完成。</p>
     </div>
   </div>
 </header>
@@ -1089,10 +1256,12 @@ src="https://www.facebook.com/tr?id=404602746416082&ev=PageView&noscript=1"
   <div class="quicknav-inner" id="ai-quicknav">
     <a href="#why">為什麼是 KFCS</a>
     <a href="#features">服務內容</a>
+    <a href="#race">賽事訓練方案</a>
+    <a href="#videos">跟練影片</a>
     <a href="#cases">真實回饋案例</a>
     <a href="#compare">與通用 AI 的差別</a>
     <a href="#fit">適合對象</a>
-    <a href="#plan">訂閱制</a>
+    <a href="#plan">兩種方案</a>
     <a href="#faq">常見問題</a>
   </div>
 </nav>
@@ -1154,7 +1323,12 @@ src="https://www.facebook.com/tr?id=404602746416082&ev=PageView&noscript=1"
     <span class="sec-rule"></span>
   </div>
 
-  <div class="funcs">
+  <p class="lead">
+    以下五項是目前已經上線的功能。其中「目標賽事的週期化訓練計畫」屬於賽事訓練方案，
+    其餘四項兩種方案都包含，方案差異請見 <a href="#plan">兩種訂閱方案</a>。
+  </p>
+
+  <div class="funcs" style="margin-top: 30px;">
     <article class="func">
       <span class="func-num">1</span>
       <div>
@@ -1170,6 +1344,7 @@ src="https://www.facebook.com/tr?id=404602746416082&ev=PageView&noscript=1"
           <li>告訴你接下來該收還是該加，以及具體要怎麼調整。</li>
           <li>回饋直接留在該筆紀錄底下，累積成你自己的訓練對話史。</li>
           <li>過往在 RQ 記錄的數據會一併納入判讀，不是每次都從零開始看你。</li>
+          <li>手上有週期化訓練計畫時，回饋還會對照你在整份計畫裡的位置：這一週的週期任務是什麼、你這次的狀況跟計畫預期差在哪裡、接下來要注意什麼。</li>
         </ul>
         <p class="func-text" style="margin-top: 16px;">
           跑完當下是感受最強烈的時刻，也是學得最快、改得最快的時候。
@@ -1179,6 +1354,28 @@ src="https://www.facebook.com/tr?id=404602746416082&ev=PageView&noscript=1"
 
     <article class="func">
       <span class="func-num">2</span>
+      <div>
+        <h3>目標賽事的週期化訓練計畫</h3>
+        <p class="func-sub">賽事訓練方案｜從比賽日往回排</p>
+        <p class="func-text">
+          已經有確定日期的目標賽事時，系統會先從你在 RQ 累積的訓練數據判斷你該練多少量，
+          再依徐國峰的訓練邏輯，把從今天到比賽當天的這段時間排成基礎期、進展期、巔峰期與比賽期。
+          每一天練什麼、練多久都排好，每一堂課都附上一段「教練的話」。
+        </p>
+        <ul class="func-list">
+          <li>訓練量是從你自己的數據算出來的，不是套用同一份範本。</li>
+          <li>四個週期的長度與位置，都是從比賽日往回推算的。</li>
+          <li>課表可同步到跑錶（支援特定型號），練完的數據回到系統，接下來的課表跟著調整。</li>
+          <li>每天練完的回饋會對照你在計畫裡的進度，而不是只看這一次跑得如何。</li>
+        </ul>
+        <p class="func-text" style="margin-top: 16px;">
+          完整說明請見下一段 <a href="#race">賽事訓練方案</a>。
+        </p>
+      </div>
+    </article>
+
+    <article class="func">
+      <span class="func-num">3</span>
       <div>
         <h3>12 套完整的 KFCS 訓練計畫</h3>
         <p class="func-sub">四種目標距離 × 三種跑量</p>
@@ -1200,7 +1397,7 @@ src="https://www.facebook.com/tr?id=404602746416082&ev=PageView&noscript=1"
     </article>
 
     <article class="func">
-      <span class="func-num">3</span>
+      <span class="func-num">4</span>
       <div>
         <h3>單次跑步課表產生器</h3>
         <p class="func-sub">依你的跑力與訓練指數，即時產生一份課表</p>
@@ -1215,13 +1412,207 @@ src="https://www.facebook.com/tr?id=404602746416082&ev=PageView&noscript=1"
         </ul>
       </div>
     </article>
+
+    <article class="func">
+      <span class="func-num">5</span>
+      <div>
+        <h3>熱身、力量、收操跟練影片</h3>
+        <p class="func-sub">訂閱者群組影片區｜26 部完整跟練影片</p>
+        <p class="func-text">
+          課表只是訓練的一部分。跑前沒熱身、跑後不收操、力量一直沒練，課表再完整，執行品質都會打折。
+          訂閱者群組的影片區裡有 26 部可以直接跟著做的影片，不必自己拼湊流程，打開跟著練就好。
+        </p>
+        <div class="func-chips">
+          <span class="chip">熱身 8 部</span>
+          <span class="chip">力量 8 部</span>
+          <span class="chip">收操 8 部</span>
+          <span class="chip">恢復專用 2 部</span>
+        </div>
+        <p class="func-text" style="margin-top: 16px;">
+          完整內容請見 <a href="#videos">跟練影片</a>。
+        </p>
+      </div>
+    </article>
   </div>
 </section>
 
-<!-- ═══════════ 03 真實回饋案例 ═══════════ -->
-<section class="section" id="cases">
+
+<!-- ═══════════ 03 賽事訓練方案 ═══════════ -->
+<section class="section" id="race">
   <div class="sec-head">
     <span class="sec-num">03</span>
+    <h2 class="sec-title">賽事訓練方案：為你的目標賽事排的週期化課表</h2>
+    <span class="sec-rule"></span>
+  </div>
+
+  <p class="lead">
+    這是徐國峰 × AI 最新上線的方案，也是這套系統花最久時間才做出來的一段。
+    從 2014 年的耐力網開始，我們就想做線上的個人化訓練計畫，但當時手上沒有使用者的數據，
+    能參考的只有問卷上那幾個欄位，排出來的課表稱不上個人化。
+  </p>
+  <p class="lead">
+    週期化與個人化是兩件事。要同時做到，關鍵在於數據能不能串成一條鍊：
+    跑錶採集數據、系統分析數據、依分析結果排出課表、練完的回饋再回到數據。
+    這個環接起來之後，課表才會跟著你當下的狀況一起移動，而不是寫好之後就不再改變。
+  </p>
+
+  <div class="pullquote">
+    你的數據決定練多少，徐國峰的訓練邏輯決定怎麼練。
+  </div>
+
+  <h3 class="sub-head">這份計畫是怎麼排出來的</h3>
+  <ul class="features">
+    <li><i>01</i><span><b>你該練多少？只有你的數據知道。</b>有些人需要很大的訓練量才會進步，有些人一超過某個量就開始退步，所以練得多不等於練得對。系統會先從你在 RQ 累積的訓練紀錄，判斷你的訓練量該落在哪裡。</span></li>
+    <li><i>02</i><span><b>你該怎麼練？出自徐國峰的訓練邏輯。</b>訓練量決定之後，接下來是這些量要怎麼用：哪幾天輕鬆跑、哪幾天是質量課表、強度落在哪個區間、兩堂之間要隔多久。同樣的訓練量，配置方式不一樣，練出來的結果就不一樣。</span></li>
+    <li><i>03</i><span><b>從比賽日往回推，切成四個週期。</b>四個週期的長度與位置都是從比賽當天往回算的。愈接近比賽，訓練的目的愈不一樣。</span></li>
+  </ul>
+
+  <div class="phases">
+    <article class="phase">
+      <i>PHASE 01</i>
+      <b>基礎期</b>
+      <span>把有氧基礎打起來。這一段練的不是比賽，是為了能練比賽。</span>
+    </article>
+    <article class="phase">
+      <i>PHASE 02</i>
+      <b>進展期</b>
+      <span>開始加入質量課表，把攝氧能力往上推。</span>
+    </article>
+    <article class="phase">
+      <i>PHASE 03</i>
+      <b>巔峰期</b>
+      <span>訓練量與強度都來到最高的一段，也是最接近比賽狀態的時候。</span>
+    </article>
+    <article class="phase">
+      <i>PHASE 04</i>
+      <b>比賽期</b>
+      <span>把累積的疲勞放掉，練習比賽當天的配速與節奏。</span>
+    </article>
+  </div>
+
+  <p class="lead" style="margin-top: 26px;">
+    每一個週期都有它要完成的任務，前一個沒完成，後一個做了也不會有效果。
+    這是週期化訓練計畫和一份寫死的通用課表最大的差別。
+  </p>
+
+  <h3 class="sub-head">一份計畫，三個層次都看得到</h3>
+  <div class="modules">
+    <article class="module">
+      <h3>整份計畫<span class="m-en">CALENDAR</span></h3>
+      <p>從今天到比賽日，每一天練什麼、練多久都排好了，同時可以看到這一週的體能、疲勞與狀況指數。</p>
+    </article>
+    <article class="module">
+      <h3>當天課表<span class="m-en">SESSION</span></h3>
+      <p>時間、距離、訓練指數與逐段強度一次看完，還有「教練的話」說明今天這堂課要練什麼、該注意什麼。</p>
+    </article>
+    <article class="module">
+      <h3>逐段內容<span class="m-en">DETAIL</span></h3>
+      <p>熱身、主課表、休息、收操逐段列出，每一段的時間、配速區間與次數都標清楚，照著練就好。</p>
+    </article>
+  </div>
+
+  <h3 class="sub-head">每一堂課都附一段「教練的話」</h3>
+  <p class="lead">
+    這一段字數不多，卻是整套系統裡最難做的部分。同一種課表在不同時間點的意義會反過來：
+    一樣是間歇課表，在平常的訓練週練的是速度知覺與技術，放到賽前減量週，要減的是量而不是強度，
+    連「第一趟先慢一點」這個提醒，背後的理由都不一樣。
+  </p>
+  <p class="lead">
+    所以課表類型的說明只能當預設值，碰到週期的脈絡就得改寫。為了處理這些狀況，
+    「教練的話」被拆成十幾份規則：共用的語氣與寫法一份、每一種課表結構各一份、
+    當下的排課脈絡與整期的週期脈絡分開寫、休息日與測驗日各一份，最後再加上一層用字潤稿與一份用語守則。
+  </p>
+
+  <div class="pullquote">
+    用最少的訓練量達到最好的訓練效果，用盡量不會受傷的訓練量，去完成目標賽事的需求。
+  </div>
+
+  <p class="lead">
+    這是徐國峰排課表一向的原則，也內建在這套系統背後的邏輯裡。所以系統排出來的量，
+    會出現 57 分鐘長跑、間歇跑每趟 3 分 10 秒這樣的數字，那是依你過去的訓練數據精算出來的。
+    加量的節奏目前設定得偏保守，循序漸進往上推，因為避免受傷的優先順序高於進步。
+  </p>
+
+  <h3 class="sub-head">建立計畫之前，你需要這三件事</h3>
+  <ul class="features">
+    <li><i>01</i><span><b>在 RQ 累積至少半年以上的訓練紀錄。</b>訓練量要有足夠的數據才算得準。可從 Garmin Connect、COROS 或 Apple Watch 直接同步，串接 Strava，或手動上傳 .fit／.tcx／.gpx 檔案。</span></li>
+    <li><i>02</i><span><b>已經確定的比賽日期。</b>計畫是從比賽日往回排的，日期一旦決定，整份計畫的長度與每個週期的位置就跟著定下來，產生後目前無法更改。還沒報名沒關係，知道日期就可以開始。</span></li>
+    <li><i>03</i><span><b>每次練完留下簡單的描述與吃力程度。</b>這是回饋的來源。讓數據和你的體感一起被判讀，回饋才貼得上你的狀況。</span></li>
+  </ul>
+
+  <p class="lead" style="margin-top: 26px;">
+    建立計畫時要填的只有三項：目標賽事的距離（5 公里、10 公里、半程馬拉松、全程馬拉松）、
+    比賽日期，以及你每週可以訓練的日子。想練一三五加禮拜天、想練二四六，或七天都練都可以，
+    哪一天休息、哪一天排恢復跑，都由你自己勾選。填完之後，計畫就會生成。
+  </p>
+</section>
+
+<!-- ═══════════ 04 跟練影片 ═══════════ -->
+<section class="section" id="videos">
+  <div class="sec-head">
+    <span class="sec-num">04</span>
+    <h2 class="sec-title">熱身、力量、收操，26 部跟著練就好</h2>
+    <span class="sec-rule"></span>
+  </div>
+
+  <p class="lead">
+    很多跑者在開跑前不知道該做什麼，隨便動動手腳就起跑，結果前三公里一直很卡、腳步沉重，
+    要到第四、五公里才漸漸進入狀態。跑完之後也一樣：收操草草了事，力量訓練一直排不進行事曆。
+  </p>
+  <p class="lead">
+    這些不是課表寫得不夠好，是課表以外的那幾段沒有被照顧到。
+    所以我們把完整的熱身、力量與收操流程拍成跟練影片，放進訂閱者群組的影片區，打開跟著做就好。
+  </p>
+
+  <div class="vids">
+    <article class="vid">
+      <b>熱身</b>
+      <em>8 部</em>
+      <span>每部 24 至 30 分鐘。從關節活動度、力量啟動、技術知覺到速度，最後以慢跑整合收邊，其中四部分別對應不同的主課表類型。</span>
+    </article>
+    <article class="vid">
+      <b>力量</b>
+      <em>8 部</em>
+      <span>每部 65 至 73 分鐘，是一堂完整的力量課。不必自己決定今天要做哪些動作、做幾組，跟著做完就是一次完整的力量訓練。</span>
+    </article>
+    <article class="vid">
+      <b>收操</b>
+      <em>8 部</em>
+      <span>每部 11 至 20 分鐘。跑完之後跟著做一遍，把身體帶回來，不是隨意拉兩下就結束。</span>
+    </article>
+    <article class="vid">
+      <b>恢復專用</b>
+      <em>2 部</em>
+      <span>鱷魚式呼吸與死蟲，用來減少跑者側腹痛機率的呼吸訓練。</span>
+    </article>
+  </div>
+
+  <h3 class="sub-head">熱身影片怎麼挑</h3>
+  <ul class="features">
+    <li><i>01</i><span><b>長跑與有氧跑課表前。</b>從關節活動度到技術整合，讓身體在長時間跑步前先把動力鍊逐層打開。肩膀附近較緊繃的跑者也適用。</span></li>
+    <li><i>02</i><span><b>高強度間歇與速度課表前。</b>特別加入髖關節與胸椎的活動度訓練，以及撐牆技術練習，先建立「向前轉移體重」的速度知覺。髖關節較緊繃的跑者也適用。</span></li>
+    <li><i>03</i><span><b>節奏跑與乳酸閾值跑課表前。</b>以彈力帶輔助技術訓練為核心，在熱身階段就先開發「放鬆向前倒」的跑感，讓配速從一開始就來得輕。踝關節、跟腱與小腿較緊繃的跑者也適用。</span></li>
+    <li><i>04</i><span><b>全馬配速課表前。</b>從踝關節開始，加入負重上拉與雙手交握跑的技術對比訓練，先把支撐穩定度與軀幹控制建立起來。腳掌上拉力量較薄弱、拉起動作較不敏捷的跑者也適用。</span></li>
+  </ul>
+
+  <p class="lead" style="margin-top: 26px;">
+    每一支熱身影片的設計邏輯都遵循同一個原則：先打開關節的活動空間，接著啟動力量，再喚醒技術，最後帶出速度。
+    收尾一律是慢跑整合，這一段特別重要。跑者在完成快步跑之後神經系統往往是亢奮的，
+    直接進間歇或節奏跑，開頭很容易衝過頭。那幾分鐘，是讓身心安定下來的最後一道收邊程序。
+  </p>
+
+  <div class="vid-note">
+    <b>影片放在哪裡：</b>訂閱徐國峰 × AI 之後會加入「徐國峰 × AI 教練」訂閱者群組，
+    影片都在群組的<a href="https://www.runningquotient.com/group/videos/351" target="_blank" rel="noopener">影片區</a>，
+    依熱身、力量、收操、恢復專用分類，隨時可以回去重看。此連結僅訂閱者可開啟。
+    另外，AI 教練在回饋裡提到的每一個訓練動作，也都能在 RQ 的跑步訓練動作庫找到圖片、指導語與示範影片。
+  </div>
+</section>
+
+<!-- ═══════════ 05 真實回饋案例 ═══════════ -->
+<section class="section" id="cases">
+  <div class="sec-head">
+    <span class="sec-num">05</span>
     <h2 class="sec-title">真實回饋案例</h2>
     <span class="sec-rule"></span>
   </div>
@@ -1308,10 +1699,10 @@ src="https://www.facebook.com/tr?id=404602746416082&ev=PageView&noscript=1"
   </p>
 </section>
 
-<!-- ═══════════ 04 與通用 AI 的差別 ═══════════ -->
+<!-- ═══════════ 06 與通用 AI 的差別 ═══════════ -->
 <section class="section" id="compare">
   <div class="sec-head">
-    <span class="sec-num">04</span>
+    <span class="sec-num">06</span>
     <h2 class="sec-title">你不是缺工具，你是缺決策</h2>
     <span class="sec-rule"></span>
   </div>
@@ -1346,6 +1737,11 @@ src="https://www.facebook.com/tr?id=404602746416082&ev=PageView&noscript=1"
           <td class="ours">回饋留在訓練紀錄底下，累積成可回顧的訓練對話史。<b>具備跨次記憶</b>，過往在 RQ 記錄的數據會一併納入判讀，知道你上週累積了多少疲勞、最近哪裡在退步。</td>
         </tr>
         <tr>
+          <th scope="row">訓練計畫</th>
+          <td class="generic">可以生出一份看起來很像一回事的課表，但它不知道你該練多少量，給的是一份平均值。課表生出來就結束了，你這幾週練得如何它不會知道，也不會據此回頭修正。</td>
+          <td class="ours">訓練量<b>從你在 RQ 累積的數據算出來</b>，再依比賽日往回鋪成基礎期到比賽期。每一次練完的回饋都對照你在計畫裡的位置，課表跟著你的實際狀況滾動修正。</td>
+        </tr>
+        <tr>
           <th scope="row">訓練邏輯</th>
           <td class="generic">沒有統一的訓練邏輯，今天一套、明天一套。不會幫你維持週期一致性，也不會把刺激、恢復、累積當成同一條線來看，你得到的是一堆看似合理卻彼此不連貫的建議。</td>
           <td class="ours">統一使用<b>徐國峰的耐力訓練邏輯</b>，以 30 萬字真人教練回饋與 10 年訓練數據為基礎，判斷標準前後一致。</td>
@@ -1359,10 +1755,10 @@ src="https://www.facebook.com/tr?id=404602746416082&ev=PageView&noscript=1"
   </div>
 </section>
 
-<!-- ═══════════ 05 適合對象 ═══════════ -->
+<!-- ═══════════ 07 適合對象 ═══════════ -->
 <section class="section" id="fit">
   <div class="sec-head">
-    <span class="sec-num">05</span>
+    <span class="sec-num">07</span>
     <h2 class="sec-title">適合誰，不適合誰</h2>
     <span class="sec-rule"></span>
   </div>
@@ -1395,53 +1791,129 @@ src="https://www.facebook.com/tr?id=404602746416082&ev=PageView&noscript=1"
   </div>
 </section>
 
-<!-- ═══════════ 06 訂閱制 ═══════════ -->
+<!-- ═══════════ 08 兩種訂閱方案 ═══════════ -->
 <section class="section" id="plan">
   <div class="sec-head">
-    <span class="sec-num">06</span>
-    <h2 class="sec-title">訂閱制</h2>
+    <span class="sec-num">08</span>
+    <h2 class="sec-title">兩種訂閱方案</h2>
     <span class="sec-rule"></span>
   </div>
 
-  <div class="plan">
+  <p class="lead">
+    差別只在一件事：你現在有沒有一場確定日期的目標賽事。
+    有的話選賽事訓練方案，系統會替你排出整份週期化的備賽計畫；
+    沒有的話選日常訓練方案，每天練完一樣有回饋，也一樣有課表可以跟。
+  </p>
+
+  <div class="plan" style="margin-top: 30px;">
     <div class="plan-card">
-      <h3>訂閱後你會得到</h3>
+      <h3>日常訓練方案</h3>
+      <div class="plan-price"><b>NT$699</b><span>／月</span></div>
+      <p class="plan-for">
+        適合已經有自己的訓練節奏，或目前還沒有明確目標賽事的跑者。缺的不是課表，是每天練完之後有人幫你看「今天這樣練，對嗎」。
+      </p>
       <ul class="plan-list">
         <li>訓練即時回饋，每一筆訓練紀錄都能收到教練分析與指導。</li>
+        <li>今日課表，依你當下的訓練量、疲勞與體感，給出今日與明日各一堂。</li>
+        <li>單次跑步課表產生器，臨時想換一堂時隨時產生一份完整課表。</li>
         <li>12 套完整的 KFCS 訓練計畫，含每堂課的解說、熱身、收操與力量訓練跟練影音。</li>
-        <li>單次跑步課表產生器，隨時產生一份完整的單次課表。</li>
-        <li>AI 教練限定群組，訂閱者延伸學習與觀看內容的專屬入口。</li>
+        <li>訂閱者群組與群組影片區，26 部熱身、力量、收操跟練影片。</li>
       </ul>
-      <p class="plan-note">
-        以月為單位訂閱，可隨時取消，取消後仍可使用到當期結束。
-        目前一般會員與白金會員皆可訂閱使用，方案內容與價格以 RQ 平台頁面為準。
-      </p>
-      <a class="btn btn-primary" href="https://www.runningquotient.com/ai-coach/index" target="_blank" rel="noopener">前往 RQ 查看方案與訂閱</a>
+      <a class="btn btn-primary" href="https://www.runningquotient.com/ai-coach/index" target="_blank" rel="noopener">前往 RQ 查看日常訓練方案</a>
     </div>
 
-    <div class="plan-next">
-      <h3>接下來會增加的功能</h3>
-      <p>徐國峰 × AI 仍在持續開發中，以下功能正在規劃與製作：</p>
-      <ul class="next-list">
-        <li><i>01</i>全天候即時問答，訓練上的問題隨時能問。</li>
-        <li><i>02</i>客製化排課與課表調整，依你的狀況安排整個週期。</li>
-      </ul>
-      <p class="next-kicker">
-        新功能上線後，訂閱價格會隨之調整。愈早訂閱，愈早開始累積屬於你自己的訓練對話史。
+    <div class="plan-card is-feature">
+      <span class="plan-tag">新上線</span>
+      <h3>賽事訓練方案</h3>
+      <div class="plan-price"><b>NT$1,099</b><span>／月</span></div>
+      <p class="plan-for">
+        適合已經有確定日期的目標賽事，想用週期化的方式備賽。備賽期通常是四到六個月，以 16 週計算，整個備賽期大約 NT$4,400。
       </p>
+      <ul class="plan-list">
+        <li>目標賽事的週期化訓練計畫，一次為一場目標賽事安排。</li>
+        <li>每日訓練回饋，並對照你在整份計畫裡的進度。</li>
+        <li>日常訓練方案的所有功能都包含在內。</li>
+      </ul>
+      <a class="btn btn-primary" href="https://www.runningquotient.com/ai-coach/race-training" target="_blank" rel="noopener">前往 RQ 查看賽事訓練方案</a>
     </div>
+  </div>
+
+  <div class="plan-next plan-wide">
+    <h3>已經上線，以及接下來會增加的功能</h3>
+    <p>
+      原本列在這裡的「客製化排課與課表調整」，已經隨賽事訓練方案上線。
+      徐國峰 × AI 仍在持續開發中，以下功能正在規劃與製作：
+    </p>
+    <ul class="next-list">
+      <li><i>01</i>全天候即時問答，訓練上的問題隨時能問。</li>
+    </ul>
+    <p class="next-kicker">
+      新功能上線後，訂閱價格會隨之調整。愈早訂閱，愈早開始累積屬於你自己的訓練對話史。
+    </p>
+    <p class="plan-note">
+      兩種方案皆為每月自動續訂、無綁約，可隨時取消，取消後仍可使用到當期結束。
+      目前一般會員與白金會員皆可訂閱使用。方案內容與價格以 RQ 平台頁面為準。
+    </p>
   </div>
 </section>
 
-<!-- ═══════════ 07 常見問題 ═══════════ -->
+<!-- ═══════════ 09 常見問題 ═══════════ -->
 <section class="section" id="faq">
   <div class="sec-head">
-    <span class="sec-num">07</span>
+    <span class="sec-num">09</span>
     <h2 class="sec-title">常見問題</h2>
     <span class="sec-rule"></span>
   </div>
 
   <div class="faqs">
+    <details class="faq">
+      <summary>「日常訓練方案」和「賽事訓練方案」要選哪一個？</summary>
+      <div class="faq-body">
+        <p>看你現在有沒有一場確定日期的目標賽事。</p>
+        <p>有，而且距離比賽還有一段完整的備賽期，就選賽事訓練方案。系統會從比賽日往回排出整份週期化計畫，每天練完的回饋也會對照你在計畫裡的進度。</p>
+        <p>沒有，或是距離下一場比賽還很遠、想先把基礎與弱項練起來，就選日常訓練方案，用今日課表讓系統依你當下的狀況決定今天該練什麼。</p>
+        <p>賽事訓練方案包含日常訓練方案的所有功能，所以不會因為選了它而少掉什麼。</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>賽事訓練方案需要在 RQ 累積多久的訓練紀錄？</summary>
+      <div class="faq-body">
+        <p>建議至少半年以上。訓練量要有足夠的數據才算得準，累積得愈多，算出來的計畫愈貼近你的需求。</p>
+        <p>如果紀錄還不夠，可以先把過往的紀錄上傳到 RQ，或先用日常訓練方案累積一段時間，資料足夠之後再回來建立計畫。</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>我還沒報名，可以先建立計畫嗎？</summary>
+      <div class="faq-body">
+        <p>可以，只要你已經知道比賽日期。計畫是從比賽日往回排的，日期一旦決定，整份計畫的長度與每個週期的位置就跟著定下來，產生後目前無法更改，所以建議日期確定之後再開始。</p>
+        <p>距離賽事的時間比計畫週期短也沒關係，系統會從對應的週次開始排，這會比從第一週硬排更合適。</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>可以同時準備兩場比賽嗎？</summary>
+      <div class="faq-body">
+        <p>一次專注一場。週期化訓練的前提，就是所有安排都往同一個比賽日收斂。兩份計畫同時跑，訓練量會重複疊加，原本設計好的節奏也會亂掉。</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>比賽結束之後呢？</summary>
+      <div class="faq-body">
+        <p>計畫完成後，可以繼續用今日課表維持訓練，它會依照你當下的數據給出當天最適合的一堂課，不需要另外安排。等下一個目標賽事確定，再開始新的計畫。</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>熱身、力量、收操的跟練影片在哪裡看？</summary>
+      <div class="faq-body">
+        <p>訂閱之後會加入「徐國峰 × AI 教練」訂閱者群組，影片都在群組的影片區，依熱身、力量、收操、恢復專用分類，目前共 26 部，隨時可以回去重看。</p>
+        <p>12 套 KFCS 訓練計畫裡的每一堂課也都附有課表解說、熱身、收操與力量訓練的跟練影音。另外，AI 教練在回饋裡提到的每一個訓練動作，都能在 RQ 的跑步訓練動作庫找到圖片、指導語與示範影片。</p>
+      </div>
+    </details>
+
     <details class="faq">
       <summary>跟 ChatGPT、Gemini 有什麼差別？</summary>
       <div class="faq-body">
@@ -1480,9 +1952,11 @@ src="https://www.facebook.com/tr?id=404602746416082&ev=PageView&noscript=1"
     </details>
 
     <details class="faq">
-      <summary>可以隨時取消嗎？會不會綁約？</summary>
+      <summary>可以隨時取消嗎？取消之後，排好的計畫還在嗎？</summary>
       <div class="faq-body">
         <p>可隨時取消，不綁約，取消後仍可使用到當期結束。若日後想重新訂閱，須依照當時的價格計算。</p>
+        <p>已經練過的部分會保留，訓練紀錄與每一則回饋都留在你的 RQ 帳號裡，隨時可以回頭看。訓練日期在到期日之後的課表會鎖定、不再顯示內容，續訂之後即可解鎖。</p>
+        <p>週期化計畫是從比賽日往回排的，中間每一週都接著前一週，所以如果比賽還沒到，建議訂閱維持到比賽當天。</p>
       </div>
     </details>
 
@@ -1511,6 +1985,7 @@ src="https://www.facebook.com/tr?id=404602746416082&ev=PageView&noscript=1"
       <p>
         不必等到受傷了才知道該收，也不必練了六週才發現方向錯了。
         跑完寫下一句話，剩下的交給徐國峰的訓練邏輯。
+        已經有目標賽事的人，現在就可以從比賽日往回，排出整個備賽期的課表。
       </p>
     </div>
     <a class="btn btn-primary" href="https://www.runningquotient.com/ai-coach/index" target="_blank" rel="noopener">前往 RQ 查看方案與訂閱</a>
