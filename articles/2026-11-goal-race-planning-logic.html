@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>依目標賽事排課的邏輯｜為何我不建議用目標成績來排課表？ — KFCS</title>
+<meta name="description" content="目標成績多半是近期從未跑過的成績，拿它來設定訓練強度，很容易超出身體當下能承受的負荷。目標賽事在排課上的意義，在於確定訓練週數、比賽距離與是哪一場比賽；課表要先回顧跑者過去的數據，再從當下的實力出發安排。這也是徐國峰 x AI 教練排課功能的核心。">
+<meta property="og:url" content="https://kfcs.tw/articles/2026-11-goal-race-planning-logic">
+<meta property="og:title" content="依目標賽事排課的邏輯｜為何我不建議用目標成績來排課表？">
+<meta property="og:description" content="目標成績多半是近期從未跑過的成績，拿它來設定訓練強度，很容易超出身體當下能承受的負荷。目標賽事在排課上的意義，在於確定訓練週數、比賽距離與是哪一場比賽；課表要先回顧跑者過去的數據，再從當下的實力出發安排。這也是徐國峰 x AI 教練排課功能的核心。">
+<meta property="og:image" content="https://kfcs.tw/assets/og-cover.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="KFCS 耐力訓練系統｜訓練，是科學也是藝術">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:type" content="article">
+<link rel="canonical" href="https://kfcs.tw/articles/2026-11-goal-race-planning-logic">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="stylesheet" href="../shared/site-chrome.css">
+<link rel="stylesheet" href="../shared/article.css">
+</head>
+<body>
+<nav class="kfcs-sitenav">
+  <div class="nav-shell">
+    <a class="nav-brand" href="../index.html">
+      <img src="../assets/kfcs-logo.svg" alt="KFCS logo">
+      <span class="brand-sub">耐力訓練系統</span>
+    </a>
+    <input class="nav-toggle-box" type="checkbox" id="kfcs-nav-toggle">
+    <label class="nav-toggle" for="kfcs-nav-toggle" aria-label="開啟選單"><span></span><span></span><span></span></label>
+    <div class="nav-menu">
+      <ul class="nav-links">
+        <li><a href="../index.html">首頁</a></li>
+        <li><a href="../ai-coach.html">AI 教練</a></li>
+        <li><a href="../courses.html">課程總覽</a></li>
+        <li><a href="../coach-certification.html">教練認證</a></li>
+        <li><a href="../education.html">教育訓練</a></li>
+        <li><a class="is-active" href="../blog.html">部落格</a></li>
+        <li><a href="../books.html">訓練書系</a></li>
+        <li class="nav-drop"><a href="../online-course.html">學習資源</a>
+          <ul class="drop-panel">
+            <li><a href="../online-course.html">跑步線上課程</a></li>
+            <li><a href="../youtube.html">YouTube 專區</a></li>
+            <li><a href="../podcast.html">Podcast 專區</a></li>
+          </ul>
+        </li>
+        <li><a href="../about.html">關於我們</a></li>
+        <li><a class="nav-social" href="https://www.facebook.com/rocky549" target="_blank" rel="noopener" aria-label="追蹤徐國峰的臉書"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.313 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="nav-social-label">臉書</span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<article class="kfcs-article">
+  <header class="art-hero">
+    <div class="art-hero-inner">
+      <a class="art-back" href="../blog.html">← 回部落格</a>
+      <div class="art-meta">
+        <span class="art-cat">體能與課表</span>
+        <span class="art-date">2026-11-07</span>
+      </div>
+      <h1 class="art-title">依目標賽事排課的邏輯｜為何我不建議用目標成績來排課表？</h1>
+    </div>
+  </header>
+  <div class="art-body">
+<p>設計跑步的訓練計畫是一門學問，而做這門學問的關鍵在於學會提出優質的問題。</p>
+<p>好的問題才會導向好的答案。</p>
+<p>不同的目標設定，會導向不同的方法；</p>
+<p>不同的提問方式，也會產生不同的計畫。</p>
+<hr>
+<p>比方說，我常收到這樣的問題：「數週後就要參加全馬比賽了，目標成績也設好了，接下來的課表該怎麼排？」</p>
+<p>每次收到這個問題，我都會提醒自己：如果我直接拿「目標成績」來決定「課表怎麼排」，我排出來的訓練強度就會依未來的目標來設定，對跑者當下的身體來說，就很容易累積過度的負荷。</p>
+<p>原因在於，一位跑者若要設定目標成績，很少會設一個最近就跑得到的成績。目標多半是近幾年從未跑到的成績，甚至是人生從未跑過的成績（未來的 PB）。如果我拿一個跑者（近期）從未跑過的成績，來設定接下來的訓練強度，就很容易超出身體當下能承受的負荷。</p>
+<p>所以我不會從目標成績算出配速，再照這個配速去排間歇、設定節奏跑的配速、排長距離的課表或設定每週跑量。</p>
+<hr>
+<p>先說我怎麼看目標賽事。</p>
+<p>目標當然要設，但我認為目標賽事在排課上的意義，在於回答三個問題：</p>
+<p>▹ 離比賽還有多少時間可以練（確定訓練週數）</p>
+<p>▹ 這場比賽的距離有多長（3K、5K、10K、半馬、全馬或超馬）</p>
+<p>▹ 要參加的是哪一場比賽（了解賽道和前幾年比賽當天的氣溫、濕度與降雨機率）</p>
+<p>這三件事決定了計畫的長度、課表的內容、訓練的終點與方向。至於目標成績或目標配速，我不會拿它來決定課表的內容（這也是 KFCS 的核心原則）。如果我拿一個偏高的目標來排，強度與訓練量就會跟著高估；拿一個偏保守的目標來排，課表又練不到該練的東西。兩種情況，我排的課表對準的都是那個未來的數字，眼前這個人的實力反而容易被我忽略。</p>
+<p>舉一個極端的例子。一位跑者目前一週跑 10 公里，報了十六週後的全馬，也懷抱一個遠大的目標。如果我直接拿這個目標回推，把一整份全馬課表壓在他身上，受傷的風險就會非常高，也很不合理。我能為他做的，是排一份從他現在的身體與能力出發、一步一步打好基礎的課表，這份課表一開始的量一定不會太多，甚至會讓人覺得：這樣真的跑得完全馬嗎？但一開始本來就無法排太多，這是由跑者最近的跑量所決定的。</p>
+<p>如果我反過來，只依據目標成績幫他設定課表，這對該位跑者而言反而是不負責的。</p>
+<p>❝ 目標決定你要去哪裡，現在的實力決定你從哪裡出發。 ❞</p>
+<p>所以課表該依據什麼？我的做法是先回頭看。就像做研究之前要先做文獻回顧，排課之前要先回顧這位跑者過去的訓練數據、比賽數據與訓練情況，從中看出他現在的實力在哪裡；再從當下的實力出發，搭配目標賽事的距離與剩下的時間，安排接下來的每一個週期。目標成績並沒有消失，它會在訓練過程中被一次次校準，等到實力追上來，數字自然會對上。</p>
+<p>這是我十多年來排課表的原則，現在也是我在研發「徐國峰 x AI 教練」排課功能的核心。</p>
+<hr>
+<p>AI 教練在二〇二六年三月十五日上線。上線之前我們醞釀了半年，上線之後又做了半年多，算起來我和 RQ 團隊全力投入這個產品已經一年多了。</p>
+<p>這段期間做了很多研究，有些只停在底層，沒有做成功能；有些則一步步上線，變成跑者每天會用到的系統。其中和排課邏輯直接相關的有兩項：</p>
+<p>❶ 今日課表與明日課表：依據跑者過去的訓練與比賽數據，動態調整今天或明天該練什麼</p>
+<p>❷ <a href="https://www.runningquotient.com/ai-coach/race-training" target="_blank" rel="noopener">賽事訓練方案的週期化課表</a>：依據跑者在 RQ 上過去的數據回推他現在的實力，再依目標賽事的距離與剩下的時間，安排整個訓練週期</p>
+<p>這項功能背後，就是前面說的那套排課邏輯。我把它設計成先做「數據文獻回顧」：AI 教練在幫跑者建立計畫時，系統會先讀取他長期累積在 RQ 上的訓練紀錄，算出近期的平均週訓練量（訓練指數），當作整份計畫訓練量的起點；再從他各距離的最佳成績，找出目標賽事距離以下競賽跑力相對最弱的那一項，訂為這一段訓練的側重點。</p>
+<p>這些推估都以跑者自己的資料為準，不套用年齡或族群的數據模型。</p>
+<p>所以個人參數設得準不準，非常關鍵。最大心率要用過去跑步時實際跑出來的數值，站姿安靜心率要自己量，跑錶要設定每秒紀錄。這幾項有偏差，算出來的訓練量與強度就會跟著偏掉。</p>
+<p>接著是一份問卷。我在設計問卷時，會請跑者先回答受傷史、每週想練幾天、哪幾天可以練、長跑日排在哪一天、過去訓練量最大的那幾週練起來累不累、目前能舒服地連續跑多久。這些題目問的都是「當下的狀況」：身體的狀況、生活能留給訓練多少空間、過去承受過多大的量。</p>
+<p>目標的部分，目標賽事的日期與距離決定了計畫有幾週、整段時間怎麼切成幾個 3 到 6 週的中週期、每一段練什麼、在哪裡收尾。</p>
+<p>計畫開始之後，第 2 週起，系統會在每個週日依這一週實際完成的訓練，產生下一週的課表；每進到一個新的中週期，再重新讀取當下的跑力，換上新的配速區間。這就是我前面說的，目標成績會在訓練過程中被一次次校準。</p>
+<hr>
+<p>在這兩項之外，目前上線的功能還有：</p>
+<p>▹ 單筆紀錄回饋：每練完一次，AI 教練會針對這筆數據給你回饋</p>
+<p>▹ 六種課表類型的建立邏輯，建好的課表可以排進自己的訓練計畫</p>
+<p>▹ 課表存進 RQ 訓練行事曆，並同步到支援的跑錶，按錶就能依序執行</p>
+<p>▹ 熱身、收操、力量跟練影片：放在 AI 教練限定群組的影片區，熱身 8 支、收操 8 支、力量 8 支，共 24 支，總長將近 15 小時；熱身影片分成長跑、間歇、節奏跑、全馬配速四種版本，依當天的課表挑選</p>
+<p>▹ 跑步訓練動作庫：目前已上架 155 個動作（新的訓練影片也已經完成，之後會有 200 個動作影片可以參考），每個動作都有圖片、重點解說與跟練影片，單筆紀錄回饋裡提到的動作，都可以點進去跟著練</p>
+<p>▹ 週期化訓練計畫的修改設定與提前準備下週課表：計畫進行中可以改訓練日、恢復跑日與長跑日；這一週練完，也可以提前把下一週的課表準備好</p>
+<p>▹ 課表的訓練重點：同一份課表，在不同時期、不同的人身上，要注意的重點都不一樣，AI 教練會針對你當下的情況，在「教練的話」裡寫出屬於你的重點</p>
+<p>▹ 追問：在單筆紀錄下面可以再問進階的問題、提出訓練上的需求，AI 教練會在之後回覆，不是即時的，節奏像一對一教練：先留言，等一段時間就會收到回覆</p>
+<p>我認為提升訓練品質的關鍵，在於每一份課表都對準這個人此刻的狀態，而且讓他知道這份課表要練到什麼。接下來還有幾個比較大的功能與許多細部的優化正在進行。AI 一直在演進，我也一直在學新的東西，想辦法把這個工具做得更貼近跑者的需求。</p>
+<hr>
+<p>希望現在的使用者，還有準備開始使用 AI 教練的跑者，都能感受到我和 RQ 團隊的用心。</p>
+<p>正在使用的跑者，用起來覺得哪裡有幫助、哪裡還不順手，或有任何建議與指教，也歡迎留言告訴我。謝謝大家！</p>
+  </div>
+  <nav class="art-related" aria-label="相關文章">
+    <h2>相關文章</h2>
+    <ul>
+      <li><a href="2026-09-running-data-chain.html">
+        <span class="rel-meta"><span class="rel-cat">體能與課表</span><span class="rel-date">2026-09-21</span></span>
+        <span class="rel-title">把跑步的數據→課表→教練指導串成一條「數據鍊」｜週期化訓練計畫上線</span>
+      </a></li>
+      <li><a href="2026-03-r002-excel-ai.html">
+        <span class="rel-meta"><span class="rel-cat">體能與課表</span><span class="rel-date">2026-03-15</span></span>
+        <span class="rel-title">從 Excel 到 AI：科學化訓練工具的摸索→新成果上線</span>
+      </a></li>
+      <li><a href="2020-04-vs.html">
+        <span class="rel-meta"><span class="rel-cat">訓練心法</span><span class="rel-date">2020-04-01</span></span>
+        <span class="rel-title">目標 vs 系統</span>
+      </a></li>
+    </ul>
+  </nav>
+  <div class="art-foot">
+    <span>徐國峰・KFCS 耐力訓練系統</span>
+    <span><a href="../blog.html">看更多文章 →</a></span>
+  </div>
+</article>
+<footer class="kfcs-sitefooter">
+  <div class="foot-shell">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <img src="../assets/kfcs-logo.svg" alt="KFCS logo">
+        <p>把心、體能、力量與技術整合為一套可理解、可實踐、可傳承的耐力訓練系統，支持運動員進步，也支持教練成長。</p>
+        <p>聯絡信箱：<a href="mailto:kuofengcoaching@gmail.com">kuofengcoaching@gmail.com</a></p>
+        <a class="foot-social" href="https://www.facebook.com/rocky549" target="_blank" rel="noopener">
+          <span class="foot-social-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.313 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg></span>
+          <span class="foot-social-text"><b>追蹤徐國峰的臉書</b><span>FACEBOOK</span></span>
+        </a>
+      </div>
+      <div class="foot-col">
+        <h3>網站導覽</h3>
+        <ul>
+          <li><a href="../index.html">首頁</a></li>
+          <li><a href="../ai-coach.html">AI 教練</a></li>
+          <li><a href="../courses.html">課程總覽</a></li>
+          <li><a href="../coach-certification.html">教練認證</a></li>
+          <li><a href="../education.html">教育訓練</a></li>
+          <li><a href="../blog.html">部落格</a></li>
+          <li><a href="../books.html">訓練書系</a></li>
+          <li><a href="../online-course.html">跑步線上課程</a></li>
+          <li><a href="../youtube.html">YouTube 專區</a></li>
+          <li><a href="../podcast.html">Podcast 專區</a></li>
+          <li><a href="../about.html">關於我們</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h3>課程一覽</h3>
+        <ul>
+          <li><a href="../blog/R1-running-course-technique.html">R1 跑步技術課程</a></li>
+          <li><a href="../blog/R2-running-course-strength.html">R2 跑步力量課程</a></li>
+          <li><a href="../blog/R3-running-fitness-syllabus.html">R3 跑步體能課程</a></li>
+          <li><a href="../blog/R4-running-periodization-and-runners-heart.html">R4 週期化訓練與練心</a></li>
+          <li><a href="../blog/R5-running-intensive-package.html">R5 四堂全修課程</a></li>
+          <li><a href="../blog/R6-running-coaching-certification.html">R6 跑步教練認證課程</a></li>
+          <li><a href="../blog/kfcs-registration-guide.html">報名流程</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© KFCS KuoFeng Coaching System・徐國峰</span>
+      <span class="motto">以身練心・去執著心</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
